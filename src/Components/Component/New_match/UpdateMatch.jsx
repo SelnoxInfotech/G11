@@ -18,7 +18,8 @@ export default function UpdateMatch() {
 
         }).then(response => {
             if (response.status === 200) {
-                // SetTeamlogo(response.data.result)
+                console.log(response.data[0])
+                setnewmatch(response.data)
             }
         })
         // setnewmatch(data.matches)

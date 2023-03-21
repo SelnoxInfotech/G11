@@ -7,14 +7,16 @@ export default function UpdateMatch() {
 
     const [newMatch, setnewmatch] = useState([])
 
-    useEffect(() => {
-        axios("https://grand11.in/g11/api/matches", {
-            method: 'GET',
+    axios(" https://grand11.in/g11/all_matches_api.php", {
+        method: 'GET',
 
-        }).then(response => {
-            setnewmatch(response.data.result)
+    }).then(response => {
+        if (response.status === 200) {
+            
+            setnewmatch(response.data)
+        }
 
-        })
+
     }, [])
 
     return (
