@@ -8,24 +8,31 @@ import axios from "axios";
 
 
 export default function UpdateMatch() {
-    const data = useContext(NewsState);
+    const imagePerRow = 8
     const [newMatch, setnewmatch] = useState([])
-
-    useEffect(() => {
+    const [match_new, set_matche_new] = useState([]);
+    const [next, setNext] = useState(imagePerRow);
+    React.useEffect(() => {
    
-        axios(" https://grand11.in/g11/all_matches_api.php", {
+        axios("https://grand11.in/g11/all_matches_api.php", {
             method: 'GET',
 
         }).then(response => {
             if (response.status === 200) {
-                console.log(response.data[0])
-                setnewmatch(response.data)
+                console.log(response.data[1198])
+                setnewmatch( response.data)
             }
         })
         // setnewmatch(data.matches)
-    }, [data])
+    },[])
 
 
+    const handleMoreImage = () => {
+        setNext(next + imagePerRow);
+    };
+    const handlelessImage = () => {
+        setNext(next - imagePerRow);
+    };
     var settings = {
         arrows: false,
         lazyLoad: true,
@@ -96,7 +103,7 @@ export default function UpdateMatch() {
 
 
                 {
-                    newMatch.map((data, index) => {
+                    newMatch?.slice(0, next)?.map((data, index) => {
                         return (
 
                             <div className="container-fluid updatematch " key={data.id}>
@@ -114,9 +121,9 @@ export default function UpdateMatch() {
                                             <span>{data.date}</span> |<span>{data.time}</span>
                                         </div>
                                         <div className="col-12 center">
-                                            <img src={`https://grand11.in/g11/${data.first_team_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
+                                            <img src={`https://grand11.in/g11/${data.team_one_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
                                             <span >VS</span>
-                                            <img src={`https://grand11.in/g11/${data.second_team_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
+                                            <img src={`https://grand11.in/g11/${data.team_two_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
                                         </div>
                                         <div className="col-12 center">
 

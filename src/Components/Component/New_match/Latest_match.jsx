@@ -7,6 +7,7 @@ export default function UpdateMatch() {
 
     const [newMatch, setnewmatch] = useState([])
 
+   React.useEffect(()=>{
     axios(" https://grand11.in/g11/all_matches_api.php", {
         method: 'GET',
 
@@ -17,7 +18,8 @@ export default function UpdateMatch() {
         }
 
 
-    }, [])
+    })
+   },[])
 
     return (
 
