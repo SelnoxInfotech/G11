@@ -20,6 +20,7 @@ const LatestVideo = () => {
             const res = await fetch("https://www.g11fantasy.com/NewsSection/Get-VideoNews/");
             const data = await res.json();
             setVal(data.data.reverse())
+            console.log("jhzksjhvlk")
         }
         callApi()
     }, [])
@@ -135,7 +136,7 @@ const LatestVideo = () => {
                                         <Link to={`Latest-Video/${ele.id}/${ele.Title.replace(/\s+/g, '-').slice(0, -1)}`} className="hedding hovereffect text  "> <p>{ele.Title.substr(0, 100)}</p></Link>
                                         <span className="Latest_video_date" >
                                             <span className="Latest_video_ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
-                                            {ele.updated.slice(0, 10)}
+                                            {ele.created.slice(0, 10)}
                                         </span>
                                     </div>
                                 </div>

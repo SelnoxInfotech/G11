@@ -23,7 +23,7 @@ export default function Players() {
           <meta name='description' content='Cricket Players Profile & Details, Age, Hight and more, from G11 Fantasy Cricket Prediction App and site. Dream11 Cricket Betting Tips & Predictions '></meta>
         </Helmet>
         <div className="container">
-          <h5 className="section-title ">Player's</h5>
+          <h1 className="section-title ">Player's</h1>
           <div className="row">
             {
               player.map((data,index) => {

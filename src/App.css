@@ -1559,12 +1559,18 @@ display: none;
 }
 .btn{
   --bs-btn-hover-border-color: #ed1919;
-  border: 1px solid black;
+  border: 1px solid ed1919;
+  --bs-btn-box-shadow: inset 0 1px 0 #ed1919,0 1px 1px #ed1919;
 }
 
 #Buttongap{
   color: #ed1919;
   gap: 10px;
+}
+.btn:focus {
+
+  outline: none;
+  box-shadow: none;
 }
 
  

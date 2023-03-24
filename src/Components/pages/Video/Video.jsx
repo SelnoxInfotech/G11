@@ -17,7 +17,7 @@ export default function Video() {
     const getApi = async () => {
       const response = await fetch("https://www.g11fantasy.com/NewsSection/Get-VideoNews/")
       const data = await response.json();
-      setVal(data.data)
+      setVal(data.data.reverse())
     }
     getApi()
 
@@ -53,7 +53,7 @@ export default function Video() {
                     <Link className="hedding hovereffect text" to={`${ele.id}/${ele.Title.replace(/\s+/g, '-').slice(0, -1)}`}><p>{ele.Title.substr(0, 100)}</p></Link>
                     <span className="Latest_video_date">
                       <span className="ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
-                      {ele.updated.slice(0, 10)}
+                      {ele.created.slice(0, 10)}
                     </span>
 
                   </div>

@@ -3,7 +3,7 @@ import axios from "axios";
 import parse from 'html-react-parser';
 import { useParams } from "react-router-dom";
 import BreakingNewsList from "./BreakingNewsList";
-export default function Breaking() {
+export default function Breaking(props) {
     const { id } = useParams();
     const [breakingnews, setbreakingnews] = useState([])
     useEffect(() => {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React , { useState } from "react";
 import ReactPlayer from 'react-player'
 import { CiCalendarDate } from 'react-icons/ci';
 import 'slick-carousel/slick/slick.css';
@@ -17,7 +17,7 @@ const Latest_videoPlay = () => {
     const handleVideo = () => {
         setHandleAudio(true)
     }
-    useEffect(() => {
+    React.useEffect(() => {
 
         axios("https://www.g11fantasy.com/NewsSection/Get-VideoNews/", {
             method: 'GET',
@@ -25,12 +25,12 @@ const Latest_videoPlay = () => {
 
             const LatestVideo = response.data.data
 
-            const select_video_by_user = LatestVideo.find(data => data.id == id)
-            // console.log(select_video_by_user)
+            const select_video_by_user = LatestVideo.find((data) => data.id = id)
+            console.log(select_video_by_user)
             const arry = [select_video_by_user]
             SetPlayer(arry)
         })
-    }, [id])
+    },[id])
 
 
 
@@ -42,12 +42,12 @@ const Latest_videoPlay = () => {
                     <div className="col-md-6">
                         {player.map((ele, index) => {
                             return (
-                                <div className=" latestVideoPlaylist" key={ele.id}>
+                                <div className=" latestVideoPlaylist" key={index}>
                                     <ReactPlayer url={ele?.VideoUrl} width="100%" height="500px" onClick={handleVideo}/>
                                     <h5>{ele.Title.substr(0, 100)}</h5>
                                     <span className="latestVideoPlaylist_videoDate " >
                                         <span className="latestVideoPlaylist_ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
-                                        {ele.updated.slice(0, 10)}
+                                        {ele.created.slice(0, 10)}
                                     </span>
                                   
 

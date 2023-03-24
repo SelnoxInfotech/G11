@@ -25,7 +25,7 @@ export default function RelativeVideo() {
 
             setVal(response.data.data.reverse())
         })
-    })
+    },[])
 
 
     const settings = {
@@ -60,7 +60,7 @@ export default function RelativeVideo() {
                                 <Link to={`/Latest-Video/${ele.id}/${ele.Title.replace(/\s+/g, '-').slice(0, -1)}`}>{ele.Title.substr(0, 100)}</Link>
                                 <span className="recent_video_playlistDate">
                                     <span className="Latest_video_ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
-                                    {ele.updated.slice(0, 10)}
+                                    {ele.created.slice(0, 10)}
                                 </span>
                             </div>
                         </div>

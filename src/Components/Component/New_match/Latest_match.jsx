@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios"
 import { Helmet } from "react-helmet";
 
 export default function UpdateMatch() {
-
+    const imagePerRow = 6
+    const [next, setNext] = useState(imagePerRow);
     const [newMatch, setnewmatch] = useState([])
 
    React.useEffect(()=>{
@@ -14,13 +15,18 @@ export default function UpdateMatch() {
     }).then(response => {
         if (response.status === 200) {
             
-            setnewmatch(response.data)
+            setnewmatch(response.data.reverse())
         }
 
 
     })
    },[])
-
+   const handleMoreImage = () => {
+    setNext(next + imagePerRow);
+};
+const handlelessImage = () => {
+    setNext(next - imagePerRow);
+};
     return (
 
 
@@ -36,7 +42,7 @@ export default function UpdateMatch() {
                 <h1 className="section-title ">Today Match Predictions - Cricket Betting Tips from Experts (100% Free)</h1>
                 <div className="row" id="team_data" >
                     {
-                        newMatch.map((data, index) => {
+                        newMatch?.slice(0, next)?.map((data, index) => {
                             return (
                                 <div className="col-sm-4 bottom">
 
@@ -55,9 +61,9 @@ export default function UpdateMatch() {
                                                     <span>{data.date}</span> |<span>{data.time}</span>
                                                 </div>
                                                 <div className="col-12 center">
-                                                    <img src={`https://grand11.in/g11/${data.first_team_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
+                                                    <img src={`https://grand11.in/g11/${data.team_one_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
                                                     <span className="vs" >VS</span>
-                                                    <img src={`https://grand11.in/g11/${data.second_team_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
+                                                    <img src={`https://grand11.in/g11/${data.team_two_img   }`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
                                                 </div>
                                                 <div className="col-12 center">
 
@@ -74,6 +80,23 @@ export default function UpdateMatch() {
                         })
                     }
 
+
+                </div>
+                <div className='row'>
+                    <div className='col-12 center '>
+                        {next < newMatch?.length && (
+                            <button className="btn readleft" onClick={handleMoreImage}
+                            >
+                                Load more
+                            </button>
+                        )}
+                        {next < newMatch?.length && (
+                            <button className={next <= 6 ? 'hidden' : "btn readleft"} onClick={handlelessImage}
+                            >
+                                Read Less
+                            </button>
+                        )}
+                    </div>
 
                 </div>
             </div>

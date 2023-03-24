@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Slider from "react-slick";
-import { useContext } from "react";
-import NewsState from "../../context/NewsApi";
-
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 
 export default function UpdateMatch() {
-    const imagePerRow = 8
+
     const [newMatch, setnewmatch] = useState([])
-    const [match_new, set_matche_new] = useState([]);
-    const [next, setNext] = useState(imagePerRow);
     React.useEffect(() => {
    
         axios("https://grand11.in/g11/all_matches_api.php", {
@@ -19,20 +14,14 @@ export default function UpdateMatch() {
 
         }).then(response => {
             if (response.status === 200) {
-                console.log(response.data[1198])
-                setnewmatch( response.data)
+                setnewmatch( response.data.reverse())
             }
         })
         // setnewmatch(data.matches)
     },[])
 
 
-    const handleMoreImage = () => {
-        setNext(next + imagePerRow);
-    };
-    const handlelessImage = () => {
-        setNext(next - imagePerRow);
-    };
+   
     var settings = {
         arrows: false,
         lazyLoad: true,
@@ -103,7 +92,7 @@ export default function UpdateMatch() {
 
 
                 {
-                    newMatch?.slice(0, next)?.map((data, index) => {
+                    newMatch?.map((data, index) => {
                         return (
 
                             <div className="container-fluid updatematch " key={data.id}>
@@ -121,9 +110,9 @@ export default function UpdateMatch() {
                                             <span>{data.date}</span> |<span>{data.time}</span>
                                         </div>
                                         <div className="col-12 center">
-                                            <img src={`https://grand11.in/g11/${data.team_one_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
+                                            <img src={`https://grand11.in/g11/${data?.team_one_img}`} width="50" height="50" alt="G11-Fantasy " />
                                             <span >VS</span>
-                                            <img src={`https://grand11.in/g11/${data.team_two_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
+                                            <img src={"https://grand11.in/g11/"+ data?.team_two_img} width="50" height="50" alt="G11-Fantasy " />
                                         </div>
                                         <div className="col-12 center">
 
