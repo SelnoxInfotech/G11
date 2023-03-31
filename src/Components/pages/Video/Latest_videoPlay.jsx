@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {  useParams } from "react-router-dom";
 import parse from 'html-react-parser';
-
+import ScrollToTop from "react-scroll-to-top";
 import axios from "axios"
 import RelativeVideo from "./RelativeVideo";
 
@@ -22,18 +22,16 @@ const Latest_videoPlay = () => {
         axios("https://www.g11fantasy.com/NewsSection/Get-VideoNews/", {
             method: 'GET',
         }).then(response => {
-
             const LatestVideo = response.data.data
-
-            const select_video_by_user = LatestVideo.find((data) => data.id = id)
-            console.log(select_video_by_user)
+            const select_video_by_user = LatestVideo.find((data) => data.id == id)
             const arry = [select_video_by_user]
             SetPlayer(arry)
+            window.scrollTo({top: 0, behavior: 'smooth' });
         })
     },[id])
 
-
-
+    
+    
 
     return (
         <>
@@ -64,7 +62,7 @@ const Latest_videoPlay = () => {
 
                     <div className="col-md-4">
                         <RelativeVideo></RelativeVideo>
-
+                        
                     </div>
 
                 </div>
