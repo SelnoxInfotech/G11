@@ -57,16 +57,13 @@ function MatchPreview(props) {
 
 
         const input = containerData.querySelector("div >p").innerHTML;
-        console.log(input)
          const f=   containerData.querySelector("div >h3").innerHTML;
-            // console.log(f)
         SetTitle(input.replace(/\s+/g, '-'))
         Navigate(`${input.replace(/\s+/g, '-').slice(26)}/${f.replace(/\s+/g, '-')}`)
       })
     }
   }, [_id])
   function TaBFunction(e) {
-    console.log(Title)
     Navigate(`/Latest-match/Cricket-prediction/${_id}/${Title.replace(/\s+/g, '-').slice(26)}/${e.target.innerText.replace(/\s+/g, '-')}`)
     
   }
