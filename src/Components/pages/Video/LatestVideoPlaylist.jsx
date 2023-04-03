@@ -20,7 +20,6 @@ const LatestVideo = () => {
             const res = await fetch("https://www.g11fantasy.com/NewsSection/Get-VideoNews/");
             const data = await res.json();
             setVal(data.data.reverse())
-            console.log("jhzksjhvlk")
         }
         callApi()
     }, [])

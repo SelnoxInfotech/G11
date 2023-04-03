@@ -4,14 +4,19 @@ import { React, useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import Axios from 'axios';
 import { Helmet } from 'react-helmet';
+import MatchPreviewDateil from "./MatchPrivewDatail"
+import { useNavigate } from "react-router-dom";
 
 function MatchPreview(props) {
+  const Navigate = useNavigate();
+  const [Title ,SetTitle] = useState('')
   const [matchpreviwe, setmatchpreviwe] = useState("")
   const [Team_Guide, Set_Team_Guide] = useState('')
   const [Detail, SetDetails_Data] = useState('')
   const [Teams_image, SetTeams_image] = useState('')
-  const { id } = useParams();
+  const { id ,_title} = useParams();
   const _id = id
+
   useEffect(() => {
     var url = "https://grand11.in/g11/api/page/match_details/" + _id
     if (_id != null) {
@@ -27,8 +32,9 @@ function MatchPreview(props) {
         var container = parserhtm[1].querySelector(".container")
         var containerData = container.querySelectorAll(".row")[1]
         var a = containerData.querySelector("div").innerHTML
-
+ 
         setmatchpreviwe(a)
+       
         // Team section///
         var Team = parserhtm[1].querySelector(".container")
         var TeamsData = Team.querySelectorAll(".row")[1]
@@ -47,9 +53,23 @@ function MatchPreview(props) {
         var TeamsData1 = Teams_.querySelectorAll("div")
         var Team_data = TeamsData1[4].innerHTML
         SetTeams_image(Team_data)
+       
+
+        const input = containerData.querySelector("div > p").innerHTML;
+    //  const f=   containerData.querySelector("div >h3").innerHTML;
+    //     console.log(f)
+    SetTitle(input)
+        Navigate(`${input.replace(/\s+/g, '-').slice(26)}`)
       })
     }
   }, [_id])
+  function Tab (e){
+console.log(e.target.innerText)
+// Navigate('/')
+Navigate(`/Latest-match/Cricket-prediction/${_id}/${_title.replace(/\s+/g, '-').slice(0, -1)}/${Title}`)
+  }
+    
+
   return (
 
     <div>
@@ -58,20 +78,29 @@ function MatchPreview(props) {
         <meta name='description' content="Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"></meta>
       </Helmet>
       <Tabs
+        onClick={Tab}
         defaultActiveKey="Match_Preview"
         id="uncontrolled-tab-example"
-        className="mb-3" >
+        className="mb-3"
+       >
         < Tab className='color' eventKey="Match_Preview" title="Match Preview">
           <div className='container'>
             <div className='row'>
-              <div className='col-12'>
-                <div className='font' dangerouslySetInnerHTML={{ __html: matchpreviwe }}></div>
+              <div className='col-12 ' >
+
+              <div className='font' dangerouslySetInnerHTML={{ __html: matchpreviwe }}></div>
+            
+               
               </div>
             </div>
           </div>
         </Tab>
-        < Tab className='color' eventKey="Team_Guide" title="Team Guide">
-          <div className='container'>
+
+
+        {/* <MatchPreviewDateil matchpreviwe={matchpreviwe} ></MatchPreviewDateil> */}
+
+        < Tab className='color' eventKey="Team_Guide" title="Team Guide" >
+          <div className='container' section >
             <div className='row'>
               <div className='col-12'>
                 <div className='font' dangerouslySetInnerHTML={{ __html: Team_Guide }}></div>
@@ -79,6 +108,7 @@ function MatchPreview(props) {
             </div>
           </div>
         </Tab>
+
         < Tab className='color' eventKey="Details_Analysis" title="Cheat sheet ">
           <div className='container'>
             <div className='row'>
