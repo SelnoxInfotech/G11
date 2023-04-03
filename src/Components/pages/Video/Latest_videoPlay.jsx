@@ -5,13 +5,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {  useParams } from "react-router-dom";
 import parse from 'html-react-parser';
-import ScrollToTop from "react-scroll-to-top";
 import axios from "axios"
 import RelativeVideo from "./RelativeVideo";
-
+ import _ from "lodash";
 const Latest_videoPlay = () => {
-    const { id } = useParams();
-
+    const  id  = useParams();
     const [player, SetPlayer] = useState([])
     const [setHandleAudio] = useState(false)
     const handleVideo = () => {
@@ -22,23 +20,18 @@ const Latest_videoPlay = () => {
         axios("https://www.g11fantasy.com/NewsSection/Get-VideoNews/", {
             method: 'GET',
         }).then(response => {
-            const LatestVideo = response.data.data
-            const select_video_by_user = LatestVideo.find((data) => data.id == id)
-            const arry = [select_video_by_user]
-            SetPlayer(arry)
+            const LatestVideo = response?.data.data
+            const select_video_by_user = _.find(LatestVideo, LatestVideo => LatestVideo.id === parseInt(id.id))
+            SetPlayer([select_video_by_user ])
             window.scrollTo({top: 0, behavior: 'smooth' });
         })
     },[id])
-
-    
-    
-
     return (
         <>
             <div className="container-fluid ">
                 <div className="row centerVideoPlayer">
                     <div className="col-md-6">
-                        {player.map((ele, index) => {
+                        {player?.map((ele, index) => {
                             return (
                                 <div className=" latestVideoPlaylist" key={index}>
                                     <ReactPlayer url={ele?.VideoUrl} width="100%" height="500px" onClick={handleVideo}/>
