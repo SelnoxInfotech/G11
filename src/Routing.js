@@ -44,7 +44,8 @@ export default function Routing() {
           <Route path='/Latest-match/Cricket-prediction/:id/:match' element={<MatchPreview />} />
           <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title' element={<MatchPreview />} />
           <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
-          <Route path='/Cricket-prediction/:id/:match/:Title' element={<MatchPreview />} />
+          <Route path='/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
+          <Route path='/Cricket-prediction_match/:id/:match/:Title/:preview' element={<MatchPreview />} />
           <Route path="/Latest-match" element={<Latestmatch></Latestmatch>} />
           <Route path='/Cricket-BreakingNews/:id/:Title' element ={<Breaking></Breaking>} />
           <Route path='/Latest-Video/:id/:Title' element ={<LatestvideoPlay></LatestvideoPlay>} />

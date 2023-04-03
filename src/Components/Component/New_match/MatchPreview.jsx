@@ -6,15 +6,16 @@ import Axios from 'axios';
 import { Helmet } from 'react-helmet';
 import MatchPreviewDateil from "./MatchPrivewDatail"
 import { useNavigate } from "react-router-dom";
-
+import parse from 'html-react-parser'
 function MatchPreview(props) {
   const Navigate = useNavigate();
-  const [Title ,SetTitle] = useState('')
+  const [Title, SetTitle] = useState()
   const [matchpreviwe, setmatchpreviwe] = useState("")
   const [Team_Guide, Set_Team_Guide] = useState('')
   const [Detail, SetDetails_Data] = useState('')
   const [Teams_image, SetTeams_image] = useState('')
-  const { id ,_title} = useParams();
+  const { id, _title } = useParams();
+  
   const _id = id
 
   useEffect(() => {
@@ -32,9 +33,9 @@ function MatchPreview(props) {
         var container = parserhtm[1].querySelector(".container")
         var containerData = container.querySelectorAll(".row")[1]
         var a = containerData.querySelector("div").innerHTML
- 
+
         setmatchpreviwe(a)
-       
+
         // Team section///
         var Team = parserhtm[1].querySelector(".container")
         var TeamsData = Team.querySelectorAll(".row")[1]
@@ -53,22 +54,23 @@ function MatchPreview(props) {
         var TeamsData1 = Teams_.querySelectorAll("div")
         var Team_data = TeamsData1[4].innerHTML
         SetTeams_image(Team_data)
-       
 
-        const input = containerData.querySelector("div > p").innerHTML;
-    //  const f=   containerData.querySelector("div >h3").innerHTML;
-    //     console.log(f)
-    SetTitle(input)
-        Navigate(`${input.replace(/\s+/g, '-').slice(26)}`)
+
+        const input = containerData.querySelector("div >p").innerHTML;
+        console.log(input)
+         const f=   containerData.querySelector("div >h3").innerHTML;
+            // console.log(f)
+        SetTitle(input.replace(/\s+/g, '-'))
+        Navigate(`${input.replace(/\s+/g, '-').slice(26)}/${f.replace(/\s+/g, '-')}`)
       })
     }
   }, [_id])
-  function Tab (e){
-console.log(e.target.innerText)
-// Navigate('/')
-Navigate(`/Latest-match/Cricket-prediction/${_id}/${_title.replace(/\s+/g, '-').slice(0, -1)}/${Title}`)
-  }
+  function TaBFunction(e) {
+    console.log(Title)
+    Navigate(`/Latest-match/Cricket-prediction/${_id}/${Title.replace(/\s+/g, '-').slice(26)}/${e.target.innerText.replace(/\s+/g, '-')}`)
     
+  }
+
 
   return (
 
@@ -78,19 +80,19 @@ Navigate(`/Latest-match/Cricket-prediction/${_id}/${_title.replace(/\s+/g, '-').
         <meta name='description' content="Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"></meta>
       </Helmet>
       <Tabs
-        onClick={Tab}
         defaultActiveKey="Match_Preview"
         id="uncontrolled-tab-example"
         className="mb-3"
-       >
+          onClick={TaBFunction}
+      >
         < Tab className='color' eventKey="Match_Preview" title="Match Preview">
           <div className='container'>
             <div className='row'>
               <div className='col-12 ' >
 
-              <div className='font' dangerouslySetInnerHTML={{ __html: matchpreviwe }}></div>
-            
-               
+                <div className='font' dangerouslySetInnerHTML={{ __html: matchpreviwe }}></div>
+
+
               </div>
             </div>
           </div>
