@@ -4,9 +4,7 @@ import { React, useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import Axios from 'axios';
 import { Helmet } from 'react-helmet';
-import MatchPreviewDateil from "./MatchPrivewDatail"
 import { useNavigate } from "react-router-dom";
-import parse from 'html-react-parser'
 function MatchPreview(props) {
   const Navigate = useNavigate();
   const [Title, SetTitle] = useState()
@@ -14,7 +12,7 @@ function MatchPreview(props) {
   const [Team_Guide, Set_Team_Guide] = useState('')
   const [Detail, SetDetails_Data] = useState('')
   const [Teams_image, SetTeams_image] = useState('')
-  const { id, _title } = useParams();
+  const { id } = useParams();
   
   const _id = id
 
@@ -57,7 +55,7 @@ function MatchPreview(props) {
 
 
         const input = containerData.querySelector("div >p").innerHTML;
-         const f=   containerData.querySelector("div >h3").innerHTML;
+         const f =   containerData.querySelector("div >h3").innerHTML;
         SetTitle(input.replace(/\s+/g, '-'))
         Navigate(`${input.replace(/\s+/g, '-').slice(26)}/${f.replace(/\s+/g, '-')}`)
       })
@@ -65,10 +63,7 @@ function MatchPreview(props) {
   }, [_id])
   function TaBFunction(e) {
     Navigate(`/Latest-match/Cricket-prediction/${_id}/${Title.replace(/\s+/g, '-').slice(26)}/${e.target.innerText.replace(/\s+/g, '-')}`)
-    
   }
-
-
   return (
 
     <div>
@@ -80,24 +75,16 @@ function MatchPreview(props) {
         defaultActiveKey="Match_Preview"
         id="uncontrolled-tab-example"
         className="mb-3"
-          onClick={TaBFunction}
-      >
+          onClick={TaBFunction}>
         < Tab className='color' eventKey="Match_Preview" title="Match Preview">
           <div className='container'>
             <div className='row'>
               <div className='col-12 ' >
-
                 <div className='font' dangerouslySetInnerHTML={{ __html: matchpreviwe }}></div>
-
-
               </div>
             </div>
           </div>
         </Tab>
-
-
-        {/* <MatchPreviewDateil matchpreviwe={matchpreviwe} ></MatchPreviewDateil> */}
-
         < Tab className='color' eventKey="Team_Guide" title="Team Guide" >
           <div className='container' section >
             <div className='row'>
