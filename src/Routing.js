@@ -20,7 +20,8 @@ import BreakingNewsList from './Components/Component/Breaking/BreakingNewsList';
 import Breaking from './Components/Component/Breaking/Breaking';
 import LatestvideoPlay from "./Components/pages/Video/Latest_videoPlay"
 import Video from './Components/pages/Video/Video';
-
+import IPlPriemier from "./Components/pages/IplPrimer/Ipl"
+import SelcectIpl from "./Components/pages/IplPrimer/SelectIplNews"
 export default function Routing() {
   window.scrollTo(0, 0);
   return (
@@ -51,7 +52,8 @@ export default function Routing() {
           <Route path='/Latest-Video/:id/:Title' element ={<LatestvideoPlay></LatestvideoPlay>} />
           <Route path='/Latest-Video/' element ={<Video></Video>} />
           <Route path='/BreakingNews' element ={<BreakingNewsList></BreakingNewsList>} />
-
+          <Route path='/Ipl_2023' element ={<IPlPriemier></IPlPriemier>} />
+          <Route path='/Ipl_2023/:Title/:id' element ={<SelcectIpl></SelcectIpl>} />
           <Route path='*' element={ <PageNotFound></PageNotFound>} />
         </Routes>
         <Footerlink></Footerlink> 

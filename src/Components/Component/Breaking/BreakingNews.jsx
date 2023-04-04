@@ -5,17 +5,18 @@ import { CiCalendarDate } from 'react-icons/ci';
 import Slider from "react-slick";
 function Breaking() {
     const [breakingnews, setbreakingnews] = useState([])
-    useEffect(() => {
+
+    useEffect(() => { 
         axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
             method: 'GET',
-
+              
         }).then(response => {
             if (response.status === 200) {
                 setbreakingnews(response.data.reverse())
+              
             }
         })
     }, [])
-
 
     var settings = {
         
@@ -110,38 +111,41 @@ function Breaking() {
 
                 <div className="container-fluid">
                     <div className="row ">
-                        <Slider {...settings} >
-                            {breakingnews.map((data, index) => {
-                                return (
-                                    <>
-                                        <div className="col-12 colBreaking" key={index}   >
-                                            <div className=" col hovereffec    ">
-                                                <div >
-                                                    <img className=" " src={`https://www.g11fantasy.com${data.Image}`} alt="G11-Fantasy Cricket Prediction for Today's Match" style={{ width: "100%", height: "200px" }} />
-                                                </div>
+                      
+                          <Slider {...settings} >
+                        {breakingnews?.map((data, index) => {
+                            return (
+                                <>
+                                    <div className="col-12 colBreaking" key={index}   >
+                                        <div className=" col hovereffec    ">
+                                            <div >
+                                                <img className=" " src={`https://www.g11fantasy.com${data.Image}`} alt="G11-Fantasy Cricket Prediction for Today's Match" style={{ width: "100%", height: "200px" }} />
                                             </div>
-                                        </div >
-                                        <div className="col-12 ">
-
-                                            <Link to={`/Cricket-BreakingNews/${data.id}/${data.Title.replace(/\s+/g, '-')}`}  className="hedding hovereffect text  "> 
-                                               <div className="col breacking_news_title">
-                                               {data.Title.substr(0, 100)}
-                                               </div>
-                                                </Link>
-                                        <div className="col ">
-                                            <span className="  BreakingNews_date" >
-                                                <span className="ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
-                                                {data.created.slice(0, 10)}
-                                            </span>
-
                                         </div>
-                                        </div>
+                                    </div >
+                                    <div className="col-12 ">
+
+                                        <Link to={`/Cricket-BreakingNews/${data.id}/${data.Title.replace(/\s+/g, '-')}`}  className="hedding hovereffect text  "> 
+                                           <div className="col breacking_news_title">
+                                           {data.Title.substr(0, 100)}
+                                           </div>
+                                            </Link>
+                                    <div className="col ">
+                                        <span className="  BreakingNews_date" >
+                                            <span className="ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
+                                            {data.created.slice(0, 10)}
+                                        </span>
+
+                                    </div>
+                                    </div>
 
 
-                                    </>
-                                )
-                            })}
-                        </Slider>
+                                </>
+                            )
+                        })}
+                    </Slider>
+                
+                      
                     </div>
                 </div>
 

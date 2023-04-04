@@ -14,6 +14,9 @@
 <url> <loc>https://www.g11prediction.com/Latest-match/Latest-match</loc> </url>
 <url> <loc>https://www.g11prediction.com/Cricket-BreakingNews/:id/:Title</loc> </url>
 <url> <loc>https://www.g11prediction.com/BreakingNews</loc> </url>
+<url> <loc>https://www.g11prediction.com/Latest-match/Cricket-prediction/:id/:match/:Title/:preview</loc> </url>
+<url> <loc>https://www.g11prediction.com/Ipl_2023</loc> </url>
+<url> <loc>https://www.g11prediction.com/Ipl_2023/:Title/:id</loc> </url>
 
 
 

@@ -75,9 +75,12 @@ function OffcanvasExample() {
                                             <NavLink 
                                    onClick={toggleOffCanvas}
                                         to="/BreakingNews">Breaking News</NavLink>
-                                    <NavLink 
+                                    {/* <NavLink Ipl_premier_league_2023
                                  onClick={toggleOffCanvas}
-                                        to="/players">Players</NavLink >
+                                        to="/players">Players</NavLink > */}
+                                          <NavLink 
+                                 onClick={toggleOffCanvas}
+                                        to="/Ipl_2023">IPL 2023</NavLink >
                                     <NavLink
                                      onClick={toggleOffCanvas}
                                         to="/Cricket-news">News</NavLink >

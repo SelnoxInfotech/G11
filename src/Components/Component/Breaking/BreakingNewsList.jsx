@@ -18,7 +18,7 @@ export default function BreakingNewsList() {
         }).then(response => {
             if (response.status === 200) {
                 setbreakingnews(response.data.reverse())
-                // console.log(response.data.reverse())
+        
                 
                 window.scrollTo(0, 0);
             }
