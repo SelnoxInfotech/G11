@@ -17,13 +17,14 @@ export default function SelcectIpl(props) {
             }
           
         })
+        window.scrollTo(0, 0);
     }, [id])
 
 
 
     return (
         <div>{
-            SelcetIpl.map((data, index) => {
+            SelcetIpl?.map((data, index) => {
                 return (
 
 

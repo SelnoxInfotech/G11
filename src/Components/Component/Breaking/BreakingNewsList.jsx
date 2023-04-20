@@ -55,7 +55,7 @@ export default function BreakingNewsList() {
                             <div className="  col-xs-12 col-sm-6 col-md-3 Breaking_news_gap" key={index}>
                                 <div className="card1 card">
                                     <div className="video text-center">
-                                        <Link className="hedding hovereffect text" to={`/Cricket-BreakingNews/${breakingnews.id}/${breakingnews?.urlslug.replace(/\s+/g, '-')}`}>
+                                        <Link className="hedding hovereffect text" to={`/Cricket-BreakingNews/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-')}`}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <p className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</p>
