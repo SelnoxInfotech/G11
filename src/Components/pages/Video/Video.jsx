@@ -34,20 +34,23 @@ export default function Video() {
 
   return (
     <div className='container-fluid'>
-  <Helmet>
+      <Helmet>
         <title>Video News |  G11 Fantasy Cricket Prediction |</title>
         <meta name="keywords" content="fantasy cricket prediction"
         />
         <meta name='description' content="Video Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."></meta>
       </Helmet>
       <div className="row">
+        <div className='col-12 center mt-2 breaking_news_hed'>
+          <h1>Latest Video News - G11 Fantasy Cricket Prediction</h1>
+        </div>
         {val?.slice(0, next)?.map((ele) => {
           return (
             <div className='col-md-3' key={ele.id}>
               <div className='video' style={{ margin: "20px" }}>
-         <div className='react_player'> 
-         <ReactPlayer url={ele.VideoUrl} width="100%" height="100%" onClick={handleVideo} />
-          </div>
+                <div className='react_player'>
+                  <ReactPlayer url={ele.VideoUrl} width="100%" height="100%" onClick={handleVideo} />
+                </div>
                 <div>
                   <div className="col latest_video_title">
                     <Link className="hedding hovereffect text" to={`${ele.id}/${ele.Title.replace(/\s+/g, '-').slice(0, -1)}`}><p>{ele.Title.substr(0, 100)}</p></Link>

@@ -11,13 +11,13 @@ export default function Contact_us() {
       <div className='Container'>
         <div className='row'>
           <div className='col-12 hedding center'>
-          <h1>  Contact Us</h1>
+          <h1>Contact Us</h1>
           </div>
 
           <hr></hr>
           <div className='row'>
             <div className='col-12 hedding center'>
-            <h1>  Address</h1>
+            <h2>  Address</h2>
             </div>
 
             <hr></hr>
@@ -47,7 +47,7 @@ export default function Contact_us() {
           <div className='container'>
             <div className='row'>
               <div className='col-12 hedding center'>
-              <h1>Phone</h1>
+              <h2>Phone</h2>
               </div>
 
               <hr></hr>

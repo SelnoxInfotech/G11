@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Helmet from "react-helmet"
-export default function BreakingNewsList() {
+export default function BreakingNewsList({h2}) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
     const [match_new, set_matche_new] = useState([]);
@@ -45,7 +45,9 @@ export default function BreakingNewsList() {
             </Helmet>
             <div className='row'>
                 <div className='col-12  breaking_news_hed '>
-                    <h1> Cricket Breaking News ON TRENDING TOPICS</h1>
+                {
+                       h2 ? <h2> Cricket Breaking News ON TRENDING TOPICS</h2> : <h1> Cricket Breaking News ON TRENDING TOPICS</h1>
+                    }
                 </div>
              
                 {

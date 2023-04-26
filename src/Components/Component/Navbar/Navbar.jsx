@@ -3,11 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { React ,useState,useEffect} from 'react';
-import { NavLink } from "react-router-dom"
+import { NavLink  ,useNavigate} from "react-router-dom"
 import { Link } from "react-router-dom"
 
 function OffcanvasExample() {
-
+const Navigate = useNavigate()
     const [show, setShow] = useState(false);
     const [windowDimenion, detectHW] = useState({
         winWidth: window.innerWidth,
@@ -33,7 +33,7 @@ function OffcanvasExample() {
         window.location.href = "https://t.me/+TyYoHMGT3r1jMjM1";
     }
     function href(){
-        window.location.href = "/";
+      Navigate("/") 
     }
     return (
  
@@ -43,7 +43,7 @@ function OffcanvasExample() {
                 
                 >
                 <Container fluid  >
-                        <Nav onClick={href} className='brand non' ><img src="/image/G11.png" className=" logo_img" alt="Grand11.logo" /></Nav>
+                        <Nav  className='brand non' ><img src="/image/G11.png" onClick={href} className=" logo_img" alt="Grand11.logo" /></Nav>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}` }     onClick={toggleOffCanvas} />
                         <Navbar.Offcanvas
                   
