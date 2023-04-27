@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Helmet from "react-helmet"
-export default function Ipl() {
+export default function Ipl({ h2 }) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
     // const [match_new, set_matche_new] = useState([]);
- 
+
 
 
 
@@ -18,13 +18,13 @@ export default function Ipl() {
         }).then(response => {
             if (response.status === 200) {
                 SetIplData(response.data.data.reverse())
-               
-                
+
+
                 window.scrollTo(0, 0);
             }
         })
     }, [])
-    
+
 
 
     const handleMoreImage = () => {
@@ -38,20 +38,29 @@ export default function Ipl() {
     }, [IplData])
     return (
         <div className='container-fluid center'>
-            <Helmet>
-                <title>IPL 2023-Latest News & Live Updates, Match Report & Analysis</title>
-                <meta  name="keywords" content="IPL 2023-Latest News & Live Updates, Match Report & Analysis" />
-                <meta name='description' content="IPL 2023: Latest News, LIVE Updates, Schedule, Venue Details, Series, Player Stats, Points Table, Expert Analysis, Videos & much more at g11prediction.com"></meta>
-            </Helmet>
+            {
+                IplData?.map((data) => {
+                    return (
+                        <Helmet>
+                            <title>{data.Meta_title}</title>
+                            <meta name="keywords" content="IPL 2023-Latest News & Live Updates, Match Report & Analysis" />
+                            <meta name='description' content={data.Meta_Description}></meta>
+                        </Helmet>
+                    )
+                })
+            }
             <div className='row'>
                 <div className='col-12  breaking_news_hed mb-2 '>
-                    <h1>IPL 2023 - Latest News & Live Updates </h1>
+                    {
+                        h2 ? <h2>IPL 2023 - Latest News & Live Updates </h2> : <h1>IPL 2023 - Latest News & Live Updates </h1>
+
+                    }
                 </div>
-             
+
                 {
                     IplData?.slice(0, next)?.map((breakingnews, index) => {
                         return (
-        
+
                             <div className="  col-xs-12 col-sm-6 col-md-3 Breaking_news_gap" key={index}>
                                 <div className="card1 card">
                                     <div className="video text-center">
@@ -93,8 +102,8 @@ export default function Ipl() {
 
                 </div>
             </div>
-     
+
         </div>
-     
+
     )
 }

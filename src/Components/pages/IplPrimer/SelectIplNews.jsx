@@ -47,7 +47,7 @@ export default function SelcectIpl(props) {
             })
 
         }
-            <Ipl></Ipl>
+            <Ipl h2={true}></Ipl>
         </div>
     )
 }
