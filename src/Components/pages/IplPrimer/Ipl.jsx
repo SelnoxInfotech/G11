@@ -38,17 +38,11 @@ export default function Ipl({ h2 }) {
     }, [IplData])
     return (
         <div className='container-fluid center'>
-            {
-                IplData?.map((data) => {
-                    return (
-                        <Helmet>
-                            <title>{data.Meta_title}</title>
-                            <meta name="keywords" content="IPL 2023-Latest News & Live Updates, Match Report & Analysis" />
-                            <meta name='description' content={data.Meta_Description}></meta>
-                        </Helmet>
-                    )
-                })
-            }
+             <Helmet>
+                <title>IPL 2023-Latest News & Live Updates, Match Report & Analysis</title>
+                <meta  name="keywords" content="IPL 2023-Latest News & Live Updates, Match Report & Analysis" />
+                <meta name='description' content="IPL 2023: Latest News, LIVE Updates, Schedule, Venue Details, Series, Player Stats, Points Table, Expert Analysis, Videos & much more at g11prediction.com"></meta>
+            </Helmet>
             <div className='row'>
                 <div className='col-12  breaking_news_hed mb-2 '>
                     {
