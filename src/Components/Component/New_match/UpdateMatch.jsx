@@ -95,7 +95,7 @@ export default function UpdateMatch() {
                     newMatch?.map((data, index) => {
                         return (
 
-                            <div className="container-fluid updatematch " key={data.id}>
+                            <div className="container-fluid updatematch " key={index}>
                                 <Link to={`Cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-')}`} >
 
                                     <div className="row center grid_row">

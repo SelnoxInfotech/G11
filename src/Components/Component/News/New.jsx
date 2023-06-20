@@ -51,7 +51,7 @@ export default function New() {
                                 <div className="col-xs-12 col-sm-6 col-md-3" key={index}>
                                     <div className="card">
                                         <div className="video text-center">
-                                            <Link className="hedding hovereffect text" to={`/Cricket-BreakingNews/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}`}>
+                                            <Link className="hedding hovereffect text" to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}`}>
                                                 <img className=" News_image" src={`https://grand11.in/g11/${data.image}`} alt="news_image" />
                                                 <div className='News_image_title'>
                                                     <p className="card-text content col_card_heading">{data.title.slice(0, 80)}</p>

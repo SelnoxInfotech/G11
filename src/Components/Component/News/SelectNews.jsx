@@ -25,7 +25,8 @@ export default function SelectNews() {
 
     
     return (
-        <div>
+     
+         <>
             {
                 user_new.map((user_new, index) => {
                     return (
@@ -49,7 +50,9 @@ export default function SelectNews() {
             }
            
                  <News></News>
-            </div>
+           
+
+         </>
 
       
 

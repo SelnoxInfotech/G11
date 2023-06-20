@@ -42,7 +42,7 @@ export default function Breaking(props) {
                     return (
 
 
-                        <div key={index} className="container " >
+                        <div className="container "  key={data.id}>
                             <div className="row">
                                 <div className="col-12"> <h1 className="title_had">{parse(data.Title)}</h1></div>
                                 <div className="col-12 imag">

@@ -26,13 +26,13 @@ function App() {
 
     <>
 
-        <script type="application/ld+json">
-          {JSON.stringify(articleStructuredData)}
-        </script>
+      <script type="application/ld+json">
+        {JSON.stringify(articleStructuredData)}
+      </script>
 
-      
- <Route></Route>
-   
+
+      <Route></Route>
+
     </>
   );
 }
