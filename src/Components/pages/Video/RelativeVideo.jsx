@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/youtube'
 import { CiCalendarDate } from 'react-icons/ci';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';

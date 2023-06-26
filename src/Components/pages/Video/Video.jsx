@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/youtube'
 import { CiCalendarDate } from 'react-icons/ci';
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet'
@@ -48,8 +48,9 @@ export default function Video() {
           return (
             <div className='col-md-3' key={ele.id}>
               <div className='video' style={{ margin: "20px" }}>
-                <div className='react_player'>
-                  <ReactPlayer url={ele.VideoUrl} width="100%" height="100%" onClick={handleVideo} />
+                <div className='react_player iframeContainer'>
+                  <ReactPlayer   controls={false} url={ele.VideoUrl} width="100%" height="100%" onClick={handleVideo} />
+            
                 </div>
                 <div>
                   <div className="col latest_video_title">

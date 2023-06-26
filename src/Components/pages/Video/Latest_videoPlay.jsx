@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/youtube'
 import { CiCalendarDate } from 'react-icons/ci';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -26,14 +26,14 @@ const Latest_videoPlay = () => {
             SetPlayer([select_video_by_user])
             window.scrollTo({ top: 0, behavior: 'smooth' });
         })
-    }, [id])
+    }, [id.id])
     return (
         <>
             <div className="container-fluid ">
                 {
-                    player?.map((data) => {
+                    player?.map((data , index) => {
                         return (
-                            <Helmet>
+                            <Helmet key={index}>
                                 <title>{data.Meta_title}</title>
                                 <meta name="keywords" content="fantasy cricket prediction"
                                 />
@@ -44,9 +44,9 @@ const Latest_videoPlay = () => {
                 }
                 <div className="row centerVideoPlayer">
                     <div className="col-md-6">
-                        {player?.map((ele, index) => {
+                        {player?.map((ele) => {
                             return (
-                                <div className=" latestVideoPlaylist" key={index}>
+                                <div key={ele.id} className=" latestVideoPlaylist" >
                                     <ReactPlayer url={ele?.VideoUrl} width="100%" height="500px" onClick={handleVideo} />
                                     <h1 className="breaking_news_hed" style={{ fontSize: "27px" }}>{ele.Title.substr(0, 100)}</h1>
                                     <span className="latestVideoPlaylist_videoDate " >
@@ -67,7 +67,7 @@ const Latest_videoPlay = () => {
                     </div>
 
                     <div className="col-md-4">
-                        <RelativeVideo></RelativeVideo>
+                        {/* <RelativeVideo></RelativeVideo> */}
 
                     </div>
 
