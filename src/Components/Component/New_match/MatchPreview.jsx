@@ -4,7 +4,7 @@ import { React, useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import Axios from 'axios';
 import { Helmet } from 'react-helmet';
-import { useNavigate   } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function MatchPreview(props) {
   const Navigate = useNavigate();
   const [Title1, SetTitle] = useState()
@@ -12,9 +12,8 @@ function MatchPreview(props) {
   const [Team_Guide, Set_Team_Guide] = useState('')
   const [Detail, SetDetails_Data] = useState('')
   const [Teams_image, SetTeams_image] = useState('')
-  const { id , match,Title , preview } = useParams();
-  const _id  = id
-  console.log(Boolean(_id ) , _id,id , match,Title , preview )
+  const { id, match, Title, preview } = useParams();
+  const _id = id
   useEffect(() => {
     var url = "https://grand11.in/g11/api/page/match_details/" + _id
     var p = "https://grand11.in/g11/api/page/match_details/" + preview
@@ -55,18 +54,11 @@ function MatchPreview(props) {
 
 
         const input = containerData.querySelector("div >p").innerHTML;
-         const f =   containerData.querySelector("div >h3").innerHTML;
-        //  console.log(input.replace(/\s+/g, '-').slice(26),Title?.replace(/\s+/g, '-'),  input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') , f  )
-        
-// {Params.preview}/${Params.match}/${Params.Title}/${Params.id}
-          //  Navigate(`${f.replace(/\s+/g, '-')}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
-          // if(input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') ){
+        const f = containerData.querySelector("div >h3").innerHTML;
+        Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
 
-            Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
-          // }
-         
         SetTitle(input.replace(/\s+/g, '-'))
-      }).catch((error)=>{
+      }).catch((error) => {
         Axios(p, {
           method: 'Post',
         }).then(response => {
@@ -79,9 +71,9 @@ function MatchPreview(props) {
           var container = parserhtm[1].querySelector(".container")
           var containerData = container.querySelectorAll(".row")[1]
           var a = containerData.querySelector("div").innerHTML
-  
+
           setmatchpreviwe(a)
-  
+
           // Team section///
           var Team = parserhtm[1].querySelector(".container")
           var TeamsData = Team.querySelectorAll(".row")[1]
@@ -100,27 +92,27 @@ function MatchPreview(props) {
           var TeamsData1 = Teams_.querySelectorAll("div")
           var Team_data = TeamsData1[4].innerHTML
           SetTeams_image(Team_data)
-  
-  
+
+
           const input = containerData.querySelector("div >p").innerHTML;
-           const f =   containerData.querySelector("div >h3").innerHTML;
+          const f = containerData.querySelector("div >h3").innerHTML;
           //  console.log(input.replace(/\s+/g, '-').slice(26),Title?.replace(/\s+/g, '-'),  input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') , f  )
-          
-  // {Params.preview}/${Params.match}/${Params.Title}/${Params.id}
-            //  Navigate(`${f.replace(/\s+/g, '-')}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
-            // if(input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') ){
-  
-              Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${preview}`)
-            // }
-           
+
+          // {Params.preview}/${Params.match}/${Params.Title}/${Params.id}
+          //  Navigate(`${f.replace(/\s+/g, '-')}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
+          // if(input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') ){
+
+          Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${preview}`)
+          // }
+
           SetTitle(input.replace(/\s+/g, '-'))
         })
       })
     }
-  
+
   }, [_id])
   function TaBFunction(e) {
-    Navigate(`/Latest-match/Cricket-prediction/${e.target.innerText.replace(/\s+/g, '-')}/${match}/${Title1.replace(/\s+/g, '-').slice(26)}/${preview}`)
+    Navigate(`/Latest-match/Cricket-prediction/${e.target.innerText.replace(/\s+/g, '-')}/${match}/${Title1.replace(/\s+/g, '-').slice(26)}/${_id}`)
   }
   return (
 
@@ -133,7 +125,7 @@ function MatchPreview(props) {
         defaultActiveKey="Match_Preview"
         id="uncontrolled-tab-example"
         className="mb-3"
-          onClick={TaBFunction}>
+        onClick={TaBFunction}>
         < Tab className='color' eventKey="Match_Preview" title="Match Preview">
           <div className='container'>
             <div className='row'>

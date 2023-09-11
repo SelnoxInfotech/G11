@@ -22,7 +22,6 @@ import LatestvideoPlay from "./Components/pages/Video/Latest_videoPlay"
 import Video from './Components/pages/Video/Video';
 import IPlPriemier from "./Components/pages/IplPrimer/Ipl"
 import SelcectIpl from "./Components/pages/IplPrimer/SelectIplNews"
-import NewMatchPreview from "./Components/Component/New_match/NewMatchPreview"
 import { useParams } from 'react-router-dom';
 import Redirection from "../src/Redirection"
 export default function Routing() {
