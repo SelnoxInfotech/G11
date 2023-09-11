@@ -22,6 +22,7 @@ import LatestvideoPlay from "./Components/pages/Video/Latest_videoPlay"
 import Video from './Components/pages/Video/Video';
 import IPlPriemier from "./Components/pages/IplPrimer/Ipl"
 import SelcectIpl from "./Components/pages/IplPrimer/SelectIplNews"
+import NewMatchPreview from "./Components/Component/New_match/NewMatchPreview"
 import { useParams } from 'react-router-dom';
 import Redirection from "../src/Redirection"
 export default function Routing() {
@@ -46,8 +47,8 @@ export default function Routing() {
         <Route path="/Cricket-News/:id/:name" element={<SelectNews />} />
         {/*  Match Priview Route */}
         <Route path='/Latest-match/Cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
+        <Route path='/Latest-match/Cricket-prediction/:preview/:match/:Title/:id' element={<MatchPreview/>} />
         <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<Redirection Component={MatchPreview } ></Redirection>} />
-        <Route path='/Latest-match/Cricket-prediction/:preview/:match/:Title/:id' element={<Redirection Component={MatchPreview } ></Redirection>} />
         {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title' element={<MatchPreview />} /> */}
         {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} /> */}
         <Route path='/Cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
