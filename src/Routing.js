@@ -22,44 +22,52 @@ import LatestvideoPlay from "./Components/pages/Video/Latest_videoPlay"
 import Video from './Components/pages/Video/Video';
 import IPlPriemier from "./Components/pages/IplPrimer/Ipl"
 import SelcectIpl from "./Components/pages/IplPrimer/SelectIplNews"
+import { useParams } from 'react-router-dom';
+import Redirection from "../src/Redirection"
 export default function Routing() {
-  window.scrollTo(0, 0);
+  const location = useParams()
+  console.log(location)
   return (
-   
-      <BrowserRouter>
-    
-        <Navbar></Navbar>
-        <Routes>
-          <Route exact path="/" element={<Home />}>
-        </Route>
-          <Route path="/players" element={<Players />} />
-          <Route path="/Cricket-news" element={<News />} />
-          <Route path="/About-us" element={<About />} />
-          <Route path="/FAQ" element={<FAQ />} />
-          <Route path="/Privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/series" element={<Series />} />
-          <Route path="/contact-us" element={<Contact />} />
-          <Route path="/Terms-and-Conditions" element={<Terms />} />
-          <Route path="/Cricket-News/:id/:name" element={<SelectNews />} />
-          <Route path='/Cricket-prediction/:id/:match' element={<MatchPreview />} />
-          <Route path='/Latest-match/Cricket-prediction/:id/:match' element={<MatchPreview />} />
-          <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title' element={<MatchPreview />} />
-          <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
-          <Route path='/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
-          <Route path='/Cricket-prediction_match/:id/:match/:Title/:preview' element={<MatchPreview />} />
-          <Route path="/Latest-match" element={<Latestmatch></Latestmatch>} />
-          <Route path='/Cricket-BreakingNews/:id/:Title' element ={<Breaking></Breaking>} />
-          <Route path='/Latest-Video/:id/:Title' element ={<LatestvideoPlay></LatestvideoPlay>} />
-          <Route path='/Latest-Video/' element ={<Video></Video>} />
-          <Route path='/BreakingNews' element ={<BreakingNewsList></BreakingNewsList>} />
-          <Route path='/Ipl_2023' element ={<IPlPriemier></IPlPriemier>} />
-          <Route path='/Ipl_2023/:Title/:id' element ={<SelcectIpl></SelcectIpl>} />
-          <Route path='*' element={ <PageNotFound></PageNotFound>} />
-        </Routes>
-        <Footerlink></Footerlink> 
-       <Scroll></Scroll>
-      </BrowserRouter>
 
-   
+    <BrowserRouter>
+
+      <Navbar></Navbar>
+      <Routes>
+        <Route exact path="/" element={<Home />}>
+        </Route>
+        <Route path="/players" element={<Players />} />
+        <Route path="/Cricket-news" element={<News />} />
+        <Route path="/About-us" element={<About />} />
+        <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/Privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/series" element={<Series />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/Terms-and-Conditions" element={<Terms />} />
+        <Route path="/Cricket-News/:id/:name" element={<SelectNews />} />
+        {/*  Match Priview Route */}
+        <Route path='/Latest-match/Cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
+        <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<Redirection Component={MatchPreview } ></Redirection>} />
+        <Route path='/Latest-match/Cricket-prediction/:preview/:match/:Title/:id' element={<Redirection Component={MatchPreview } ></Redirection>} />
+        {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title' element={<MatchPreview />} /> */}
+        {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} /> */}
+        <Route path='/Cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
+        <Route path='/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
+        {/* <Route path='/Cricket-prediction_match/:id/:match/:Title/:preview' element={<MatchPreview />} /> */}
+        {/* End */}
+        <Route path="/Latest-match" element={<Latestmatch></Latestmatch> } />
+        <Route path="/Latest-match/Cricket-prediction/" element={<Latestmatch></Latestmatch>} />
+        <Route path='/Cricket-BreakingNews/:id/:Title' element={<Breaking></Breaking>} />
+        <Route path='/Latest-Video/:id/:Title' element={<LatestvideoPlay></LatestvideoPlay>} />
+        <Route path='/Latest-Video/' element={<Video></Video>} />
+        <Route path='/BreakingNews' element={<BreakingNewsList></BreakingNewsList>} />
+        <Route path='/Ipl_2023' element={<IPlPriemier></IPlPriemier>} />
+        <Route path='/Ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
+        <Route path='*' element={<PageNotFound></PageNotFound>} />
+      </Routes>
+      <Footerlink></Footerlink>
+      <Scroll></Scroll>
+    </BrowserRouter>
+
+
   )
 }

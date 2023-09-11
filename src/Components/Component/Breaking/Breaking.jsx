@@ -24,9 +24,9 @@ export default function Breaking(props) {
     return (
         <div>
             {
-                breakingnews?.map((data) => {
+                breakingnews?.map((data , index) => {
                     return (
-                        <Helmet key={data.id}>
+                        <Helmet key={index}>
                             <title>{data.Meta_title}</title>
                             <meta name="keywords" content="Cricket Betting Tips & Predictions" />
                             <meta name='description' content={data.Meta_Description}></meta>
@@ -42,7 +42,7 @@ export default function Breaking(props) {
                     return (
 
 
-                        <div className="container "  key={data.id}>
+                        <div className="container "  key={index}>
                             <div className="row">
                                 <div className="col-12"> <h1 className="title_had">{parse(data.Title)}</h1></div>
                                 <div className="col-12 imag">

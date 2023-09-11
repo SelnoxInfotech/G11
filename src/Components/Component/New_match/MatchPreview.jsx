@@ -4,17 +4,16 @@ import { React, useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import Axios from 'axios';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from "react-router-dom";
+import { useNavigate   } from "react-router-dom";
 function MatchPreview(props) {
   const Navigate = useNavigate();
-  const [Title, SetTitle] = useState()
+  const [Title1, SetTitle] = useState()
   const [matchpreviwe, setmatchpreviwe] = useState("")
   const [Team_Guide, Set_Team_Guide] = useState('')
   const [Detail, SetDetails_Data] = useState('')
   const [Teams_image, SetTeams_image] = useState('')
-  const { id } = useParams();
-  
-  const _id = id
+  const { id , match,Title , preview } = useParams();
+  const _id  = id
 
   useEffect(() => {
     var url = "https://grand11.in/g11/api/page/match_details/" + _id
@@ -56,13 +55,22 @@ function MatchPreview(props) {
 
         const input = containerData.querySelector("div >p").innerHTML;
          const f =   containerData.querySelector("div >h3").innerHTML;
+         console.log(input.replace(/\s+/g, '-').slice(26),Title?.replace(/\s+/g, '-'),  input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') , f )
+        
+// {Params.preview}/${Params.match}/${Params.Title}/${Params.id}
+          //  Navigate(`${f.replace(/\s+/g, '-')}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
+          // if(input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') ){
+
+            Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
+          // }
+         
         SetTitle(input.replace(/\s+/g, '-'))
-        Navigate(`${input.replace(/\s+/g, '-').slice(26)}/${f.replace(/\s+/g, '-')}`)
       })
     }
+  
   }, [_id])
   function TaBFunction(e) {
-    Navigate(`/Latest-match/Cricket-prediction/${_id}/${Title.replace(/\s+/g, '-').slice(26)}/${e.target.innerText.replace(/\s+/g, '-')}`)
+    Navigate(`/Latest-match/Cricket-prediction/${e.target.innerText.replace(/\s+/g, '-')}/${match}/${Title1.replace(/\s+/g, '-').slice(26)}/${preview}`)
   }
   return (
 

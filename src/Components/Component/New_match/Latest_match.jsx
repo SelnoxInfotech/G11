@@ -44,9 +44,9 @@ const handlelessImage = () => {
                     {
                         newMatch?.slice(0, next)?.map((data, index) => {
                             return (
-                                <div className="col-sm-4 bottom">
+                                <div className="col-sm-4 bottom" key={index}>
 
-                                    <div className="container-fluid updatematch " key={index}>
+                                    <div className="container-fluid updatematch ">
                                         <Link to={`Cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}`} >
 
                                             <div className="row center grid_row">

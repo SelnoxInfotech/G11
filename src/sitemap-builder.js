@@ -1,5 +1,6 @@
 require("babel-register")({
-    presets: ["es2015", "react"]
+    presets: ["es2015", "react"],
+
   });
   
   const router = require('../src/Routing').default;
@@ -7,6 +8,6 @@ require("babel-register")({
   
   (
       new Sitemap(router)
-          .build('https://www.g11prediction.com')
+          .build('https://g11prediction.com')
           .save('./public/sitemap.xml')
   );
