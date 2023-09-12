@@ -120,7 +120,16 @@ function MatchPreview(props) {
     <div>
       <Helmet>
         <title>{`${preview} | ${Title1?.replace(/\s+/g,'-').slice(26)}`}| Cricket Prediction |  </title>
-        <meta name='description' content={metaDiscription.slice(0, 160)}></meta>
+        <meta name='description' 
+        content={
+          preview === "Match-Preview" ? metaDiscription.slice(0, 160)
+          :   preview === "Team-Guide" ? "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application" 
+          :preview === "Cheat-sheet" ? "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application" 
+          :preview === "Teams" && "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application" 
+        
+        }
+          
+          ></meta>
       </Helmet>
       <Tabs
         defaultActiveKey="Match_Preview"

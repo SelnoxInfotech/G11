@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 function OffcanvasExample() {
+  const [Dropshow, setDropshow] = useState(false);
   const Navigate = useNavigate()
   const [show, setShow] = useState(false);
   const [windowDimenion, detectHW] = useState({
@@ -36,6 +37,15 @@ function OffcanvasExample() {
   function href() {
     Navigate("/")
   }
+
+
+
+const showDropdown = (e)=>{
+  setDropshow(!Dropshow);
+}
+const hideDropdown = e => {
+  setDropshow(false);
+}
   return (
 
     <div className='sticky-top'  >
@@ -92,13 +102,17 @@ function OffcanvasExample() {
                   <NavDropdown
                     id="nav-dropdown-dark-example"
                     title="More"
-                    menuVariant="dark"
+                    show={Dropshow}
+                    onFocus={() => setDropshow(true)}
+                    onMouseEnter={showDropdown} 
+                    onMouseLeave={hideDropdown}
+
                   >
-                    <Dropdown.Item href="/rules-and-regulation/" active onClick={toggleOffCanvas}> Cricket Rules and Regulation</Dropdown.Item>
-                    <Dropdown.Item href="/cricket-players" active onClick={toggleOffCanvas}>  Cricket Players</Dropdown.Item>
-                    <Dropdown.Item href="/Ipl_2023" active onClick={toggleOffCanvas}>IPL 2023</Dropdown.Item>
-                    <Dropdown.Item href="/Cricket-news" active onClick={toggleOffCanvas}>News</Dropdown.Item>
-                    <Dropdown.Item href="/Latest-video" active onClick={toggleOffCanvas}>Video</Dropdown.Item>
+                    <Dropdown.Item to="/rules-and-regulation/" active onClick={toggleOffCanvas}> Cricket Rules and Regulation</Dropdown.Item>
+                    <Dropdown.Item to="/cricket-players" active onClick={toggleOffCanvas}>  Cricket Players</Dropdown.Item>
+                    <Dropdown.Item to="/Ipl_2023" active onClick={toggleOffCanvas}>IPL 2023</Dropdown.Item>
+                    <Dropdown.Item to="/Cricket-news" active onClick={toggleOffCanvas}>News</Dropdown.Item>
+                    <Dropdown.Item to="/Latest-video" active onClick={toggleOffCanvas}>Video</Dropdown.Item>
                   </NavDropdown>
                 </Nav>
 

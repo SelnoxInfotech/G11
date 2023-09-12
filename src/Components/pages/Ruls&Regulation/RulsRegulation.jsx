@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Helmet from "react-helmet"
+import {AiFillEye} from "react-icons/ai"
 export default function RulsRegulation({ h2 }) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
@@ -54,18 +55,26 @@ export default function RulsRegulation({ h2 }) {
 
                 {
                     IplData?.slice(0, next)?.map((breakingnews, index) => {
+
                         return (
 
                             <div className="  col-xs-12 col-sm-6 col-md-3 Breaking_news_gap" key={index}>
                                 <div className="card1 card">
                                     <div className="video text-center">
-                                        <Link className="hedding hovereffect text" to={`/rules-and-regulation/${breakingnews?.urlslug?.replace(/\s+/g, '-')}/${breakingnews.id} `}>
-                                            <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
+                                        <Link className="hedding hovereffect text" to={`/rules-and-regulation/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '')}/${breakingnews.id} `}>
+                                            <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews?.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <p className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</p>
                                             </div>
                                         </Link>
-                                        <p >{breakingnews.created.slice(0, 10)}</p>
+                                        <div className="col-12 ViewCount">
+                                            <div className="col-6 ViewCountEye">
+                                              <AiFillEye></AiFillEye>  <span>view</span>
+                                            </div>
+                                            <div className="col-6 ViewCountDate">
+                                            <p >{breakingnews.created.slice(0, 10)}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

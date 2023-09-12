@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Helmet from "react-helmet"
+import {AiFillEye} from "react-icons/ai"
 export default function BreakingNewsList({h2}) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
@@ -63,15 +64,17 @@ export default function BreakingNewsList({h2}) {
                                                 <p className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</p>
                                             </div>
                                         </Link>
-                                        <p >{breakingnews.created.slice(0, 10)}</p>
+                                        <div className="col-12 ViewCount">
+                                            <div className="col-6 ViewCountEye">
+                                              <AiFillEye></AiFillEye>  <span>view</span>
+                                            </div>
+                                            <div className="col-6 ViewCountDate">
+                                            <p >{breakingnews.created.slice(0, 10)}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
 
                         )
                     })

@@ -4,6 +4,7 @@ import parse from 'html-react-parser';
 import { useParams } from "react-router-dom";
 import Helmet from "react-helmet"
 import Cricketplayers from "./Cricketplayers";
+import {AiFillEye} from "react-icons/ai"
 export default function CricketplayersByid(props) {
     const { id } = useParams();
     const [SelcetIpl, SetSelcetIpl] = useState([])
@@ -53,6 +54,14 @@ export default function CricketplayersByid(props) {
 
                                         {parse(data.Description)}
                                     </div>
+                                    <div className="col-12 ViewCount">
+                                            <div className="col-6 ViewCountEye">
+                                              <AiFillEye></AiFillEye>  <span>view</span>
+                                            </div>
+                                            <div className="col-6 ViewCountDate">
+                                            <p >{data.created.slice(0, 10)}</p>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
