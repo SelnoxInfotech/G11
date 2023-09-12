@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 export default function UpdateMatch() {
 
     const [newMatch, setnewmatch] = useState([])
@@ -19,7 +18,6 @@ export default function UpdateMatch() {
         })
         // setnewmatch(data.matches)
     },[])
-
 
    
     var settings = {

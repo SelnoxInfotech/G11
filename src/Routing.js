@@ -22,11 +22,14 @@ import LatestvideoPlay from "./Components/pages/Video/Latest_videoPlay"
 import Video from './Components/pages/Video/Video';
 import IPlPriemier from "./Components/pages/IplPrimer/Ipl"
 import SelcectIpl from "./Components/pages/IplPrimer/SelectIplNews"
-import { useParams } from 'react-router-dom';
 import Redirection from "../src/Redirection"
+import IccWorld from "../src/Components/pages/IccWorldCup/IccWorldCup"
+import SelectIccWorldCup from "../src/Components/pages/IccWorldCup/SelectIccWorldCup"
+import RulsRegulation from "./Components/pages/Ruls&Regulation/RulsRegulation"
+import Ruls_Regulation from '../src/Components/pages/Ruls&Regulation/RulsRegulationsbyid';
+import Cricketplayers from "../src/Components/pages/Cricketplayers/Cricketplayers"
+import CricketplayersByid from "../src/Components/pages/Cricketplayers/CricketplayersByid"
 export default function Routing() {
-  const location = useParams()
-  console.log(location)
   return (
 
     <BrowserRouter>
@@ -62,6 +65,14 @@ export default function Routing() {
         <Route path='/BreakingNews' element={<BreakingNewsList></BreakingNewsList>} />
         <Route path='/Ipl_2023' element={<IPlPriemier></IPlPriemier>} />
         <Route path='/Ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
+        <Route path='/ICC-Cricket-World-Cup-2023/' element={<IccWorld></IccWorld>} />
+        <Route path='/ICC-Cricket-World-Cup-2023/:Title/:id' element={<SelectIccWorldCup></SelectIccWorldCup>} />
+        <Route path='/rules-and-regulation/' element={<RulsRegulation></RulsRegulation>} />
+        <Route path='/rules-and-regulation/:Title/:id' element={<Ruls_Regulation></Ruls_Regulation>} />
+
+
+        <Route path='/cricket-players/' element={<Cricketplayers></Cricketplayers>} />
+        <Route path='/cricket-players/:Title/:id' element={<CricketplayersByid></CricketplayersByid>} />
         <Route path='*' element={<PageNotFound></PageNotFound>} />
       </Routes>
       <Footerlink></Footerlink>

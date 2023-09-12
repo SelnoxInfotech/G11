@@ -129,7 +129,7 @@ const LatestVideo = () => {
                                 <div className="row latest_video_container_video" >
 
                                     <div className="col latestVideoPlayer">
-                                        <ReactPlayer url={ele.VideoUrl} onClick={handleVideo} className="react_player_home"/>
+                                        <ReactPlayer  controls={false} url={ele.VideoUrl} onClick={handleVideo} className="react_player_home"/>
                                     </div>
                                     <div className="col latest_video_title">
                                         <Link to={`Latest-Video/${ele.id}/${ele.Title.replace(/\s+/g, '-').slice(0, -1)}`} className="hedding hovereffect text  "> <p>{ele.Title.substr(0, 100)}</p></Link>

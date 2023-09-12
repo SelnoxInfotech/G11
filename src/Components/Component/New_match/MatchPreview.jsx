@@ -12,7 +12,8 @@ function MatchPreview(props) {
   const [Team_Guide, Set_Team_Guide] = useState('')
   const [Detail, SetDetails_Data] = useState('')
   const [Teams_image, SetTeams_image] = useState('')
-  const { id, match, Title, preview } = useParams();
+  const [metaDiscription, SetmetaDiscription] = useState('')
+  const { id, match, preview } = useParams();
   const _id = id
   useEffect(() => {
     var url = "https://grand11.in/g11/api/page/match_details/" + _id
@@ -30,15 +31,19 @@ function MatchPreview(props) {
         var container = parserhtm[1].querySelector(".container")
         var containerData = container.querySelectorAll(".row")[1]
         var a = containerData.querySelector("div").innerHTML
-
         setmatchpreviwe(a)
-
+        // const spanBoxes = a.getElementsByTagName("p");
+        const list = containerData.querySelector("div")?.getElementsByTagName("*")
+        for (let i = 0; i < list.length; i++) {
+          list[i].innerHTML === "Preview :" && SetmetaDiscription(list[i + 1].innerText + list[i + 2].innerText);
+        };
         // Team section///
         var Team = parserhtm[1].querySelector(".container")
         var TeamsData = Team.querySelectorAll(".row")[1]
         var ab = TeamsData.querySelectorAll("div")
         var team = ab[1].innerHTML
         Set_Team_Guide(team)
+
         // Details Analysis
         var Details = parserhtm[1].querySelector(".container")
         var Details_Analysis = Details.querySelectorAll(".row")[1]
@@ -73,7 +78,10 @@ function MatchPreview(props) {
           var a = containerData.querySelector("div").innerHTML
 
           setmatchpreviwe(a)
-
+          const list = containerData.querySelector("div")?.getElementsByTagName("*")
+          for (let i = 0; i < list.length; i++) {
+            list[i].innerHTML === "Preview :" && SetmetaDiscription(list[i + 1].innerText + list[i + 2].innerText)
+          };
           // Team section///
           var Team = parserhtm[1].querySelector(".container")
           var TeamsData = Team.querySelectorAll(".row")[1]
@@ -96,21 +104,14 @@ function MatchPreview(props) {
 
           const input = containerData.querySelector("div >p").innerHTML;
           const f = containerData.querySelector("div >h3").innerHTML;
-          //  console.log(input.replace(/\s+/g, '-').slice(26),Title?.replace(/\s+/g, '-'),  input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') , f  )
-
-          // {Params.preview}/${Params.match}/${Params.Title}/${Params.id}
-          //  Navigate(`${f.replace(/\s+/g, '-')}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
-          // if(input.replace(/\s+/g, '-').slice(26) === Title?.replace(/\s+/g, '-') ){
-
           Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${preview}`)
-          // }
-
           SetTitle(input.replace(/\s+/g, '-'))
         })
       })
     }
 
   }, [_id])
+
   function TaBFunction(e) {
     Navigate(`/Latest-match/Cricket-prediction/${e.target.innerText.replace(/\s+/g, '-')}/${match}/${Title1.replace(/\s+/g, '-').slice(26)}/${_id}`)
   }
@@ -118,15 +119,15 @@ function MatchPreview(props) {
 
     <div>
       <Helmet>
-        <title>Today's Match | G11 | Fantasy Cricket Betting Prediction | </title>
-        <meta name='description' content="Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"></meta>
+        <title>{`${preview} | ${Title1?.replace(/\s+/g,'-').slice(26)}`}| Cricket Prediction |  </title>
+        <meta name='description' content={metaDiscription.slice(0, 160)}></meta>
       </Helmet>
       <Tabs
         defaultActiveKey="Match_Preview"
         id="uncontrolled-tab-example"
         className="mb-3"
         onClick={TaBFunction}>
-        < Tab className='color' eventKey="Match_Preview" title="Match Preview">
+        < Tab className='color' eventKey="Match_Preview" title={ preview === "Match-Preview" ? <h1 className='match_priview' >Match Preview</h1> : "Match Preview"} >
           <div className='container'>
             <div className='row'>
               <div className='col-12 ' >
@@ -135,7 +136,7 @@ function MatchPreview(props) {
             </div>
           </div>
         </Tab>
-        < Tab className='color' eventKey="Team_Guide" title="Team Guide" >
+        < Tab className='color' eventKey="Team_Guide" title={preview ==="Team-Guide" ? <h1 className='match_priview' >Team Guide</h1> : "Team Guide"} >
           <div className='container' section >
             <div className='row'>
               <div className='col-12'>
@@ -145,7 +146,7 @@ function MatchPreview(props) {
           </div>
         </Tab>
 
-        < Tab className='color' eventKey="Details_Analysis" title="Cheat sheet ">
+        < Tab className='color' eventKey="Details_Analysis" title={preview ==="Cheat-sheet" ? <h1 className='match_priview' >Cheat sheet</h1> : "Cheat sheet"}>
           <div className='container'>
             <div className='row'>
               <div className='col-12 '>
@@ -154,7 +155,7 @@ function MatchPreview(props) {
             </div>
           </div>
         </Tab>
-        < Tab className='color' eventKey="Teams " title="Teams">
+        < Tab className='color' eventKey="Teams"  title={preview ==="Teams" ? <h1 className='match_priview' >Teams</h1> : "Teams"}>
           <div className='container'>
             <div className='row'>
               <div className='col-12'>

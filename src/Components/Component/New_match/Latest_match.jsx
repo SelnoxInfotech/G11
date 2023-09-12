@@ -1,32 +1,32 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios"
 import { Helmet } from "react-helmet";
-
+import { useLocation } from "react-router-dom";
 export default function UpdateMatch() {
     const imagePerRow = 6
     const [next, setNext] = useState(imagePerRow);
     const [newMatch, setnewmatch] = useState([])
+    const location = useLocation()
+    React.useEffect(() => {
+        axios(" https://grand11.in/g11/all_matches_api.php", {
+            method: 'GET',
 
-   React.useEffect(()=>{
-    axios(" https://grand11.in/g11/all_matches_api.php", {
-        method: 'GET',
+        }).then(response => {
+            if (response.status === 200) {
 
-    }).then(response => {
-        if (response.status === 200) {
-            
-            setnewmatch(response.data.reverse())
-        }
+                setnewmatch(response.data.reverse())
+            }
 
 
-    })
-   },[])
-   const handleMoreImage = () => {
-    setNext(next + imagePerRow);
-};
-const handlelessImage = () => {
-    setNext(next - imagePerRow);
-};
+        })
+    }, [])
+    const handleMoreImage = () => {
+        setNext(next + imagePerRow);
+    };
+    const handlelessImage = () => {
+        setNext(next - imagePerRow);
+    };
     return (
 
 
@@ -35,7 +35,7 @@ const handlelessImage = () => {
 
 
                 <title>Today's Match | G11 | Fantasy Cricket Betting Prediction </title>
-                <meta  name="keywords" content="Dream11 Prediction website" />
+                <meta name="keywords" content="Dream11 Prediction website" />
                 <meta name='description' content="Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"></meta>
             </Helmet>
             <div className="container">
@@ -47,7 +47,7 @@ const handlelessImage = () => {
                                 <div className="col-sm-4 bottom" key={index}>
 
                                     <div className="container-fluid updatematch ">
-                                        <Link to={`Cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}`} >
+                                        <Link to={location.pathname !== "/Latest-match" ? `${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}` : `Cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}    `} >
 
                                             <div className="row center grid_row">
                                                 <div className="col-12 center color">
@@ -63,7 +63,7 @@ const handlelessImage = () => {
                                                 <div className="col-12 center">
                                                     <img src={`https://grand11.in/g11/${data.team_one_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
                                                     <span className="vs" >VS</span>
-                                                    <img src={`https://grand11.in/g11/${data.team_two_img   }`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
+                                                    <img src={`https://grand11.in/g11/${data.team_two_img}`} width="50" height="50" alt="G11-Fantasy Cricket Prediction for Today's Match" />
                                                 </div>
                                                 <div className="col-12 center">
 

@@ -96,7 +96,7 @@ height: 320px;
   margin: 20px;
   color: white;
   text-decoration: none;
-  font-size: 26px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +134,10 @@ height: 320px;
 }
 
 .navbar-nav {
-  --bs-nav-link-padding-y: 1.5rem;
+  --bs-nav-link-padding-y:0
+}
+.nav-item .dropdown a{
+ height: 50px;
 }
 
 .banner_field p {
@@ -1575,6 +1578,21 @@ display: none;
 }
 
  
- 
- 
- 
+ /* match_priview */
+ .match_priview{
+  font-size: 22px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 8px;
+ }
+ .dropdown-menu{
+  background-color: #c2121c;
+ }
+ .dropdown-menu  a{
+  background-color: #c2121c;
+  font-size: 17px;
+ }
+ .dropdown-toggle::after{
+  color: white;
+ }
+ /* end */
