@@ -8,6 +8,7 @@ import { AiFillEye } from "react-icons/ai"
 export default function CricketplayersByid(props) {
     const { id } = useParams();
     const [SelcetIpl, SetSelcetIpl] = useState([])
+    const [Api, SetApi] = useState(false)
     useEffect(() => {
         axios(`https://www.g11fantasy.com/NewsSection/Get-Newsbyid/${id}`, {
             method: 'GET',
@@ -21,6 +22,19 @@ export default function CricketplayersByid(props) {
         })
         window.scrollTo(0, 0);
     }, [id])
+    useEffect(() => {
+        axios.post(`https://www.g11fantasy.com/NewsSection/Update-ViewCounter/`,
+
+            {
+                "id": id
+
+            }
+
+        ).then(response => {
+            SetApi(!Api)
+        })
+    }, [id])
+
 
 
 
@@ -69,7 +83,7 @@ export default function CricketplayersByid(props) {
                 })
 
             }
-            <Cricketplayers h2={true}></Cricketplayers>
+            <Cricketplayers Api={Api} h2={true}></Cricketplayers>
         </div>
     )
 }

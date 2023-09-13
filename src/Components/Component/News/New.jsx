@@ -2,7 +2,7 @@ import { React, useContext, useState, useEffect } from 'react'
 import news from "../../context/NewsApi";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+import { AiFillEye } from "react-icons/ai"
 export default function New() {
     const imagePerRow = 8
     const [match_new, set_matche_new] = useState([]);
@@ -22,9 +22,9 @@ export default function New() {
         <section id="team" className="pb-5">
             <Helmet>
                 <title>Latest Cricket News | G11 Fantasy Cricket Prediction </title>
-                <meta  name="keywords" content="Breaking News, Cricket news, G11 Fantasy Cricket Prediction, Dream11 prediction, Cricket News Today, Live Cricket News, Online Cricket News, Cricket News Today Match, world cup 2023 cricket news, " />
+                <meta name="keywords" content="Breaking News, Cricket news, G11 Fantasy Cricket Prediction, Dream11 prediction, Cricket News Today, Live Cricket News, Online Cricket News, Cricket News Today Match, world cup 2023 cricket news, " />
                 <meta name="description" key="description" content="Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"></meta>
-               
+
             </Helmet>
             <div className="container-Fluid">
                 <h1 className="section-title ">Latest Cricket News ON TRENDING TOPICS</h1>
@@ -34,7 +34,7 @@ export default function New() {
                             return (
 
 
-                                <div className="col-xs-12 col-sm-6 col-md-3" key={index}>
+                                <div className="col-xs-12 col-sm-6 col-md-3 Breaking_news_gap" key={index}>
                                     <div className="card">
                                         <div className="video text-center">
                                             <Link className="hedding hovereffect text" to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}`}>
@@ -43,7 +43,15 @@ export default function New() {
                                                     <h2 className="card-text content col_card_heading">{data.title.slice(0, 80)}</h2>
                                                 </div>
                                             </Link>
-                                            <span >{data.post_date}</span>
+
+                                            <div className="col-12 ViewCount">
+                                                <div className="col-6 ViewCountEye">
+                                                    <AiFillEye></AiFillEye>  <span> {data?.ViewCount + 1} view</span>
+                                                </div>
+                                                <div className="col-6 ViewCountDate">
+                                                    <span >{data.post_date}</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

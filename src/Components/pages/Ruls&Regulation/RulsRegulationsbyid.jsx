@@ -7,6 +7,7 @@ import RulsRegulation from "./RulsRegulation";
 import {AiFillEye} from "react-icons/ai"
 export default function RulsRegulationsbyid(props) {
     const { id } = useParams();
+    const [Api, SetApi] = useState(false)
     const [SelcetIpl, SetSelcetIpl] = useState([])
     useEffect(() => {
         axios(`https://www.g11fantasy.com/NewsSection/Get-Newsbyid/${id}`, {
@@ -20,6 +21,18 @@ export default function RulsRegulationsbyid(props) {
 
         })
         window.scrollTo(0, 0);
+    }, [id])
+    useEffect(() => {
+        axios.post(`https://www.g11fantasy.com/NewsSection/Update-ViewCounter/`,
+
+            {
+                "id": id
+
+            }
+
+        ).then(response => {
+            SetApi(!Api)
+        })
     }, [id])
 
 
@@ -57,7 +70,7 @@ export default function RulsRegulationsbyid(props) {
 
                                         <div className="col-12 ViewCount">
                                             <div className="col-6 ViewCountEye">
-                                              <AiFillEye></AiFillEye>  <span>view</span>
+                                              <AiFillEye></AiFillEye>  <span>{data?.ViewCount + 1} view</span>
                                             </div>
                                             <div className="col-6 ViewCountDate">
                                             <p >{data.created.slice(0, 10)}</p>
@@ -70,7 +83,7 @@ export default function RulsRegulationsbyid(props) {
                 })
 
             }
-            <RulsRegulation h2={true}></RulsRegulation>
+            <RulsRegulation  Api={Api}  h2={true}></RulsRegulation>
         </div>
     )
 }

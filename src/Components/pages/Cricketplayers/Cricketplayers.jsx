@@ -3,8 +3,10 @@ import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Helmet from "react-helmet"
 import {AiFillEye} from "react-icons/ai"
-
-export default function Cricketplayers({ h2 }) {
+import { RWebShare } from "react-web-share";
+import { BsFillShareFill } from "react-icons/bs"
+import Button from "react-bootstrap/Button";
+export default function Cricketplayers({ h2, Api}) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
     // const [match_new, set_matche_new] = useState([]);
@@ -25,7 +27,7 @@ export default function Cricketplayers({ h2 }) {
                 window.scrollTo(0, 0);
             }
         })
-    }, [])
+    }, [Api])
 
 
 
@@ -60,6 +62,19 @@ export default function Cricketplayers({ h2 }) {
                             <div className="  col-xs-12 col-sm-6 col-md-3 Breaking_news_gap" key={index}>
                                 <div className="card1 card">
                                     <div className="video text-center">
+                                   < div className='col ShareOption'>
+                                            <RWebShare
+                                                data={{
+                                                    url: `https://g11prediction.com/cricket-players/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '')}`
+                                                }}
+                                                onClick={() => console.log("shared successfully!")}
+                                            >
+                                                <Button className="ShareButton">
+                                                    <BsFillShareFill color='#c2121c'></BsFillShareFill>
+                                                </Button>
+                                            </RWebShare>
+
+                                        </div>
                                         <Link className="hedding hovereffect text" to={`/cricket-players/${breakingnews?.urlslug?.replace(/\s+/g, '-')}/${breakingnews.id} `}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
@@ -68,7 +83,7 @@ export default function Cricketplayers({ h2 }) {
                                         </Link>
                                         <div className="col-12 ViewCount">
                                             <div className="col-6 ViewCountEye">
-                                              <AiFillEye></AiFillEye>  <span> {breakingnews?.ViewCount}view</span>
+                                              <AiFillEye></AiFillEye>  <span> {breakingnews?.ViewCount} view</span>
                                             </div>
                                             <div className="col-6 ViewCountDate">
                                             <p >{breakingnews.created.slice(0, 10)}</p>
