@@ -107,7 +107,7 @@ export default function Teams() {
                       <img className="team_img" src={`https://grand11.in/g11/${data.image}`} alt="G11-Fantasy Cricket Prediction for Today's Match" />
                     </div>
                     <div className="col-12  team_text">
-                      <h6 >{data.name}</h6>
+                      <p >{data.name}</p>
                     </div>
                   </div>
                 );

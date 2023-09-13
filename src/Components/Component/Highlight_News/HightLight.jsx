@@ -91,7 +91,7 @@ function HighLight_News() {
             <div className="container-fluid hight_container ">
                 <div className="row highlight-container">
                     <div className="col-md-12 View_All_link">
-                        <span className="hadd">Highlight </span>
+                    <h3>    <span className="hadd">Highlight </span></h3>
                         <span className=" position-absolute end-0">  <Link to="/Cricket-news" className="view_all"> View All  </Link ></span>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ function HighLight_News() {
                                                 }} />
                                         </Col >
                                         <Col sm={6}  >
-                                            <div className="  hedding hovereffect "  >   <h3 > <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}> {data.title.substr(0,50)} </Link> </h3></div>
+                                            <div className="  hedding hovereffect "  >    <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}> <h2 >{data.title.substr(0,50)}</h2> </Link> </div>
                                             <div className="Hight_content"><span className="content text" value={data} >{parse(data.content.substr(0,500))}</span></div>
                                             <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}><div> <button className="btn mt-3 hovereffect text-break fw-lighter " >Read Full News</button></div></Link>
                                         </Col>

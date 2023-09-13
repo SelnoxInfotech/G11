@@ -31,7 +31,7 @@ export default function SelcectIpl(props) {
                     return (
                         <Helmet>
                             <title>{data.Meta_title}</title>
-                            <meta name="keywords" content="IPL 2023-Latest News & Live Updates, Match Report & Analysis" />
+                            <meta name="keywords" content="G11 Fantasy Cricket Prediction,ICC CRICKET WORLD CUP 2023,Dream11 prediction,ICC Cricket World Cup 2023 Prediction,Latest News,ICC CRICKET WORLD CUP Match,ICC Cricket World Cup 2023 schedule,ICC Cricket World Cup 2023 results,ICC Cricket World Cup 2023 fixtures,ICC Cricket World Cup 2023 videos" />
                             <meta name='description' content={data.Meta_Description}></meta>
                         </Helmet>
                     )

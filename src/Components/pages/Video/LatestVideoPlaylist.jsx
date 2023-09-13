@@ -114,7 +114,7 @@ const LatestVideo = () => {
             <div className="container-fluid border  mt-4">
                 <div className="row latest_video_container m-1">
                     <div className="col-md-12 LatestVideo_All_link">
-                        <span className="hadd">Latest Video </span>
+                   <h3>     <span className="hadd">Latest Video </span></h3>
                         <span className="position-absolute end-0"> <Link className=" LatestVideo_view_all" to="/Latest-Video">View All</Link></span>
                     </div>
                 </div>

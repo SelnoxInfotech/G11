@@ -41,7 +41,7 @@ export default function RulsRegulation({ h2 }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Cricket Rules And Regulations | Playing Conditions- G11 Prediction |</title>
-                <meta name="keywords" content="ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis |" />
+                <meta name="keywords" content="Cricket Playing Conditions, Cricket Rules and Regulations, Cricket Laws, Cricket Playing Rules, ODI laws, T20 rules, Cricket match playing rules, cricket penalty conditions," />
                 <meta name='description' content="Cricket Rules And Regulations, Playing Conditions by G11 Fantasy Cricket Prediction Website and Application for Today's Match. # 1 Fantasy Cricket Prediction tips.
 "></meta>
             </Helmet>
@@ -64,7 +64,7 @@ export default function RulsRegulation({ h2 }) {
                                         <Link className="hedding hovereffect text" to={`/rules-and-regulation/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '')}/${breakingnews.id} `}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews?.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
-                                                <p className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</p>
+                                            <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>
                                         </Link>
                                         <div className="col-12 ViewCount">

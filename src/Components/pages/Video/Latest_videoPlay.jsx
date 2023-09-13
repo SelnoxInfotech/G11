@@ -35,7 +35,7 @@ const Latest_videoPlay = () => {
                         return (
                             <Helmet key={index}>
                                 <title>{data.Meta_title}</title>
-                                <meta name="keywords" content="fantasy cricket prediction"
+                                <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"
                                 />
                                 <meta name='description' content="Video Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."></meta>
                             </Helmet>
@@ -48,7 +48,7 @@ const Latest_videoPlay = () => {
                             return (
                                 <div key={ele.id} className=" latestVideoPlaylist" >
                                     <ReactPlayer url={ele?.VideoUrl} width="100%" height="500px" onClick={handleVideo} />
-                                    <h1 className="breaking_news_hed" style={{ fontSize: "27px" }}>{ele.Title.substr(0, 100)}</h1>
+                                    <h2 className="breaking_news_hed" style={{ fontSize: "27px" }}>{ele.Title.substr(0, 100)}</h2>
                                     <span className="latestVideoPlaylist_videoDate " >
                                         <span className="latestVideoPlaylist_ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
                                         {ele.created.slice(0, 10)}

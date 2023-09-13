@@ -22,23 +22,9 @@ export default function New() {
         <section id="team" className="pb-5">
             <Helmet>
                 <title>Latest Cricket News | G11 Fantasy Cricket Prediction </title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                <meta  name="keywords" content="fantasy cricket prediction" />
+                <meta  name="keywords" content="Breaking News, Cricket news, G11 Fantasy Cricket Prediction, Dream11 prediction, Cricket News Today, Live Cricket News, Online Cricket News, Cricket News Today Match, world cup 2023 cricket news, " />
                 <meta name="description" key="description" content="Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"></meta>
-                <meta property="og:locale" key="og:locale" content="en_US" />
-                <meta charSet="utf-8" />
-                <meta property="og:type" key="og:type" content="website" />
-                <meta
-                    property="og:description"
-                    key="og:description"
-                    content={"Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"}
-                />
-                <meta
-                    property="og:image"
-                    key="og:image"
-                    content={`/images/G11.png`}
-                />
+               
             </Helmet>
             <div className="container-Fluid">
                 <h1 className="section-title ">Latest Cricket News ON TRENDING TOPICS</h1>
@@ -54,7 +40,7 @@ export default function New() {
                                             <Link className="hedding hovereffect text" to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1)}`}>
                                                 <img className=" News_image" src={`https://grand11.in/g11/${data.image}`} alt="news_image" />
                                                 <div className='News_image_title'>
-                                                    <p className="card-text content col_card_heading">{data.title.slice(0, 80)}</p>
+                                                    <h2 className="card-text content col_card_heading">{data.title.slice(0, 80)}</h2>
                                                 </div>
                                             </Link>
                                             <span >{data.post_date}</span>

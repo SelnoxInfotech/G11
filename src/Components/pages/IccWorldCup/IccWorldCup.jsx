@@ -41,7 +41,7 @@ export default function IccWorld({ h2 }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis |</title>
-                <meta name="keywords" content="ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis |" />
+                <meta name="keywords" content="G11 Fantasy Cricket Prediction,ICC CRICKET WORLD CUP 2023,Dream11 prediction,ICC Cricket World Cup 2023 Prediction,Latest News,ICC CRICKET WORLD CUP Match,ICC Cricket World Cup 2023 schedule,ICC Cricket World Cup 2023 results,ICC Cricket World Cup 2023 fixtures,ICC Cricket World Cup 2023 videos" />
                 <meta name='description' content=" ICC Cricket World Cup 2023 Latest News, LIVE Updates, Match Prediction, Schedule, Venue Details, Points Table, Expert Analysis, & much more at G11 prediction."></meta>
             </Helmet>
             <div className='row'>
@@ -62,7 +62,7 @@ export default function IccWorld({ h2 }) {
                                         <Link className="hedding hovereffect text" to={`/ICC-Cricket-World-Cup-2023/${breakingnews?.urlslug?.replace(/\s+/g, '-')}/${breakingnews.id} `}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
-                                                <p className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</p>
+                                            <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>
                                         </Link>
                                         <div className="col-12 ViewCount">

@@ -31,7 +31,7 @@ export default function CricketplayersByid(props) {
                     return (
                         <Helmet>
                             <title>{data.Meta_title}</title>
-                            <meta name="keywords" content="IPL 2023-Latest News & Live Updates, Match Report & Analysis" />
+                            <meta name="keywords" content="Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details, " />
                             <meta name='description' content={data.Meta_Description}></meta>
                         </Helmet>
                     )

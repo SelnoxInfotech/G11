@@ -100,19 +100,21 @@ const hideDropdown = e => {
 
 
                   <NavDropdown
-                    id="nav-dropdown-dark-example"
+                    id="nav-dropdown-example"
                     title="More"
                     show={Dropshow}
-                    onFocus={() => setDropshow(true)}
+                    // onFocus={() => setDropshow(true)}
                     onMouseEnter={showDropdown} 
                     onMouseLeave={hideDropdown}
-
+                   
                   >
-                    <Dropdown.Item to="/rules-and-regulation/" active onClick={toggleOffCanvas}> Cricket Rules and Regulation</Dropdown.Item>
-                    <Dropdown.Item to="/cricket-players" active onClick={toggleOffCanvas}>  Cricket Players</Dropdown.Item>
-                    <Dropdown.Item to="/Ipl_2023" active onClick={toggleOffCanvas}>IPL 2023</Dropdown.Item>
-                    <Dropdown.Item to="/Cricket-news" active onClick={toggleOffCanvas}>News</Dropdown.Item>
-                    <Dropdown.Item to="/Latest-video" active onClick={toggleOffCanvas}>Video</Dropdown.Item>
+                    
+                   <NavLink  to="/Cricket-rules-and-regulation/" active   style={{fontSize:"17px" ,margin: '0'  , display: "inline-flex",position: 'relative ',left:"10%"}}> Cricket Rules and Regulation</NavLink>
+                    <NavLink  to="/cricket-players" active  style={{fontSize:"17px" ,margin: '0' ,  display: "inline-flex",position: 'relative ',left:"30%"}}>  Cricket Players</NavLink>
+                    <NavLink to="/Ipl_2023" active  style={{fontSize:"17px" ,margin: '0' ,  display: "flex",position: 'relative ',left:"41%", width:'fit-content'}}>IPL 2023</NavLink>
+                    <NavLink  to="/Cricket-news" active  style={{fontSize:"17px" ,margin: '0' , display: "flex",position: 'relative ',left:"46%", width:'fit-content'}}>News</NavLink>
+                    <NavLink  to="/Latest-video" active style={{fontSize:"17px" ,margin: '0' , display: "flex",position: 'relative ',left:"46%", width:'fit-content'}}>Video</NavLink>
+                  
                   </NavDropdown>
                 </Nav>
 

@@ -541,7 +541,13 @@ slick-slide slick-active slick-current {
   background-color: #C2121C;
   color: white;
 }
-
+.copy_right p {
+  font-size: 24px;
+}
+.Follow{
+  font-weight: 500;
+  font-size: 32px;
+}
 .term_privacy {
 
   color: #AEAEAE;
@@ -1588,6 +1594,7 @@ display: none;
   background-color: #c2121c;
   background-color: #c2121c;
   font-size: 17px;
+  width: 259px !important;
  }
  .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active{
   color: white;
@@ -1625,5 +1632,25 @@ display: none;
  }
  .nav-item:hover .dropdown-menu{
   display:block!important
+}
+
+.DropDown_Navlink{
+  font-size: 17px;
+  margin: 0;
+  display:inline-flex;
+  position: relative;
+  left: 10px;
+}
+.ShareOption{
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  top: 5%;
+  height: 0;
+  left: 90%;
+}
+.ShareButton{
+  background-color: white;
+  border-radius: 20px;
 }
  /* end */

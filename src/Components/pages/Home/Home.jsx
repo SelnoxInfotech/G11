@@ -40,7 +40,7 @@ export default function Home() {
     
         <Helmet>
         <title>G11- Fantasy Cricket Prediction for Today's Match |  </title>
-        <meta  name="keywords" content="fantasy cricket prediction website" />
+        <meta  name="keywords" content="G11 Fantasy Cricket Prediction, cricket news, Today's match Prediction, Latest Cricket News, Cricket Betting Tips & Predictions, fantasy cricket prediction, dream 11 today prediction, today best cricket match prediction" />
         <meta name='description' content="G11- Fantasy Cricket Prediction for Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 Tips Cricket Prediction."></meta>
       </Helmet>
       

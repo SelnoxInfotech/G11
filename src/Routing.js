@@ -67,8 +67,8 @@ export default function Routing() {
         <Route path='/Ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
         <Route path='/ICC-Cricket-World-Cup-2023/' element={<IccWorld></IccWorld>} />
         <Route path='/ICC-Cricket-World-Cup-2023/:Title/:id' element={<SelectIccWorldCup></SelectIccWorldCup>} />
-        <Route path='/rules-and-regulation/' element={<RulsRegulation></RulsRegulation>} />
-        <Route path='/rules-and-regulation/:Title/:id' element={<Ruls_Regulation></Ruls_Regulation>} />
+        <Route path='/Cricket-rules-and-regulation/' element={<RulsRegulation></RulsRegulation>} />
+        <Route path='/Cricket-rules-and-regulation/:Title/:id' element={<Ruls_Regulation></Ruls_Regulation>} />
 
 
         <Route path='/cricket-players/' element={<Cricketplayers></Cricketplayers>} />

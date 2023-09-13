@@ -42,7 +42,7 @@ export default function Cricketplayers({ h2 }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Men's Cricket Players | List, Stats, Details | G11 Prediction |</title>
-                <meta name="keywords" content="ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis |" />
+                <meta name="keywords" content="Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details, " />
                 <meta name='description' content="List of all Men's Cricket Players, Biography, Records, ODI Teams, Test cricket, T20, Stats, Ranking, and profiles on G11 fantasy cricket prediction."></meta>
             </Helmet>
             <div className='row'>
@@ -63,7 +63,7 @@ export default function Cricketplayers({ h2 }) {
                                         <Link className="hedding hovereffect text" to={`/cricket-players/${breakingnews?.urlslug?.replace(/\s+/g, '-')}/${breakingnews.id} `}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
-                                                <p className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</p>
+                                            <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>
                                         </Link>
                                         <div className="col-12 ViewCount">

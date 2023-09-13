@@ -23,7 +23,7 @@ function LatestNews() {
                 <div className="row border  ">
                     <div className="col-md-12 View_All_link">
                         <div>
-                            <span className="latest hadd"> Latest</span> <span className="latest_n hadd">News</span>
+                          <h3>  <span className="latest hadd"> Latest</span> <span className="latest_n hadd">News</span></h3>
                             <span className="  position-absolute end-0 view_all"><Link to="/Cricket-news"> View All  </Link></span>
                         </div>
                     </div>

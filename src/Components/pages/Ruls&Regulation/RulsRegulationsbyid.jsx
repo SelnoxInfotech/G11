@@ -31,7 +31,7 @@ export default function RulsRegulationsbyid(props) {
                     return (
                         <Helmet>
                             <title>{data.Meta_title}</title>
-                            <meta name="keywords" content="IPL 2023-Latest News & Live Updates, Match Report & Analysis" />
+                            <meta name="keywords" content="Cricket Playing Conditions, Cricket Rules and Regulations, Cricket Laws, Cricket Playing Rules, ODI laws, T20 rules, Cricket match playing rules, cricket penalty conditions," />
                             <meta name='description' content={data.Meta_Description}></meta>
                         </Helmet>
                     )
