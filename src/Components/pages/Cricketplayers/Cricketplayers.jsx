@@ -68,7 +68,7 @@ export default function Cricketplayers({ h2 }) {
                                         </Link>
                                         <div className="col-12 ViewCount">
                                             <div className="col-6 ViewCountEye">
-                                              <AiFillEye></AiFillEye>  <span>view</span>
+                                              <AiFillEye></AiFillEye>  <span> {breakingnews?.ViewCount}view</span>
                                             </div>
                                             <div className="col-6 ViewCountDate">
                                             <p >{breakingnews.created.slice(0, 10)}</p>

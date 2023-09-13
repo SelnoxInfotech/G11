@@ -4,10 +4,11 @@ import parse from 'html-react-parser';
 import { useParams } from "react-router-dom";
 import Helmet from "react-helmet"
 import IccWorld from "./IccWorldCup";
-import {AiFillEye} from "react-icons/ai"
+import { AiFillEye } from "react-icons/ai"
 export default function SelcectIpl(props) {
     const { id } = useParams();
     const [SelcetIpl, SetSelcetIpl] = useState([])
+    const [Api, SetApi] = useState(false)
     useEffect(() => {
         axios(`https://www.g11fantasy.com/NewsSection/Get-Newsbyid/${id}`, {
             method: 'GET',
@@ -20,6 +21,19 @@ export default function SelcectIpl(props) {
 
         })
         window.scrollTo(0, 0);
+    }, [id])
+
+    useEffect(() => {
+        axios.post(`https://www.g11fantasy.com/NewsSection/Update-ViewCounter/`,
+
+            {
+                "id": id
+
+            }
+
+        ).then(response => {
+            SetApi(!Api)
+        })
     }, [id])
 
 
@@ -55,13 +69,13 @@ export default function SelcectIpl(props) {
                                         {parse(data.Description)}
                                     </div>
                                     <div className="col-12 ViewCount">
-                                            <div className="col-6 ViewCountEye">
-                                              <AiFillEye></AiFillEye>  <span>view</span>
-                                            </div>
-                                            <div className="col-6 ViewCountDate">
-                                            <p >{data.created.slice(0, 10)}</p>
-                                            </div>
+                                        <div className="col-6 ViewCountEye">
+                                            <AiFillEye></AiFillEye>  <span> {data?.ViewCount + 1} view</span>
                                         </div>
+                                        <div className="col-6 ViewCountDate">
+                                            <p >{data.created.slice(0, 10)}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +83,7 @@ export default function SelcectIpl(props) {
                 })
 
             }
-            <IccWorld h2={true}></IccWorld>
+            <IccWorld Api={Api} h2={true}></IccWorld>
         </div>
     )
 }

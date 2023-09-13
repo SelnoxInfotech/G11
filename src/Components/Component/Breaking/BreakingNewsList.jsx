@@ -6,11 +6,10 @@ import { AiFillEye } from "react-icons/ai"
 import { BsFillShareFill } from "react-icons/bs"
 import Button from "react-bootstrap/Button";
 import { RWebShare } from "react-web-share";
-export default function BreakingNewsList({ h2 }) {
+export default function BreakingNewsList({ h2 ,Api}) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
     const [match_new, set_matche_new] = useState([]);
-
 
 
 
@@ -29,6 +28,17 @@ export default function BreakingNewsList({ h2 }) {
         })
         
     }, [])
+    useEffect(() => {
+        axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
+            method: 'GET',
+
+        }).then(response => {
+            if (response.status === 200) {
+                setbreakingnews(response.data.reverse())
+            }
+        })
+        
+    }, [Api])
 
 
 
@@ -41,6 +51,7 @@ export default function BreakingNewsList({ h2 }) {
     useEffect(() => {
         set_matche_new(breakingnews)
     }, [breakingnews])
+
     return (
         <div className='container-fluid center'>
             <Helmet>

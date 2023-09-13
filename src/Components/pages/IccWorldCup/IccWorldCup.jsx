@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Helmet from "react-helmet"
 import {AiFillEye} from "react-icons/ai"    
-export default function IccWorld({ h2 }) {
+export default function IccWorld({ h2 , Api }) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
     // const [match_new, set_matche_new] = useState([]);
@@ -24,7 +24,7 @@ export default function IccWorld({ h2 }) {
                 window.scrollTo(0, 0);
             }
         })
-    }, [])
+    }, [Api])
 
 
 
@@ -67,7 +67,7 @@ export default function IccWorld({ h2 }) {
                                         </Link>
                                         <div className="col-12 ViewCount">
                                             <div className="col-6 ViewCountEye">
-                                              <AiFillEye></AiFillEye>  <span>view</span>
+                                              <AiFillEye></AiFillEye>  <span> {breakingnews?.ViewCount + 1} view</span>
                                             </div>
                                             <div className="col-6 ViewCountDate">
                                             <p >{breakingnews.created.slice(0, 10)}</p>

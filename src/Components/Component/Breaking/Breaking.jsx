@@ -4,9 +4,11 @@ import parse from 'html-react-parser';
 import { useParams } from "react-router-dom";
 import BreakingNewsList from "./BreakingNewsList";
 import Helmet from "react-helmet"
+import { AiFillEye } from "react-icons/ai"
 export default function Breaking(props) {
     const { id } = useParams();
     const [breakingnews, setbreakingnews] = useState([])
+    const [Api, SetApi] = useState(false)
     useEffect(() => {
         axios(`https://www.g11fantasy.com/NewsSection/Get-Newsbyid/${id}`, {
             method: 'GET',
@@ -15,16 +17,28 @@ export default function Breaking(props) {
             window.scrollTo(0, 0);
             if (response.status === 200) {
                 setbreakingnews(response.data.data)
+
             }
         })
     }, [id])
+    useEffect(() => {
+        axios.post(`https://www.g11fantasy.com/NewsSection/Update-ViewCounter/`,
 
+            {
+                "id": id
+
+            }
+
+        ).then(response => {
+            SetApi(!Api)
+        })
+    }, [id])
 
 
     return (
         <div>
             {
-                breakingnews?.map((data , index) => {
+                breakingnews?.map((data, index) => {
                     return (
                         <Helmet key={index}>
                             <title>{data.Meta_title}</title>
@@ -42,7 +56,7 @@ export default function Breaking(props) {
                     return (
 
 
-                        <div className="container "  key={index}>
+                        <div className="container " key={index}>
                             <div className="row">
                                 <div className="col-12"> <h1 className="title_had">{parse(data.Title)}</h1></div>
                                 <div className="col-12 imag">
@@ -53,6 +67,15 @@ export default function Breaking(props) {
 
                                         {parse(data.Description)}
                                     </div>
+                                    <div className="col-12 ViewCount">
+                                        <div className="col-6 ViewCountEye">
+                                            <AiFillEye></AiFillEye>  <span>{data?.ViewCount + 1} view</span>
+                                        </div>
+                                        <div className="col-6 ViewCountDate">
+                                            <p >{data.created.slice(0, 10)}</p>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -60,7 +83,7 @@ export default function Breaking(props) {
                 })
 
             }
-            <BreakingNewsList h2={true}></BreakingNewsList>
+            <BreakingNewsList Api={Api} h2={true}></BreakingNewsList>
         </div>
     )
 }
