@@ -1,38 +1,144 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://g11prediction.com</loc> </url>
-<url> <loc>https://g11prediction.com/players</loc> </url>
-<url> <loc>https://g11prediction.com/Cricket-news</loc> </url>
-<url> <loc>https://g11prediction.com/About-us</loc> </url>
-<url> <loc>https://g11prediction.com/FAQ</loc> </url>
-<url> <loc>https://g11prediction.com/series</loc> </url>
-<url> <loc>https://g11prediction.com/contact-us</loc> </url>
-<url> <loc>https://g11prediction.com/Terms-and-Conditions</loc> </url>
-<url> <loc>https://g11prediction.com/Cricket-News/:id/:name</loc> </url>
-<url> <loc>https://g11prediction.com/Cricket-prediction/:id/:match</loc> </url>
-<url> <loc>https://g11prediction.com/Latest-match</loc> </url>
-<url> <loc>https://g11prediction.com/Latest-match/Cricket-prediction/:id/:match</loc> </url>
-<url> <loc>https://g11prediction.com/Latest-match/Latest-match</loc> </url>
-<url> <loc>https://g11prediction.com/Cricket-BreakingNews/:id/:Title</loc> </url>
-<url> <loc>https://g11prediction.com/BreakingNews</loc> </url>
-<url> <loc>https://g11prediction.com/Latest-match/Cricket-prediction/:id/:match/:Title/:preview</loc> </url>
-<url> <loc>https://g11prediction.com/Ipl_2023</loc> </url>
-<url> <loc>https://g11prediction.com/Ipl_2023/:Title/:id</loc> </url>
- -->
+<url> 
+  <loc>https://g11prediction.com/</loc>
+  <changefreq>Always</changefreq>
+  <priority>1.0</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/players/</loc>
+  <changefreq>Monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/Cricket-news/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>0.7</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/About-us/</loc>
+  <changefreq>Monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/FAQ/</loc>
+  <changefreq>Monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/Privacy-policy/</loc>
+  <changefreq>Monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/series/</loc>
+  <changefreq>Monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/contact-us/</loc>
+  <changefreq>Monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/Terms-and-Conditions/</loc>
+  <changefreq>Monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/Cricket-News/:id/:name</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com/Latest-match/Cricket-prediction/:id/:match</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>
+</url>
+<url> 
+  <loc>https://g11prediction.com//Latest-match/Cricket-prediction/:preview/:match/:Title/:id</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Latest-match/Latest-match/Cricket-prediction/:id/:match/:Title/:preview</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Cricket-prediction/:id/:match</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Cricket-prediction/:id/:match/:Title/:preview</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Latest-match/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Latest-match/Cricket-prediction/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Cricket-BreakingNews/:id/:Title/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Latest-Video/:id/:Title</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Latest-Video/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/BreakingNews</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Ipl_2023</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Ipl_2023/:Title/:id</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/ICC-Cricket-World-Cup-2023/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/ICC-Cricket-World-Cup-2023/:Title/:id</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/Cricket-rules-and-regulation/:Title/:id/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/cricket-players/</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com//cricket-players/:Title/:id</loc>
+  <changefreq>Daily</changefreq>
+  <priority>1.0</priority>  
+</url>
 
-
-<!-- <url> <loc>https://grand11.in</loc> </url>
-<url> <loc>https://grand11.in/players</loc> </url> 
-<url> <loc>https://grand11.in/Cricket-news</loc> </url>
-<url> <loc>https://grand11.in/About-us</loc> </url>
-<url> <loc>https://grand11.in/FAQ</loc> </url>
-<url> <loc>https://grand11.in/series</loc> </url>
-<url> <loc>https://grand11.in/contact-us</loc> </url>
-<url> <loc>https://grand11.in/Terms-and-Conditions</loc> </url>
-<url> <loc>https://grand11.in/Cricket-News/:id/:name</loc> </url>
-<url> <loc>https://grand11.in/Cricket-prediction/:id/:match</loc> </url>
-<url> <loc>https://grand11.in/Latest-match/Cricket-prediction/:id/:match</loc> </url>
-<url> <loc>https://grand11.in/Latest-match/Latest-match</loc> </url>
-<url> <loc>https://grand11.in/Cricket-BreakingNews/:id/:Title</loc> </url>
-<url> <loc>https://grand11.in/BreakingNews</loc> </url> -->
 </urlset>

@@ -30,7 +30,9 @@ export default function Breaking(props) {
             }
 
         ).then(response => {
-            SetApi(!Api)
+            SetApi((Api)=>{
+                return !Api
+          })
         })
     }, [id])
 

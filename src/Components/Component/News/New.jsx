@@ -2,7 +2,6 @@ import { React, useContext, useState, useEffect } from 'react'
 import news from "../../context/NewsApi";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { AiFillEye } from "react-icons/ai"
 export default function New() {
     const imagePerRow = 8
     const [match_new, set_matche_new] = useState([]);
@@ -44,14 +43,12 @@ export default function New() {
                                                 </div>
                                             </Link>
 
-                                            <div className="col-12 ViewCount">
-                                                <div className="col-6 ViewCountEye">
-                                                    <AiFillEye></AiFillEye>  <span> {data?.ViewCount + 1} view</span>
-                                                </div>
-                                                <div className="col-6 ViewCountDate">
+                                            {/* <div className="col-12 ViewCount"> */}
+                                              
+                                                <div className="col-12 ViewCountDate">
                                                     <span >{data.post_date}</span>
                                                 </div>
-                                            </div>
+                                            {/* </div> */}
                                         </div>
                                     </div>
                                 </div>

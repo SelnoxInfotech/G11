@@ -31,7 +31,9 @@ export default function RulsRegulationsbyid(props) {
             }
 
         ).then(response => {
-            SetApi(!Api)
+            SetApi((Api)=>{
+                  return !Api
+            })
         })
     }, [id])
 

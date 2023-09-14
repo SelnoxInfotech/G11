@@ -32,7 +32,9 @@ export default function SelcectIpl(props) {
             }
 
         ).then(response => {
-            SetApi(!Api)
+            SetApi((Api)=>{
+                return !Api
+          })
         })
     }, [id])
 
