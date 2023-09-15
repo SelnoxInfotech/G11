@@ -12,7 +12,7 @@
 </url>
 <url> 
   <loc>https://g11prediction.com/Cricket-news/</loc>
-  <changefreq>Daily</changefreq>
+  <changefreq>Hourly</changefreq>
   <priority>0.7</priority>
 </url>
 <url> 
@@ -47,98 +47,98 @@
 </url>
 <url> 
   <loc>https://g11prediction.com/Cricket-News/:id/:name</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>
 </url>
 <url> 
   <loc>https://g11prediction.com/Latest-match/Cricket-prediction/:id/:match</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>
 </url>
 <url> 
-  <loc>https://g11prediction.com//Latest-match/Cricket-prediction/:preview/:match/:Title/:id</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <loc>https://g11prediction.com/Latest-match/Cricket-prediction/:preview/:match/:Title/:id</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com/Latest-match/Latest-match/Cricket-prediction/:id/:match/:Title/:preview</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <loc>https://g11prediction.com/Latest-match/Cricket-prediction/:id/:match/:Title/:preview</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/Cricket-prediction/:id/:match</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/Cricket-prediction/:id/:match/:Title/:preview</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com/Latest-match/</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <loc>https://g11prediction.com/Latest-match</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com/Latest-match/Cricket-prediction/</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <loc>https://g11prediction.com/Latest-match/Cricket-prediction</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/Cricket-BreakingNews/:id/:Title/</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/Latest-Video/:id/:Title</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/Latest-Video/</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/BreakingNews</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/Ipl_2023</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/Ipl_2023/:Title/:id</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/ICC-Cricket-World-Cup-2023/</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
   <loc>https://g11prediction.com/ICC-Cricket-World-Cup-2023/:Title/:id</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com/Cricket-rules-and-regulation/:Title/:id/</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <loc>https://g11prediction.com/Cricket-rules-and-regulation/:Title/:id</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com/cricket-players/</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <loc>https://g11prediction.com/cricket-players</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com//cricket-players/:Title/:id</loc>
-  <changefreq>Daily</changefreq>
-  <priority>1.0</priority>  
+  <loc>https://g11prediction.com/cricket-players/:Title/:id</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
 </url>
 
 </urlset>
