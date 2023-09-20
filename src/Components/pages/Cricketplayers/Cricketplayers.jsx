@@ -21,7 +21,7 @@ export default function Cricketplayers({ h2, Api}) {
 
         }).then(response => {
             if (response.status === 200) {
-                SetIplData(response.data.data)
+                SetIplData(response.data.data.reverse())
 
 
                 window.scrollTo(0, 0);
@@ -47,6 +47,18 @@ export default function Cricketplayers({ h2, Api}) {
                <link rel="canonical" href="https://g11prediction.com/cricket-players" ></link>
                 <meta name="keywords" content="Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details, " />
                 <meta name='description' content="List of all Men's Cricket Players, Biography, Records, ODI Teams, Test cricket, T20, Stats, Ranking, and profiles on G11 fantasy cricket prediction."></meta>
+                 {/* Facebook tags */}
+                 <meta property="og:type" content={"Cricket"} />
+            <meta property="og:title" content={"Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details,"} />
+            <meta property="og:description" content={"List of all Men's Cricket Players, Biography, Records, ODI Teams, Test cricket, T20, Stats, Ranking, and profiles on G11 fantasy cricket prediction."} />
+            { /* End Facebook tags */}
+            { /* Twitter tags */}
+            <meta name="twitter:creator" content={"Cricket"} />
+            <meta name="twitter:card" content={"Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details,"} />
+            <meta name="twitter:title" content={"Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details,"} />
+            <meta name="twitter:description" content={"List of all Men's Cricket Players, Biography, Records, ODI Teams, Test cricket, T20, Stats, Ranking, and profiles on G11 fantasy cricket prediction."} />
+      
+           
             </Helmet>
             <div className='row'>
                 <div className='col-12  breaking_news_hed mb-2 '>
@@ -66,7 +78,7 @@ export default function Cricketplayers({ h2, Api}) {
                                    < div className='col ShareOption'>
                                             <RWebShare
                                                 data={{
-                                                    url: `https://g11prediction.com/cricket-players/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '')}`
+                                                    url: `https://g11prediction.com/cricket-players/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '').toLowerCase()}`
                                                 }}
                                                 onClick={() => console.log("shared successfully!")}
                                             >
@@ -76,7 +88,7 @@ export default function Cricketplayers({ h2, Api}) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/cricket-players/${breakingnews?.urlslug?.replace(/\s+/g, '-')}/${breakingnews.id} `}>
+                                        <Link className="hedding hovereffect text" to={`/cricket-players/${breakingnews?.urlslug?.replace(/\s+/g, '-').toLowerCase()}/${breakingnews.id} `}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                             <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>

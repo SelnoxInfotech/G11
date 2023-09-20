@@ -50,6 +50,20 @@ export default function SelcectIpl(props) {
                             <link rel="canonical" href="https://g11prediction.com/icc-cricket-world-cup-2023/:Title/:id" ></link>
                             <meta name="keywords" content="G11 Fantasy Cricket Prediction,ICC CRICKET WORLD CUP 2023,Dream11 prediction,ICC Cricket World Cup 2023 Prediction,Latest News,ICC CRICKET WORLD CUP Match,ICC Cricket World Cup 2023 schedule,ICC Cricket World Cup 2023 results,ICC Cricket World Cup 2023 fixtures,ICC Cricket World Cup 2023 videos" />
                             <meta name='description' content={data.Meta_Description}></meta>
+                                                             {/* Facebook tags */}
+                                                             <meta property="og:type" content={"Cricket"} />
+            <meta property="og:title" content={data.Meta_title } />
+            <meta property="og:description" content={data.Meta_Description} />
+            { /* End Facebook tags */}
+            { /* Twitter tags */}
+            <meta name="twitter:creator" content={"Cricket"} />
+            <meta name="twitter:card" content={data.Meta_title } />
+            <meta name="twitter:title" content={data.Meta_title } />
+            <meta name="twitter:description" content={data.Meta_Description} />
+      
+           
+                    
+                    
                         </Helmet>
                     )
                 })

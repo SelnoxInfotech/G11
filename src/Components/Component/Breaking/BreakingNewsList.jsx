@@ -6,7 +6,7 @@ import { AiFillEye } from "react-icons/ai"
 import { BsFillShareFill } from "react-icons/bs"
 import Button from "react-bootstrap/Button";
 import { RWebShare } from "react-web-share";
-export default function BreakingNewsList({ h2 ,Api}) {
+export default function BreakingNewsList({ h2, Api }) {
     const imagePerRow = 8
     const [next, setNext] = useState(imagePerRow);
     const [match_new, set_matche_new] = useState([]);
@@ -26,7 +26,7 @@ export default function BreakingNewsList({ h2 ,Api}) {
                 window.scrollTo(0, 0);
             }
         })
-        
+
     }, [])
     useEffect(() => {
         axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
@@ -37,7 +37,7 @@ export default function BreakingNewsList({ h2 ,Api}) {
                 setbreakingnews(response.data.reverse())
             }
         })
-        
+
     }, [Api])
 
 
@@ -56,18 +56,21 @@ export default function BreakingNewsList({ h2 ,Api}) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Breaking News |  G11 Fantasy Cricket Prediction |  </title>
-                <link rel="canonical" href="https://g11prediction.com/breakingNews" ></link>
+                <link rel="canonical" href="https://g11prediction.com/breakingnews" ></link>
                 <meta name="keywords" content="Breaking News, Cricket news, G11 Fantasy Cricket Prediction, Dream11 prediction, Cricket News Today, Live Cricket News, Online Cricket News, Cricket News Today Match, world cup 2023 cricket news," />
                 <meta name="title" key="title" content="Breaking News |  G11 Fantasy Cricket Prediction |" />
                 <meta name='description' content="Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."></meta>
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://g11prediction.com" />
-                <meta property="og:title" content="Breaking News |  G11 Fantasy Cricket Prediction | " />
-                <meta property="og:description" content="Breaking News |  G11 Fantasy Cricket Prediction | " />
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://g11prediction.com" />
-                <meta property="twitter:title" content="Breaking News |  G11 Fantasy Cricket Prediction | " />
-                <meta property="twitter:description" content="Breaking News |  G11 Fantasy Cricket Prediction | " />
+                {/* Facebook tags */}
+                <meta property="og:type" content={"website"} />
+                <meta property="og:title" content={"Breaking News |  G11 Fantasy Cricket Prediction |"} />
+                <meta property="og:description" content={"Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."} />
+                { /* End Facebook tags */}
+                { /* Twitter tags */}
+                <meta name="twitter:creator" content={"Cricket"} />
+                <meta name="twitter:card" content={"Breaking News |  G11 Fantasy Cricket Prediction |"} />
+                <meta name="twitter:title" content={"Breaking News |  G11 Fantasy Cricket Prediction |"} />
+                <meta name="twitter:description" content={"Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."} />
+
             </Helmet>
             <div className='row'>
                 <div className='col-12  breaking_news_hed '>
@@ -87,7 +90,7 @@ export default function BreakingNewsList({ h2 ,Api}) {
                                         <div className='col ShareOption'>
                                             <RWebShare
                                                 data={{
-                                                    url: `https://g11prediction.com/Cricket-BreakingNews/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '')}`
+                                                    url: `https://g11prediction.com/cricket-breakingnews/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '').toLowerCase()}`
                                                 }}
                                                 onClick={() => console.log("shared successfully!")}
                                             >
@@ -97,7 +100,7 @@ export default function BreakingNewsList({ h2 ,Api}) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/cricket-breakingnews/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-')}`}>
+                                        <Link className="hedding hovereffect text" to={`/cricket-breakingnews/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').toLowerCase()}`}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>

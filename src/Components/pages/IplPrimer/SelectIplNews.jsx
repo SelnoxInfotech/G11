@@ -33,9 +33,9 @@ export default function SelcectIpl(props) {
             }
 
         ).then(response => {
-            SetApi((Api)=>{
+            SetApi((Api) => {
                 return !Api
-          })
+            })
         })
     }, [id])
 
@@ -49,8 +49,22 @@ export default function SelcectIpl(props) {
                         <Helmet>
                             <title>{data.Meta_title}</title>
                             <link rel="canonical" href="https://g11prediction.com/ipl_2023/:Title/:id" ></link>
-                            <meta  name="keywords" content="Indian Premier League 2023 cricket score, IPL 2023 schedule, Indian Premier League 2023 results, IPL latest news 2023, Indian Premier League, ipl, iplt20, indian premier league, ipl cricket, ipl match, ipl live, ipl live scorecard, Ipl videos, Ipl news, Ipl Players, Ipl Auction, Ipl points Table, Ipl teams, Ipl highlights, Ipl Player Injury, Best T20 cricket League, T20 league,Tata ipl, ipl 2023, ipl Players squad, Csk, MI, SRH, DC, RR, GT, LSG, RCB, KKR, PBKS, IPL cricket live, Chennai Super Kings, Delhi Capitals, Gujarat Titans, Kolkata Knight Riders, Lucknow Super Giants, Mumbai Indians, Punjab Kings, Rajasthan Royals, Royal Challengers Bangalore, Sunrisers Hyderabad" />
+                            <meta name="keywords" content="Indian Premier League 2023 cricket score, IPL 2023 schedule, Indian Premier League 2023 results, IPL latest news 2023, Indian Premier League, ipl, iplt20, indian premier league, ipl cricket, ipl match, ipl live, ipl live scorecard, Ipl videos, Ipl news, Ipl Players, Ipl Auction, Ipl points Table, Ipl teams, Ipl highlights, Ipl Player Injury, Best T20 cricket League, T20 league,Tata ipl, ipl 2023, ipl Players squad, Csk, MI, SRH, DC, RR, GT, LSG, RCB, KKR, PBKS, IPL cricket live, Chennai Super Kings, Delhi Capitals, Gujarat Titans, Kolkata Knight Riders, Lucknow Super Giants, Mumbai Indians, Punjab Kings, Rajasthan Royals, Royal Challengers Bangalore, Sunrisers Hyderabad" />
                             <meta name='description' content={data.Meta_Description}></meta>
+                            {/* Facebook tags */}
+                            <meta property="og:type" content={"Cricket"} />
+                            <meta property="og:title" content={data.Meta_title} />
+                            <meta property="og:description" content={data.Meta_Description} />
+                            { /* End Facebook tags */}
+                            { /* Twitter tags */}
+                            <meta name="twitter:creator" content={"Cricket"} />
+                            <meta name="twitter:card" content={data.Meta_title} />
+                            <meta name="twitter:title" content={data.Meta_title} />
+                            <meta name="twitter:description" content={data.Meta_Description} />
+
+
+
+
                         </Helmet>
                     )
                 })

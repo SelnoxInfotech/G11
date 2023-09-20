@@ -50,6 +50,18 @@ export default function CricketplayersByid(props) {
                             <link rel="canonical" href="https://g11prediction.com/cricket-players/:Title/:id" ></link>
                             <meta name="keywords" content="Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details, " />
                             <meta name='description' content={data.Meta_Description}></meta>
+                                 {/* Facebook tags */}
+                 <meta property="og:type" content={"Cricket"} />
+            <meta property="og:title" content={"Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details,"} />
+            <meta property="og:description" content={data.Meta_Description} />
+            { /* End Facebook tags */}
+            { /* Twitter tags */}
+            <meta name="twitter:creator" content={"Cricket"} />
+            <meta name="twitter:card" content={"Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details,"} />
+            <meta name="twitter:title" content={"Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details,"} />
+            <meta name="twitter:description" content={data.Meta_Description} />
+      
+           
                         </Helmet>
                     )
                 })

@@ -31,7 +31,7 @@ const Latest_videoPlay = () => {
         <>
             <div className="container-fluid ">
                 {
-                    player?.map((data , index) => {
+                    player?.map((data, index) => {
                         return (
                             <Helmet key={index}>
                                 <title>{data.Meta_title}</title>
@@ -39,6 +39,20 @@ const Latest_videoPlay = () => {
                                 <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"
                                 />
                                 <meta name='description' content="Video Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."></meta>
+                                {/* Facebook tags */}
+                                <meta property="og:type" content={"Cricket"} />
+                                <meta property="og:title" content={data.Meta_title} />
+                                <meta property="og:description" content={"Video Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips. "} />
+                                { /* End Facebook tags */}
+                                { /* Twitter tags */}
+                                <meta name="twitter:creator" content={"Cricket"} />
+                                <meta name="twitter:card" content={data.Meta_title} />
+                                <meta name="twitter:title" content={data.Meta_title} />
+                                <meta name="twitter:description" content={"Video Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips. "} />
+
+
+
+
                             </Helmet>
                         )
                     })

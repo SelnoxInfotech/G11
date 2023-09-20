@@ -15,6 +15,16 @@ export default function About() {
                 <link rel="canonical" href="https://g11prediction.com/about-us" ></link>
               <meta  name="keywords" content="G11 Fantasy Cricket Prediction, cricket news, Today's match Prediction, Latest Cricket News, Cricket Betting Tips & Predictions, fantasy cricket prediction, dream 11 today prediction, today best cricket match prediction" />
                 <meta name='description' content='About-Us- G11 best Fantasy Cricket Prediction Web and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. '></meta>
+                  {/* Facebook tags */}
+            <meta property="og:type" content={"Cricket"} />
+            <meta property="og:title" content={"G11 Fantasy Cricket Prediction, cricket news, Today's match Prediction, Latest Cricket News, Cricket Betting Tips & Predictions, fantasy cricket prediction, dream 11 today prediction, today best cricket match prediction"} />
+            <meta property="og:description" content={"About-Us- G11 best Fantasy Cricket Prediction Web and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps."} />
+            { /* End Facebook tags */}
+            { /* Twitter tags */}
+            <meta name="twitter:creator" content={"Cricket"} />
+            <meta name="twitter:card" content={"G11 Fantasy Cricket Prediction, cricket news, Today's match Prediction, Latest Cricket News, Cricket Betting Tips & Predictions, fantasy cricket prediction, dream 11 today prediction, today best cricket match prediction"} />
+            <meta name="twitter:title" content={"G11 Fantasy Cricket Prediction, cricket news, Today's match Prediction, Latest Cricket News, Cricket Betting Tips & Predictions, fantasy cricket prediction, dream 11 today prediction, today best cricket match prediction"} />
+            <meta name="twitter:description" content={"About-Us- G11 best Fantasy Cricket Prediction Web and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps."} />
             </Helmet>
             <div className='Container'>
        

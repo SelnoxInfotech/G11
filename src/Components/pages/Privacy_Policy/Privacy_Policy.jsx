@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 export default function Privacy_Policy() {
   window.scrollTo({
-    top: 0, 
+    top: 0,
     behavior: 'smooth'
     /* you can also use 'auto' behaviour
        in place of 'smooth' */
@@ -14,11 +14,22 @@ export default function Privacy_Policy() {
         <title>Privacy Policy | G11 Fantasy Cricket Prediction Today's Match | </title>
         <link rel="canonical" href="https://g11prediction.com/privacy-policy" ></link>
         <meta name='description' content="Privacy Policy, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream11 Prediction website"></meta>
+        {/* Facebook tags */}
+        <meta property="og:type" content={"Cricket"} />
+        <meta property="og:title" content={"Privacy Policy | G11 Fantasy Cricket Prediction Today's Match |"} />
+        <meta property="og:description" content={"Privacy Policy, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream11 Prediction website"} />
+        { /* End Facebook tags */}
+        { /* Twitter tags */}
+        <meta name="twitter:creator" content={"Cricket"} />
+        <meta name="twitter:card" content={"Privacy Policy | G11 Fantasy Cricket Prediction Today's Match |"} />
+        <meta name="twitter:title" content={"Privacy Policy | G11 Fantasy Cricket Prediction Today's Match |"} />
+        <meta name="twitter:description" content={"Privacy Policy, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream11 Prediction website"} />
+
       </Helmet>
       <div className='Container'>
         <div className='row'>
           <div className='col-12 hedding center'>
-         <h1>   Privacy Policy</h1>
+            <h1>   Privacy Policy</h1>
           </div>
 
           <hr></hr>
@@ -42,7 +53,7 @@ export default function Privacy_Policy() {
         </div>
         <div className='row center'>
           <div className='col-12 hedding center'>
-          <h1>  Information Collection and Use</h1>
+            <h1>  Information Collection and Use</h1>
           </div>
           <hr></hr>
         </div>
@@ -69,7 +80,7 @@ export default function Privacy_Policy() {
         <div className='container'>
           <div className='row'>
             <div className='col-12 hedding center'>
-            <h1>  Log Data</h1>
+              <h1>  Log Data</h1>
             </div>
 
             <hr></hr>
@@ -86,7 +97,7 @@ export default function Privacy_Policy() {
         <div className='container'>
           <div className='row'>
             <div className='col-12 hedding center'>
-             <h1> Cookies</h1>
+              <h1> Cookies</h1>
             </div>
 
             <hr></hr>
@@ -119,7 +130,7 @@ export default function Privacy_Policy() {
                   I may employ third-party companies and individuals due to the following reasons:
                 </p>
                 <p>
-                 
+
                   <li>
                     To provide the Service on our behalf
                   </li>
@@ -142,7 +153,7 @@ export default function Privacy_Policy() {
         <div className='container'>
           <div className='row'>
             <div className='col-12 hedding center'>
-            <h1>  Security</h1>
+              <h1>  Security</h1>
             </div>
 
             <hr></hr>
@@ -161,7 +172,7 @@ export default function Privacy_Policy() {
         <div className='container'>
           <div className='row'>
             <div className='col-12 hedding center'>
-            <h1>  Links to Other Sites</h1>
+              <h1>  Links to Other Sites</h1>
             </div>
 
             <hr></hr>
@@ -180,7 +191,7 @@ export default function Privacy_Policy() {
         <div className='container'>
           <div className='row'>
             <div className='col-12 hedding center'>
-          <h1>    Children’s Privacy</h1>
+              <h1>    Children’s Privacy</h1>
             </div>
 
             <hr></hr>
@@ -199,7 +210,7 @@ export default function Privacy_Policy() {
         <div className='container'>
           <div className='row'>
             <div className='col-12 hedding center'>
-           <h1>   Changes to This Privacy Policy</h1>
+              <h1>   Changes to This Privacy Policy</h1>
             </div>
 
             <hr></hr>
@@ -210,7 +221,7 @@ export default function Privacy_Policy() {
                   I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.
                 </p>
                 <p>
-                <p>  This policy is effective as of 2021-09-18</p>
+                  <p>  This policy is effective as of 2021-09-18</p>
                 </p>
 
               </div>
@@ -221,7 +232,7 @@ export default function Privacy_Policy() {
         <div className='container '>
           <div className='row'>
             <div className='col-12 hedding center'>
-           <h1>   Contact Us</h1>
+              <h1>   Contact Us</h1>
             </div>
 
             <hr></hr>

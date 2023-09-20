@@ -22,13 +22,15 @@ import LatestvideoPlay from "./Components/pages/Video/Latest_videoPlay"
 import Video from './Components/pages/Video/Video';
 import IPlPriemier from "./Components/pages/IplPrimer/Ipl"
 import SelcectIpl from "./Components/pages/IplPrimer/SelectIplNews"
-import Redirection from "../src/Redirection"
+import Redirection from "./RedirectionRoute/Redirection"
 import IccWorld from "../src/Components/pages/IccWorldCup/IccWorldCup"
 import SelectIccWorldCup from "../src/Components/pages/IccWorldCup/SelectIccWorldCup"
 import RulsRegulation from "./Components/pages/Ruls&Regulation/RulsRegulation"
 import RulsRegulation1 from '../src/Components/pages/Ruls&Regulation/RulsRegulationsbyid';
 import Cricketplayers from "../src/Components/pages/Cricketplayers/Cricketplayers"
 import CricketplayersByid from "../src/Components/pages/Cricketplayers/CricketplayersByid"
+import BreakingNewsRediection from './RedirectionRoute/BreakingNewsRediection';
+import CricketRedriction from './RedirectionRoute/Cricketredirection';
 export default function Routing() {
   return (
 
@@ -47,7 +49,8 @@ export default function Routing() {
   <Route path="/series" element={<Series />} />
   <Route path="/contact-us" element={<Contact />} />
   <Route path="/terms-and-conditions" element={<Terms />} />
-  <Route path="/cricket-news/:id/:name" element={<SelectNews />} />
+      <Route path='/cricket-news/:name/:id' element={<CricketRedriction Component={SelectNews}></CricketRedriction>} />
+  <Route path='/cricket-news/:id/:name' element={<SelectNews></SelectNews>  } />
   {/*  Match Priview Route */}
   <Route path='/latest-match/cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
   <Route path='/latest-match/cricket-prediction/:preview/:match/:Title/:id' element={<MatchPreview/>} />
@@ -60,10 +63,12 @@ export default function Routing() {
   {/* End */}
   <Route path="/latest-match" element={<Latestmatch></Latestmatch> } />
   <Route path="/latest-match/cricket-prediction/" element={<Latestmatch></Latestmatch>} />
-  <Route path='/cricket-breakingnews/:id/:Title' element={<Breaking></Breaking>} />
+  <Route path='/cricket-breakingnews/:id/:Title' element={ <BreakingNewsRediection Component={Breaking}></BreakingNewsRediection>} />
+  <Route path='/cricket-breaking-news/:Title/:id' element={ <Breaking></Breaking>} />
   <Route path='/latest-video/:id/:Title' element={<LatestvideoPlay></LatestvideoPlay>} />
   <Route path='/latest-video/' element={<Video></Video>} />
-  <Route path='/breakingNews' element={<BreakingNewsList></BreakingNewsList>} />
+  <Route path='/breakingnews' element={<BreakingNewsRediection Component={BreakingNewsList}></BreakingNewsRediection>} />
+  <Route path='/breaking-news' element={<BreakingNewsList></BreakingNewsList>} />
   <Route path='/ipl_2023' element={<IPlPriemier></IPlPriemier>} />
   <Route path='/ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
   <Route path='/icc-cricket-world-cup-2023' element={<IccWorld></IccWorld>} />

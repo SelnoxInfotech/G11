@@ -21,7 +21,7 @@ export default function IccWorld({ h2, Api }) {
 
         }).then(response => {
             if (response.status === 200) {
-                SetIplData(response.data.data)
+                SetIplData(response.data.data.reverse())
 
 
                 window.scrollTo(0, 0);
@@ -47,6 +47,19 @@ export default function IccWorld({ h2, Api }) {
                 <link rel="canonical" href="https://g11prediction.com/icc-cricket-world-cup-2023" ></link>
                 <meta name="keywords" content="G11 Fantasy Cricket Prediction,ICC CRICKET WORLD CUP 2023,Dream11 prediction,ICC Cricket World Cup 2023 Prediction,Latest News,ICC CRICKET WORLD CUP Match,ICC Cricket World Cup 2023 schedule,ICC Cricket World Cup 2023 results,ICC Cricket World Cup 2023 fixtures,ICC Cricket World Cup 2023 videos" />
                 <meta name='description' content=" ICC Cricket World Cup 2023 Latest News, LIVE Updates, Match Prediction, Schedule, Venue Details, Points Table, Expert Analysis, & much more at G11 prediction."></meta>
+                                                {/* Facebook tags */}
+                                                <meta property="og:type" content={"Cricket"} />
+            <meta property="og:title" content={"ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis | "} />
+            <meta property="og:description" content={"ICC Cricket World Cup 2023 Latest News, LIVE Updates, Match Prediction, Schedule, Venue Details, Points Table, Expert Analysis, & much more at G11 prediction."} />
+            { /* End Facebook tags */}
+            { /* Twitter tags */}
+            <meta name="twitter:creator" content={"Cricket"} />
+            <meta name="twitter:card" content={"ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis | "} />
+            <meta name="twitter:title" content={"ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis | "} />
+            <meta name="twitter:description" content={"ICC Cricket World Cup 2023 Latest News, LIVE Updates, Match Prediction, Schedule, Venue Details, Points Table, Expert Analysis, & much more at G11 prediction."} />
+      
+           
+           
             </Helmet>
             <div className='row'>
                 <div className='col-12  breaking_news_hed mb-2 '>
@@ -66,7 +79,7 @@ export default function IccWorld({ h2, Api }) {
                                     <div className='col ShareOption'>
                                             <RWebShare
                                                 data={{
-                                                    url: `https://g11prediction.com/ICC-Cricket-World-Cup-2023/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '')}`
+                                                    url: `https://g11prediction.com/icc-cricket-world-cup-2023/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '').toLowerCase()}`
                                                 }}
                                                 onClick={() => console.log("shared successfully!")}
                                             >
@@ -76,7 +89,7 @@ export default function IccWorld({ h2, Api }) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/ICC-Cricket-World-Cup-2023/${breakingnews?.urlslug?.replace(/\s+/g, '-')}/${breakingnews.id} `}>
+                                        <Link className="hedding hovereffect text" to={`/icc-cricket-world-cup-2023/${breakingnews?.urlslug?.replace(/\s+/g, '-').toLowerCase()}/${breakingnews.id} `}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>

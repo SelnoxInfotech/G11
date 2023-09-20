@@ -2,17 +2,31 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 export default function FAQ() {
-  return (
+    return (
         <div className='container-fluid  center'>
             <Helmet>
                 <title>FAQs | G11 | Fantasy Cricket  Prediction Today's Match | </title>
-                <link rel="canonical" href="https://g11prediction.com/fAQ" ></link>
+                <link rel="canonical" href="https://g11prediction.com/faq" ></link>
                 <meta name='description' content='FAQs, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and more. Dream11 Betting Tips. '></meta>
+
+                {/* Facebook tags */}
+                <meta property="og:type" content={"Cricket"} />
+                <meta property="og:title" content={"FAQs | G11 | Fantasy Cricket  Prediction Today's Match |"} />
+                <meta property="og:description" content='FAQs, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and more. Dream11 Betting Tips.' />
+                { /* End Facebook tags */}
+                { /* Twitter tags */}
+                <meta name="twitter:creator" content={"Cricket"} />
+                <meta name="twitter:card" content={"FAQs | G11 | Fantasy Cricket  Prediction Today's Match |"} />
+                <meta name="twitter:title" content={"FAQs | G11 | Fantasy Cricket  Prediction Today's Match |"} />
+                <meta name="twitter:description" content='FAQs, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and more. Dream11 Betting Tips.' />
+
+
+
             </Helmet>
             <div className='Container'>
                 <div className='row'>
                     <div className='col-12 hedding center'>
-                <h1>    What is G11 App?</h1>
+                        <h1>    What is G11 App?</h1>
                     </div>
 
                     <hr></hr>
@@ -28,7 +42,7 @@ export default function FAQ() {
                 </div>
                 <div className='row center'>
                     <div className='col-12 hedding center'>
-                  <h1>  Do you guys upade match analysis regularly?</h1>
+                        <h1>  Do you guys upade match analysis regularly?</h1>
                     </div>
                     <hr></hr>
                 </div>
@@ -36,7 +50,7 @@ export default function FAQ() {
                     <div className='row '>
                         <div className='col-12 textSize '>
                             <p>
-                             yes from past 5 years. every day. we have been updating match previews regularly and on time . thatswhy pwople love us
+                                yes from past 5 years. every day. we have been updating match previews regularly and on time . thatswhy pwople love us
                             </p>
 
                         </div>
@@ -47,7 +61,7 @@ export default function FAQ() {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-12 hedding center'>
-                     <h1>   What makes you special from others?</h1>
+                            <h1>   What makes you special from others?</h1>
                         </div>
 
                         <hr></hr>
@@ -57,7 +71,7 @@ export default function FAQ() {
                                 <div className='col-12 textSize'>
                                     <p> Our Unique Research Analysis, Team Guide and Team Blueprint for each match helps users to make their own team in less time.</p>
                                     <p>If you are always busy with your work and don't get enough time to Research for a match, then you are at right place.</p>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -66,5 +80,5 @@ export default function FAQ() {
 
             </div>
         </div>
-  )
+    )
 }

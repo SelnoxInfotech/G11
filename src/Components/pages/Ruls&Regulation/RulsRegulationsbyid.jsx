@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import { useParams } from "react-router-dom";
 import Helmet from "react-helmet"
 import RulsRegulation from "./RulsRegulation";
-import {AiFillEye} from "react-icons/ai"
+import { AiFillEye } from "react-icons/ai"
 export default function RulsRegulationsbyid(props) {
     const { id } = useParams();
     const [Api, SetApi] = useState(false)
@@ -31,8 +31,8 @@ export default function RulsRegulationsbyid(props) {
             }
 
         ).then(response => {
-            SetApi((Api)=>{
-                  return !Api
+            SetApi((Api) => {
+                return !Api
             })
         })
     }, [id])
@@ -49,6 +49,17 @@ export default function RulsRegulationsbyid(props) {
                             <link rel="canonical" href="https://g11prediction.com/cricket-rules-and-regulation/:Title/:id" ></link>
                             <meta name="keywords" content="Cricket Playing Conditions, Cricket Rules and Regulations, Cricket Laws, Cricket Playing Rules, ODI laws, T20 rules, Cricket match playing rules, cricket penalty conditions," />
                             <meta name='description' content={data.Meta_Description}></meta>
+                            {/* Facebook tags */}
+                            <meta property="og:type" content={"Cricket"} />
+                            <meta property="og:title" content={data.Meta_title} />
+                            <meta property="og:description" content={data.Meta_Description} />
+                            { /* End Facebook tags */}
+                            { /* Twitter tags */}
+                            <meta name="twitter:creator" content={"Cricket"} />
+                            <meta name="twitter:card" content={data.Meta_title} />
+                            <meta name="twitter:title" content={data.Meta_title} />
+                            <meta name="twitter:description" content={data.Meta_Description} />
+
                         </Helmet>
                     )
                 })
@@ -71,14 +82,14 @@ export default function RulsRegulationsbyid(props) {
                                         {parse(data.Description)}
                                     </div>
 
-                                        <div className="col-12 ViewCount">
-                                            <div className="col-6 ViewCountEye">
-                                              <AiFillEye></AiFillEye>  <span>{data?.ViewCount + 1} view</span>
-                                            </div>
-                                            <div className="col-6 ViewCountDate">
-                                            <p >{data.created.slice(0, 10)}</p>
-                                            </div>
+                                    <div className="col-12 ViewCount">
+                                        <div className="col-6 ViewCountEye">
+                                            <AiFillEye></AiFillEye>  <span>{data?.ViewCount + 1} view</span>
                                         </div>
+                                        <div className="col-6 ViewCountDate">
+                                            <p >{data.created.slice(0, 10)}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +97,7 @@ export default function RulsRegulationsbyid(props) {
                 })
 
             }
-            <RulsRegulation  Api={Api}  h2={true}></RulsRegulation>
+            <RulsRegulation Api={Api} h2={true}></RulsRegulation>
         </div>
     )
 }

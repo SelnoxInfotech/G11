@@ -30,9 +30,9 @@ export default function Breaking(props) {
             }
 
         ).then(response => {
-            SetApi((Api)=>{
+            SetApi((Api) => {
                 return !Api
-          })
+            })
         })
     }, [id])
 
@@ -47,6 +47,17 @@ export default function Breaking(props) {
                             <link rel="canonical" href="https://g11prediction.com/cricket-breakingnews/:id/:Title" ></link>
                             <meta name="keywords" content="Cricket Betting Tips & Predictions" />
                             <meta name='description' content={data.Meta_Description}></meta>
+                            {/* Facebook tags */}
+                            <meta property="og:type" content={"website"} />
+                            <meta property="og:title" content={data.Meta_title} />
+                            <meta property="og:description" content={ data.Meta_Description} />
+                            { /* End Facebook tags */}
+                            { /* Twitter tags */}
+                            <meta name="twitter:creator" content={"Cricket"} />
+                            <meta name="twitter:card" content={data.Meta_title} />
+                            <meta name="twitter:title" content={data.Meta_title} />
+                            <meta name="twitter:description" content={ data.Meta_Description } />
+
                         </Helmet>
 
 
@@ -78,7 +89,7 @@ export default function Breaking(props) {
                                             <p >{data.created.slice(0, 10)}</p>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>

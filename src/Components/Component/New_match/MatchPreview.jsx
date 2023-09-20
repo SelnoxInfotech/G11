@@ -60,7 +60,7 @@ function MatchPreview(props) {
 
         const input = containerData.querySelector("div >p").innerHTML;
         const f = containerData.querySelector("div >h3").innerHTML;
-        Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${_id}`)
+        Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-').toLowerCase()}/${match}/${input.replace(/\s+/g, '-').slice(26).toLowerCase()}/${_id}`)
 
         SetTitle(input.replace(/\s+/g, '-'))
       }).catch((error) => {
@@ -104,7 +104,7 @@ function MatchPreview(props) {
 
           const input = containerData.querySelector("div >p").innerHTML;
           const f = containerData.querySelector("div >h3").innerHTML;
-          Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${preview}`)
+          Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26).toLowerCase()}/${preview}`)
           SetTitle(input.replace(/\s+/g, '-'))
         })
       })
@@ -113,33 +113,55 @@ function MatchPreview(props) {
   }, [_id])
 
   function TaBFunction(e) {
-    Navigate(`/latest-match/cricket-prediction/${e.target.innerText.replace(/\s+/g, '-')}/${match}/${Title1.replace(/\s+/g, '-').slice(26)}/${_id}`)
+    Navigate(`/latest-match/cricket-prediction/${e.target.innerText.replace(/\s+/g, '-').toLowerCase()}/${match}/${Title1.replace(/\s+/g, '-').slice(26).toLowerCase()}/${_id}`)
   }
-
   return (
 
     <div>
       <Helmet>
-        <title>{`${preview} | ${Title1?.replace(/\-+/g, ' ').slice(26)}`}| Cricket Prediction |  </title>
+        <title>{`${preview?.replace('-', ' ')} | ${Title1?.replace(/\-+/g, ' ').slice(26)}`}| Cricket Prediction |  </title>
         <link rel="canonical" href="https://g11prediction.com/latest-match" ></link>
         <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match" />
         <meta name='description'
           content={
-            preview === "Match-Preview" ? metaDiscription.slice(0, 160)
-              : preview === "Team-Guide" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}` + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
-                : preview === "Cheat-sheet" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}` + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
-                  : preview === "Teams" && `${Title1?.replace(/\-+/g, ' ').slice(26)}` + "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
+            preview === "match-preview" ? metaDiscription.slice(0, 160)
+              : preview === "team-guide" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}` + " "+"team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
+                : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}`+ " "+ "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
+                  : preview === "teams" && `${Title1?.replace(/\-+/g, ' ').slice(26)}` +  " "+"Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
 
           }
 
         ></meta>
+                {/* Facebook tags */}
+                <meta property="og:type" content={"website"} />
+        <meta property="og:title" content={`${preview} | ${Title1?.replace(/\-+/g, ' ').slice(26)}` + "| Cricket Prediction | "} />
+        <meta property="og:description" content={
+          preview === "match -preview" ? metaDiscription.slice(0, 160)
+            : preview === "team-guide" ? `${Title1?.replace(/\-+/g, ' ').slice(26) + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
+              : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, ' ').slice(26) + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
+                : preview === "teams" && `${Title1?.replace(/\-+/g, ' ').slice(26)}` + "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
+
+        } />
+        { /* End Facebook tags */}
+        { /* Twitter tags */}
+        <meta name="twitter:creator" content={"Cricket"} />
+        <meta name="twitter:card" content={`${preview} | ${Title1?.replace(/\-+/g, ' ').slice(26)}` + "| Cricket Prediction | "} />
+        <meta name="twitter:title" content={`${preview} | ${Title1?.replace(/\-+/g, ' ').slice(26)}` + "| Cricket Prediction | "} />
+        <meta name="twitter:description" content={
+          preview === "matchp-review" ? metaDiscription.slice(0, 160)
+            : preview === "team-guide" ? `${Title1?.replace(/\-+/g, '').slice(26)     + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
+              : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, '').slice(26) + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
+                : preview === "teams" && `${Title1?.replace(/\+/g, '').slice(26)  + "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}`
+
+        } />
+
       </Helmet>
       <Tabs
-        defaultActiveKey="Match_Preview"
+        defaultActiveKey="match_preview"
         id="uncontrolled-tab-example"
         className="mb-3"
         onClick={TaBFunction}>
-        < Tab className='color' eventKey="Match_Preview" title={preview === "Match-Preview" ? <h1 className='match_priview' >Match Preview</h1> : "Match Preview"} >
+        < Tab className='color' eventKey="match_preview" title={preview === "match-preview" ? <h1 className='match_priview' >Match Preview</h1> : <h2 className='match_priview'>Match Preview</h2>} >
           <div className='container'>
             <div className='row'>
               <div className='col-12 ' >
@@ -148,7 +170,7 @@ function MatchPreview(props) {
             </div>
           </div>
         </Tab>
-        < Tab className='color' eventKey="Team_Guide" title={preview === "Team-Guide" ? <h1 className='match_priview' >Team Guide</h1> : "Team Guide"} >
+        < Tab className='color' eventKey="Team_Guide" title={preview === "team-guide" ? <h1 className='match_priview' >Team Guide</h1> : <h2 className='match_priview'>Team Guide</h2>} >
           <div className='container' section >
             <div className='row'>
               <div className='col-12'>
@@ -158,7 +180,7 @@ function MatchPreview(props) {
           </div>
         </Tab>
 
-        < Tab className='color' eventKey="Details_Analysis" title={preview === "Cheat-sheet" ? <h1 className='match_priview' >Cheat sheet</h1> : "Cheat sheet"}>
+        < Tab className='color' eventKey="details_Analysis" title={preview === "cheat-sheet" ? <h1 className='match_priview' >Cheat sheet</h1> : <h2 className='match_priview'>Cheat sheet</h2>}>
           <div className='container'>
             <div className='row'>
               <div className='col-12 '>
@@ -167,7 +189,7 @@ function MatchPreview(props) {
             </div>
           </div>
         </Tab>
-        < Tab className='color' eventKey="Teams" title={preview === "Teams" ? <h1 className='match_priview' >Teams</h1> : "Teams"}>
+        < Tab className='color' eventKey="teams" title={preview === "teams" ? <h1 className='match_priview' >Teams</h1> : <h2 className='match_priview'>Teams</h2>}>
           <div className='container'>
             <div className='row'>
               <div className='col-12'>

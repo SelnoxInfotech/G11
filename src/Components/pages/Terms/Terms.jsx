@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 export default function Terms() {
   window.scrollTo({
-    top: 0, 
+    top: 0,
     behavior: 'smooth'
     /* you can also use 'auto' behaviour
        in place of 'smooth' */
@@ -14,12 +14,26 @@ export default function Terms() {
         <title>Terms & Conditions | G11 Fantasy Cricket Prediction |</title>
         <link rel="canonical" href="https://g11prediction.com/terms-and-conditions" ></link>
         <meta name='description' content="'G11 Fantasy Cricket Prediction for Today's match.  Dream11 Tips Cricket Prediction. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps "></meta>
+
+        {/* Facebook tags */}
+        <meta property="og:type" content={"Cricket"} />
+        <meta property="og:title" content={"Terms & Conditions | G11 Fantasy Cricket Prediction |"} />
+        <meta property="og:description" content={"G11 Fantasy Cricket Prediction for Today's match.  Dream11 Tips Cricket Prediction. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps "} />
+        { /* End Facebook tags */}
+        { /* Twitter tags */}
+        <meta name="twitter:creator" content={"Cricket"} />
+        <meta name="twitter:card" content={"Terms & Conditions | G11 Fantasy Cricket Prediction |"} />
+        <meta name="twitter:title" content={"Terms & Conditions | G11 Fantasy Cricket Prediction |"} />
+        <meta name="twitter:description" content={"G11 Fantasy Cricket Prediction for Today's match.  Dream11 Tips Cricket Prediction. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps "} />
+
+
+
       </Helmet>
       <div className='Container'>
-    
+
         <div className='row'>
           <div className='col-12 hedding center'>
-          <h1>  Terms and Conditions</h1>
+            <h1>  Terms and Conditions</h1>
           </div>
 
           <hr></hr>
@@ -40,7 +54,7 @@ export default function Terms() {
         </div>
         <div className='row center'>
           <div className='col-12 hedding center'>
-           <h1> The app does use third party services that declare their own Terms and Conditions.</h1>
+            <h1> The app does use third party services that declare their own Terms and Conditions.</h1>
           </div>
           <hr></hr>
         </div>
@@ -71,7 +85,7 @@ export default function Terms() {
         </div>
         <div className='row center'>
           <div className='col-12 hedding center'>
-          <h1>  Changes to This Terms and Conditions</h1>
+            <h1>  Changes to This Terms and Conditions</h1>
           </div>
           <hr></hr>
         </div>
@@ -90,7 +104,7 @@ export default function Terms() {
 
         <div className='row center'>
           <div className='col-12 hedding center'>
-         <h1>   Contact Us</h1>
+            <h1>   Contact Us</h1>
           </div>
           <hr></hr>
         </div>
@@ -100,13 +114,13 @@ export default function Terms() {
               <p>
                 If you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at info@grand11.in
               </p>
-           
+
             </div>
           </div>
         </div>
 
 
-        
+
       </div>
     </div>
   )
