@@ -56,6 +56,7 @@ export default function BreakingNewsList({ h2 ,Api}) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Breaking News |  G11 Fantasy Cricket Prediction |  </title>
+                <link rel="canonical" href="https://g11prediction.com/breakingNews" ></link>
                 <meta name="keywords" content="Breaking News, Cricket news, G11 Fantasy Cricket Prediction, Dream11 prediction, Cricket News Today, Live Cricket News, Online Cricket News, Cricket News Today Match, world cup 2023 cricket news," />
                 <meta name="title" key="title" content="Breaking News |  G11 Fantasy Cricket Prediction |" />
                 <meta name='description' content="Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."></meta>
@@ -96,7 +97,7 @@ export default function BreakingNewsList({ h2 ,Api}) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/Cricket-BreakingNews/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-')}`}>
+                                        <Link className="hedding hovereffect text" to={`/cricket-breakingnews/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-')}`}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>

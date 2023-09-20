@@ -111,7 +111,7 @@ function HighLight_News() {
                                         <Col sm={6}  >
                                             <div className="  hedding hovereffect "  >    <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}> <h2 >{data.title.substr(0,50)}</h2> </Link> </div>
                                             <div className="Hight_content"><span className="content text" value={data} >{parse(data.content.substr(0,500))}</span></div>
-                                            <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}><div> <button className="btn mt-3 hovereffect text-break fw-lighter " >Read Full News</button></div></Link>
+                                            <Link to={`/cricket-news/${data.id}/${data.title.replace(/\s+/g, '-')}`}><div> <button className="btn mt-3 hovereffect text-break fw-lighter " >Read Full News</button></div></Link>
                                         </Col>
                                     </Row>
                                    

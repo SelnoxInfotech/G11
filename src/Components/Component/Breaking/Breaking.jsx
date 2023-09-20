@@ -44,6 +44,7 @@ export default function Breaking(props) {
                     return (
                         <Helmet key={index}>
                             <title>{data.Meta_title}</title>
+                            <link rel="canonical" href="https://g11prediction.com/cricket-breakingnews/:id/:Title" ></link>
                             <meta name="keywords" content="Cricket Betting Tips & Predictions" />
                             <meta name='description' content={data.Meta_Description}></meta>
                         </Helmet>

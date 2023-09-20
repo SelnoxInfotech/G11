@@ -44,9 +44,9 @@ function LatestNews() {
 
                                 </Col >
                                 <Col sm={6} >
-                                    <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}>   <div className="hedding hovereffect text"><h3> {data.title.substr(0,55)}</h3></div></Link>
+                                    <Link to={`/cricket-news/${data.id}/${data.title.replace(/\s+/g, '-')}`}>   <div className="hedding hovereffect text"><h3> {data.title.substr(0,55)}</h3></div></Link>
                                     <div><span className="content text">{parse(data.content.substr(0,1000))}</span></div>
-                                    <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}><button className="btn primary hovereffect" >Read Full News</button></Link>
+                                    <Link to={`/cricket-news/${data.id}/${data.title.replace(/\s+/g, '-')}`}><button className="btn primary hovereffect" >Read Full News</button></Link>
                                 </Col>
 
                                 <div className="row ">

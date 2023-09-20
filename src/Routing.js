@@ -40,39 +40,39 @@ export default function Routing() {
   <Route exact path="/" element={<Home />}>
   </Route>
   <Route path="/players" element={<Players />} />
-  <Route path="/Cricket-news" element={<News />} />
-  <Route path="/About-us" element={<About />} />
-  <Route path="/FAQ" element={<FAQ />} />
-  <Route path="/Privacy-policy" element={<PrivacyPolicy />} />
+  <Route path="/cricket-news" element={<News />} />
+  <Route path="/about-us" element={<About />} />
+  <Route path="/fAQ" element={<FAQ />} />
+  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
   <Route path="/series" element={<Series />} />
   <Route path="/contact-us" element={<Contact />} />
-  <Route path="/Terms-and-Conditions" element={<Terms />} />
-  <Route path="/Cricket-News/:id/:name" element={<SelectNews />} />
+  <Route path="/terms-and-conditions" element={<Terms />} />
+  <Route path="/cricket-news/:id/:name" element={<SelectNews />} />
   {/*  Match Priview Route */}
-  <Route path='/Latest-match/Cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
-  <Route path='/Latest-match/Cricket-prediction/:preview/:match/:Title/:id' element={<MatchPreview/>} />
-  <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<Redirection Component={MatchPreview } ></Redirection>} />
+  <Route path='/latest-match/cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
+  <Route path='/latest-match/cricket-prediction/:preview/:match/:Title/:id' element={<MatchPreview/>} />
+  <Route path='/latest-match/cricket-prediction/:id/:match/:Title/:preview' element={<Redirection Component={MatchPreview } ></Redirection>} />
   {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title' element={<MatchPreview />} /> */}
   {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} /> */}
-  <Route path='/Cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
-  <Route path='/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
+  <Route path='/cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
+  <Route path='/cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
   {/* <Route path='/Cricket-prediction_match/:id/:match/:Title/:preview' element={<MatchPreview />} /> */}
   {/* End */}
-  <Route path="/Latest-match/" element={<Latestmatch></Latestmatch> } />
-  <Route path="/Latest-match/Cricket-prediction/" element={<Latestmatch></Latestmatch>} />
-  <Route path='/Cricket-BreakingNews/:id/:Title' element={<Breaking></Breaking>} />
-  <Route path='/Latest-Video/:id/:Title' element={<LatestvideoPlay></LatestvideoPlay>} />
-  <Route path='/Latest-Video/' element={<Video></Video>} />
-  <Route path='/BreakingNews' element={<BreakingNewsList></BreakingNewsList>} />
-  <Route path='/Ipl_2023' element={<IPlPriemier></IPlPriemier>} />
-  <Route path='/Ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
-  <Route path='/ICC-Cricket-World-Cup-2023/' element={<IccWorld></IccWorld>} />
-  <Route path='/ICC-Cricket-World-Cup-2023/:Title/:id' element={<SelectIccWorldCup></SelectIccWorldCup>} />
-  <Route path='/Cricket-rules-and-regulation/' element={<RulsRegulation></RulsRegulation>} />
-  <Route path='/Cricket-rules-and-regulation/:Title/:id' element={<RulsRegulation1></RulsRegulation1>} />
+  <Route path="/latest-match" element={<Latestmatch></Latestmatch> } />
+  <Route path="/latest-match/cricket-prediction/" element={<Latestmatch></Latestmatch>} />
+  <Route path='/cricket-breakingnews/:id/:Title' element={<Breaking></Breaking>} />
+  <Route path='/latest-video/:id/:Title' element={<LatestvideoPlay></LatestvideoPlay>} />
+  <Route path='/latest-video/' element={<Video></Video>} />
+  <Route path='/breakingNews' element={<BreakingNewsList></BreakingNewsList>} />
+  <Route path='/ipl_2023' element={<IPlPriemier></IPlPriemier>} />
+  <Route path='/ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
+  <Route path='/icc-cricket-world-cup-2023' element={<IccWorld></IccWorld>} />
+  <Route path='/icc-cricket-world-cup-2023/:Title/:id' element={<SelectIccWorldCup></SelectIccWorldCup>} />
+  <Route path='/cricket-rules-and-regulation' element={<RulsRegulation></RulsRegulation>} />
+  <Route path='/cricket-rules-and-regulation/:Title/:id' element={<RulsRegulation1></RulsRegulation1>} />
 
 
-  <Route path='/cricket-players/' element={<Cricketplayers></Cricketplayers>} />
+  <Route path='/cricket-players' element={<Cricketplayers></Cricketplayers>} />
   <Route path='/cricket-players/:Title/:id' element={<CricketplayersByid></CricketplayersByid>} />
   <Route path='*' element={<PageNotFound></PageNotFound>} />
 </Routes>

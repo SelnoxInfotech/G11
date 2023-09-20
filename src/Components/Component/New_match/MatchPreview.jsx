@@ -104,7 +104,7 @@ function MatchPreview(props) {
 
           const input = containerData.querySelector("div >p").innerHTML;
           const f = containerData.querySelector("div >h3").innerHTML;
-          Navigate(`/Latest-match/Cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${preview}`)
+          Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26)}/${preview}`)
           SetTitle(input.replace(/\s+/g, '-'))
         })
       })
@@ -113,7 +113,7 @@ function MatchPreview(props) {
   }, [_id])
 
   function TaBFunction(e) {
-    Navigate(`/Latest-match/Cricket-prediction/${e.target.innerText.replace(/\s+/g, '-')}/${match}/${Title1.replace(/\s+/g, '-').slice(26)}/${_id}`)
+    Navigate(`/latest-match/cricket-prediction/${e.target.innerText.replace(/\s+/g, '-')}/${match}/${Title1.replace(/\s+/g, '-').slice(26)}/${_id}`)
   }
 
   return (
@@ -121,6 +121,7 @@ function MatchPreview(props) {
     <div>
       <Helmet>
         <title>{`${preview} | ${Title1?.replace(/\-+/g, ' ').slice(26)}`}| Cricket Prediction |  </title>
+        <link rel="canonical" href="https://g11prediction.com/latest-match" ></link>
         <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match" />
         <meta name='description'
           content={

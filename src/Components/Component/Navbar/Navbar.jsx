@@ -82,18 +82,18 @@ const hideDropdown = e => {
                     className="NavLink" to="/">Home</Link>
                   <NavLink
                     onClick={toggleOffCanvas}
-                    to="/Latest-match">Match</NavLink>
+                    to="/latest-match">Match</NavLink>
                   <NavLink
                     onClick={toggleOffCanvas}
-                    to="/BreakingNews">Breaking News</NavLink>
+                    to="/breakingNews">Breaking News</NavLink>
                   <NavLink Ipl_premier_league_2023
                     onClick={toggleOffCanvas}
-                    to="/ICC-Cricket-World-Cup-2023/">ICC World Cup 2023</NavLink >
+                    to="/icc-cricket-world-cup-2023/">ICC World Cup 2023</NavLink >
 
 
                   <NavLink
                     onClick={toggleOffCanvas}
-                    to="/About-us">About</NavLink >
+                    to="/about-us">About</NavLink >
                   <NavLink
                     onClick={toggleOffCanvas}
                     to="/contact-us">Contact us</NavLink >
@@ -109,11 +109,11 @@ const hideDropdown = e => {
                    
                   >
                     
-                   <NavLink  to="/Cricket-rules-and-regulation/" active   style={{fontSize:"17px" ,margin: '0'  , display: "inline-flex",position: 'relative ',left:"10%"}}> Cricket Rules and Regulation</NavLink>
+                   <NavLink  to="/cricket-rules-and-regulation/" active   style={{fontSize:"17px" ,margin: '0'  , display: "inline-flex",position: 'relative ',left:"10%"}}> Cricket Rules and Regulation</NavLink>
                     <NavLink  to="/cricket-players" active  style={{fontSize:"17px" ,margin: '0' ,  display: "inline-flex",position: 'relative ',left:"30%"}}>  Cricket Players</NavLink>
-                    <NavLink to="/Ipl_2023" active  style={{fontSize:"17px" ,margin: '0' ,  display: "flex",position: 'relative ',left:"41%", width:'fit-content'}}>IPL 2023</NavLink>
-                    <NavLink  to="/Cricket-news" active  style={{fontSize:"17px" ,margin: '0' , display: "flex",position: 'relative ',left:"46%", width:'fit-content'}}>News</NavLink>
-                    <NavLink  to="/Latest-video" active style={{fontSize:"17px" ,margin: '0' , display: "flex",position: 'relative ',left:"46%", width:'fit-content'}}>Video</NavLink>
+                    <NavLink to="/ipl_2023" active  style={{fontSize:"17px" ,margin: '0' ,  display: "flex",position: 'relative ',left:"41%", width:'fit-content'}}>IPL 2023</NavLink>
+                    <NavLink  to="/cricket-news" active  style={{fontSize:"17px" ,margin: '0' , display: "flex",position: 'relative ',left:"46%", width:'fit-content'}}>News</NavLink>
+                    <NavLink  to="/latest-video" active style={{fontSize:"17px" ,margin: '0' , display: "flex",position: 'relative ',left:"46%", width:'fit-content'}}>Video</NavLink>
                   
                   </NavDropdown>
                 </Nav>

@@ -33,7 +33,7 @@ const Match_option = () => {
                    
                     </div>
                       <div className="col scroll-container ">
-                      <span className="  scroll-text  "> <Link to= {`/Cricket-BreakingNews/${breakingnews.id}/${breakingnews.Title}`} className="hovereffect" > {breakingnews.Title} </Link></span>
+                      <span className="  scroll-text  "> <Link to= {`/cricket-breakingnews/${breakingnews.id}/${breakingnews.Title}`} className="hovereffect" > {breakingnews.Title} </Link></span>
                   </div>
                   
 

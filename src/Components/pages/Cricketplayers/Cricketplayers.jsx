@@ -44,6 +44,7 @@ export default function Cricketplayers({ h2, Api}) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Men's Cricket Players | List, Stats, Details | G11 Prediction |</title>
+               <link rel="canonical" href="https://g11prediction.com/cricket-players" ></link>
                 <meta name="keywords" content="Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details, " />
                 <meta name='description' content="List of all Men's Cricket Players, Biography, Records, ODI Teams, Test cricket, T20, Stats, Ranking, and profiles on G11 fantasy cricket prediction."></meta>
             </Helmet>

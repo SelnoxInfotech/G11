@@ -46,6 +46,7 @@ export default function RulsRegulationsbyid(props) {
                     return (
                         <Helmet>
                             <title>{data.Meta_title}</title>
+                            <link rel="canonical" href="https://g11prediction.com/cricket-rules-and-regulation/:Title/:id" ></link>
                             <meta name="keywords" content="Cricket Playing Conditions, Cricket Rules and Regulations, Cricket Laws, Cricket Playing Rules, ODI laws, T20 rules, Cricket match playing rules, cricket penalty conditions," />
                             <meta name='description' content={data.Meta_Description}></meta>
                         </Helmet>

@@ -38,7 +38,7 @@ export default function Banner() {
                                  
                                         <div className='row '>
 
-                                            <Link to={`Cricket-prediction/${match.id}/${match.title.replace(/\s+/g, '-')}`} >
+                                            <Link to={`cricket-prediction/${match.id}/${match.title.replace(/\s+/g, '-')}`} >
                                             <div className='col-sm center'>
                                                 <span style={{ color: "white" }}>{match.first_team}</span>
                                             </div>

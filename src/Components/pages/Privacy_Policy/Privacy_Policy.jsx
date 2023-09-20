@@ -12,6 +12,7 @@ export default function Privacy_Policy() {
     <div className='container-fluid  center'>
       <Helmet>
         <title>Privacy Policy | G11 Fantasy Cricket Prediction Today's Match | </title>
+        <link rel="canonical" href="https://g11prediction.com/privacy-policy" ></link>
         <meta name='description' content="Privacy Policy, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream11 Prediction website"></meta>
       </Helmet>
       <div className='Container'>

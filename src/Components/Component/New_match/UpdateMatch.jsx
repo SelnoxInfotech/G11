@@ -94,7 +94,7 @@ export default function UpdateMatch() {
                         return (
 
                             <div className="container-fluid updatematch " key={index}>
-                                <Link to={`Cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-')}`} >
+                                <Link to={`cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-')}`} >
 
                                     <div className="row center grid_row">
                                         <div className="col-12 center color">

@@ -44,6 +44,7 @@ export default function IccWorld({ h2, Api }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis |</title>
+                <link rel="canonical" href="https://g11prediction.com/icc-cricket-world-cup-2023" ></link>
                 <meta name="keywords" content="G11 Fantasy Cricket Prediction,ICC CRICKET WORLD CUP 2023,Dream11 prediction,ICC Cricket World Cup 2023 Prediction,Latest News,ICC CRICKET WORLD CUP Match,ICC Cricket World Cup 2023 schedule,ICC Cricket World Cup 2023 results,ICC Cricket World Cup 2023 fixtures,ICC Cricket World Cup 2023 videos" />
                 <meta name='description' content=" ICC Cricket World Cup 2023 Latest News, LIVE Updates, Match Prediction, Schedule, Venue Details, Points Table, Expert Analysis, & much more at G11 prediction."></meta>
             </Helmet>

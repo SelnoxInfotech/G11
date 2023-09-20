@@ -6,6 +6,7 @@ export default function FAQ() {
         <div className='container-fluid  center'>
             <Helmet>
                 <title>FAQs | G11 | Fantasy Cricket  Prediction Today's Match | </title>
+                <link rel="canonical" href="https://g11prediction.com/fAQ" ></link>
                 <meta name='description' content='FAQs, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and more. Dream11 Betting Tips. '></meta>
             </Helmet>
             <div className='Container'>
