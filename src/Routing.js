@@ -31,6 +31,7 @@ import Cricketplayers from "../src/Components/pages/Cricketplayers/Cricketplayer
 import CricketplayersByid from "../src/Components/pages/Cricketplayers/CricketplayersByid"
 import BreakingNewsRediection from './RedirectionRoute/BreakingNewsRediection';
 import CricketRedriction from './RedirectionRoute/Cricketredirection';
+import VideoPageRedirect from "./RedirectionRoute/VideoPageRedirect"
 export default function Routing() {
   return (
 
@@ -65,6 +66,7 @@ export default function Routing() {
   <Route path="/latest-match/cricket-prediction/" element={<Latestmatch></Latestmatch>} />
   <Route path='/cricket-breakingnews/:id/:Title' element={ <BreakingNewsRediection Component={Breaking}></BreakingNewsRediection>} />
   <Route path='/cricket-breaking-news/:Title/:id' element={ <Breaking></Breaking>} />
+  <Route path='/latest-video/:id/:Title' element={<VideoPageRedirect Component={LatestvideoPlay}></VideoPageRedirect>} />
   <Route path='/latest-video/:id/:Title' element={<LatestvideoPlay></LatestvideoPlay>} />
   <Route path='/latest-video/' element={<Video></Video>} />
   <Route path='/breakingnews' element={<BreakingNewsRediection Component={BreakingNewsList}></BreakingNewsRediection>} />

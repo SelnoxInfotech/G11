@@ -69,7 +69,7 @@ export default function Video() {
                 </div>
                 <div>
                   <div className="col latest_video_title">
-                    <Link className="hedding hovereffect text" to={`${ele.id}/${ele.Title.replace(/\s+/g, '-').slice(0, -1)}`}><p>{ele.Title.substr(0, 100)}</p></Link>
+                    <Link className="hedding hovereffect text" to={`${ele.id}/${ele.Title.replace(/\s+/g, '-').slice(0, -1).toLowerCase()}`}><p>{ele.Title.substr(0, 100)}</p></Link>
                     <span className="Latest_video_date">
                       <span className="ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
                       {ele.created.slice(0, 10)}

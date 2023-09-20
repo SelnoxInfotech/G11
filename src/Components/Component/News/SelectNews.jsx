@@ -28,7 +28,6 @@ export default function SelectNews() {
        
            }
         })
-        // navigate(`/cricket-news/${name}/${id}`)
     },[])
     // window.scrollTo(0, 0);
     

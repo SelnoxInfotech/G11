@@ -23,8 +23,16 @@ const Latest_videoPlay = () => {
         }).then(response => {
             const LatestVideo = response?.data.data
             const select_video_by_user = _.find(LatestVideo, LatestVideo => LatestVideo.id === parseInt(id.id))
-            SetPlayer([select_video_by_user])
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if(select_video_by_user !== undefined)
+            {
+                SetPlayer([select_video_by_user])
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          else{
+            const select_video_by_user = _.find(LatestVideo, LatestVideo => LatestVideo.id === parseInt(id.Title))
+                SetPlayer([select_video_by_user])
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
         })
     }, [id.id])
     return (
