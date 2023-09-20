@@ -9,7 +9,7 @@ function CricketRedriction(props) {
     
         
             
-              Navigate(`/cricket-news/${Params.name}/${Params.id}`)
+              Navigate(`/cricket-news/${Params.id}/${Params.name}`)
             
      } ,[Component ])
     return (

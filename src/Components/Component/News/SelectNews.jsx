@@ -10,7 +10,7 @@ export default function SelectNews() {
     const [user_new, set_user_news] = useState([])
     window.scrollTo(0, 0);
     useEffect(() => {
-        navigate(`/cricket-news/${id}/${name}`)
+        
         axios("https://grand11.in/g11/api/post", {
             method: 'GET',
         }).then(response => {
@@ -28,6 +28,7 @@ export default function SelectNews() {
        
            }
         })
+        // navigate(`/cricket-news/${name}/${id}`)
     },[])
     // window.scrollTo(0, 0);
     
