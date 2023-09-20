@@ -37,26 +37,30 @@ export default function Home() {
 
       <NewsState>
 
-    
+
         <Helmet>
-        <title>G11- Fantasy Cricket Prediction for Today's Match |  </title>
-        <link rel="canonical" href="https://g11prediction.com/" ></link>
-        <meta  name="keywords" content="G11 Fantasy Cricket Prediction, cricket news, Today's match Prediction, Latest Cricket News, Cricket Betting Tips & Predictions, fantasy cricket prediction, dream 11 today prediction, today best cricket match prediction" />
-        <meta name='description' content="G11- Fantasy Cricket Prediction for Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 Tips Cricket Prediction."></meta>
-                                      {/* Facebook tags */}
-                                      <meta property="og:type" content={"Cricket"} />
-            <meta property="og:title" content={"G11- Fantasy Cricket Prediction for Today's Match | "} />
-            <meta property="og:description" content={"G11- Fantasy Cricket Prediction for Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 Tips Cricket Prediction."} />
-            { /* End Facebook tags */}
-            { /* Twitter tags */}
-            <meta name="twitter:creator" content={"Cricket"} />
-            <meta name="twitter:card" content={"G11- Fantasy Cricket Prediction for Today's Match | "} />
-            <meta name="twitter:title" content={"G11- Fantasy Cricket Prediction for Today's Match | "} />
-            <meta name="twitter:description" content={"G11- Fantasy Cricket Prediction for Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 Tips Cricket Prediction."} />
-      
-           
-      </Helmet>
-      
+          <title>G11- Fantasy Cricket Prediction for Today's Match |  </title>
+          <link rel="canonical" href="https://g11prediction.com/" ></link>
+          <meta name="keywords" content="G11 Fantasy Cricket Prediction, cricket news, Today's match Prediction, Latest Cricket News, Cricket Betting Tips & Predictions, fantasy cricket prediction, dream 11 today prediction, today best cricket match prediction" />
+          <meta name='description' content="G11- Fantasy Cricket Prediction for Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 Tips Cricket Prediction."></meta>
+          {/* Facebook tags */}
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://g11prediction.com/" />
+          <meta property="og:title" content={"G11- Fantasy Cricket Prediction for Today's Match | "} />
+          <meta property="og:description" content={"G11- Fantasy Cricket Prediction for Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 Tips Cricket Prediction."} />
+          { /* End Facebook tags */}
+          { /* Twitter tags */}
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://g11prediction.com/" />
+          <meta name="twitter:card" content={"G11- Fantasy Cricket Prediction for Today's Match | "} />
+          <meta name="twitter:title" content={"G11- Fantasy Cricket Prediction for Today's Match | "} />
+          <meta name="twitter:description" content={"G11- Fantasy Cricket Prediction for Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 Tips Cricket Prediction."} />
+
+
+        </Helmet>
+
 
 
 
