@@ -57,7 +57,7 @@ export default function Video() {
       </Helmet>
       <div className="row">
         <div className='col-12 center mt-2 breaking_news_hed'>
-          <h1>Latest Video News - G11 Fantasy Cricket Prediction</h1>
+          <h1>Latest Video News </h1><h2 style={{fontSize:"23px"}}>- G11 Fantasy Cricket Prediction</h2>
         </div>
         {val?.slice(0, next)?.map((ele) => {
           return (

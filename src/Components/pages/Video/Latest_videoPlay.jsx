@@ -71,7 +71,7 @@ const Latest_videoPlay = () => {
                             return (
                                 <div key={ele.id} className=" latestVideoPlaylist" >
                                     <ReactPlayer url={ele?.VideoUrl} width="100%" height="500px" onClick={handleVideo} />
-                                    <h2 className="breaking_news_hed" style={{ fontSize: "27px" }}>{ele.Title.substr(0, 100)}</h2>
+                                    <h1 className="breaking_news_hed" style={{ fontSize: "27px" }}>{ele.Title.substr(0, 100)}</h1>
                                     <span className="latestVideoPlaylist_videoDate " >
                                         <span className="latestVideoPlaylist_ClenderIcon"> <CiCalendarDate></CiCalendarDate></span>
                                         {ele.created.slice(0, 10)}
