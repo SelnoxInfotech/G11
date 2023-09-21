@@ -5,8 +5,9 @@ import { useParams } from "react-router-dom";
 import BreakingNewsList from "./BreakingNewsList";
 import Helmet from "react-helmet"
 import { AiFillEye } from "react-icons/ai"
+
 export default function Breaking(props) {
-    const { id } = useParams();
+    const { id,Title } = useParams();
     const [breakingnews, setbreakingnews] = useState([])
     const [Api, SetApi] = useState(false)
     useEffect(() => {
@@ -19,6 +20,17 @@ export default function Breaking(props) {
                 setbreakingnews(response.data.data)
 
             }
+        }).catch(()=>{
+            axios(`https://www.g11fantasy.com/NewsSection/Get-Newsbyid/${Title}`, {
+            method: 'GET',
+
+        }).then(response => {
+            window.scrollTo(0, 0);
+            if (response.status === 200) {
+                setbreakingnews(response.data.data)
+
+            }
+        })
         })
     }, [id])
     useEffect(() => {
