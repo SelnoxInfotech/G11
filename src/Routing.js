@@ -70,14 +70,14 @@ export default function Routing() {
           {/* End */}
           <Route path="/Latest-Match" element={<Latest Component={Latestmatch} ></Latest>} />
           <Route path="/latest-match" element={<Latestmatch></Latestmatch>} />
-          <Route path="/latest-match/cricket-prediction/" element={<Latestmatch></Latestmatch>} />
+          <Route path="/latest-match/cricket-prediction" element={<Latestmatch></Latestmatch>} />
           <Route path='/Cricket-BreakingNews/:id/:Title' element={<BreakingNewsRediection Component={Breaking}></BreakingNewsRediection>} />
           <Route path='/cricket-breakingnews/:id/:Title' element={<BreakingNewsRediection Component={Breaking}></BreakingNewsRediection>} />
           <Route path='/cricket-breaking-news/:Title/:id' element={<Breaking></Breaking>} />
           <Route path='/latest-video/:id/:Title' element={<VideoPageRedirect Component={LatestvideoPlay}></VideoPageRedirect>} />
           <Route path='/latest-video/:id/:Title' element={<LatestvideoPlay></LatestvideoPlay>} />
-          <Route path='/Latest-Video/' element={<Latest Component={Video} ></Latest>} />
-          <Route path='/latest-video/' element={<Video></Video>} />
+          <Route path='/Latest-Video' element={<Latest Component={Video} ></Latest>} />
+          <Route path='/latest-video' element={<Video></Video>} />
           <Route path='/breakingnews' element={<BreakingNewsRediection Component={BreakingNewsList}></BreakingNewsRediection>} />
           <Route path='/breaking-news' element={<BreakingNewsList></BreakingNewsList>} />
           <Route path='/ipl_2023' element={ <Latest Component={IPlPriemier} ></Latest> } />
