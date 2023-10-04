@@ -79,7 +79,7 @@ export default function Ipl({Api, h2 }) {
                                         <div className='col ShareOption'>
                                             <RWebShare
                                                 data={{
-                                                    url: `https://g11prediction.com/icc-cricket-world-cup-2023/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '').toLowerCase()}`
+                                                    url: `https://g11prediction.com/cricket-breaking-news/${breakingnews.id}/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '').toLowerCase()}`
                                                 }}
                                                 onClick={() => console.log("shared successfully!")}
                                             >
@@ -89,7 +89,7 @@ export default function Ipl({Api, h2 }) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/ipl_2023/${breakingnews?.urlslug?.replace(/\s+/g, '-').toLowerCase()}/${breakingnews.id} `}>
+                                        <Link className="hedding hovereffect text" to={`/cricket-breaking-news/${breakingnews?.urlslug?.replace(/\s+/g, '-').toLowerCase()}/${breakingnews.id} `}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>

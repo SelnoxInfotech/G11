@@ -14,31 +14,40 @@ export default function BreakingNewsList({ h2, Api }) {
 
 
     const [breakingnews, setbreakingnews] = useState([])
+    // useEffect(() => {
+    //     axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
+    //         method: 'GET',
+
+    //     }).then(response => {
+    //         if (response.status === 200) {
+    //             setbreakingnews(response.data)
+
+
+    //         }
+    //     })
+
+    // }, [Api])
     useEffect(() => {
-        axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
+        axios("https://www.g11fantasy.com/NewsSection/Get-TopNews/1", {
             method: 'GET',
 
         }).then(response => {
             if (response.status === 200) {
-                setbreakingnews(response.data.reverse())
+                setbreakingnews(response.data)
+                axios("https://www.g11fantasy.com/NewsSection/Get-News/1", {
+            method: 'GET',
+
+        }).then(response => {
+            if (response.status === 200) {
+                setbreakingnews(response.data)
 
 
-                window.scrollTo(0, 0);
+            }
+        })
             }
         })
 
     }, [])
-    useEffect(() => {
-        axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
-            method: 'GET',
-
-        }).then(response => {
-            if (response.status === 200) {
-                setbreakingnews(response.data.reverse())
-            }
-        })
-
-    }, [Api])
 
 
 

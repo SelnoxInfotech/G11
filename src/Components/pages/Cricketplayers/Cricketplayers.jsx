@@ -16,7 +16,7 @@ export default function Cricketplayers({ h2, Api}) {
 
     const [IplData, SetIplData] = useState([])
     useEffect(() => {
-        axios("https://g11fantasy.com/NewsSection/FilterbySubCategory/3", {
+        axios("https://g11fantasy.com/NewsSection/FilterbyCategory/3", {
             method: 'GET',
 
         }).then(response => {

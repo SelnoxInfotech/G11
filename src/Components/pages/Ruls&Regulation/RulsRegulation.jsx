@@ -16,7 +16,7 @@ export default function RulsRegulation({ h2, Api }) {
 
     const [IplData, SetIplData] = useState([])
     useEffect(() => {
-        axios("https://g11fantasy.com/NewsSection/FilterbySubCategory/4", {
+        axios("https://g11fantasy.com/NewsSection/FilterbyCategory/2", {
             method: 'GET',
 
         }).then(response => {

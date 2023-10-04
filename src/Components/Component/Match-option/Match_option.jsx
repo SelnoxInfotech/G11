@@ -8,7 +8,7 @@ const Match_option = () => {
     const [breakingnews, set_latest_news] = useState('')
    
     useEffect(() => {
-        axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
+        axios("https://www.g11fantasy.com/NewsSection/Get-TopNews/1", {
             method: 'GET',
 
         }).then(response => {
@@ -33,7 +33,7 @@ const Match_option = () => {
                    
                     </div>
                       <div className="col scroll-container ">
-                      <span className="  scroll-text  "> <Link to= {`/cricket-breakingnews/${breakingnews.id}/${breakingnews.Title}`} className="hovereffect" > {breakingnews.Title} </Link></span>
+                      <span className="  scroll-text  "> <Link to= {`/cricket-breakingnews/${breakingnews.id}/${breakingnews.Title?.replace(/\s+/g, '-')}`} className="hovereffect" > {breakingnews.Title} </Link></span>
                   </div>
                   
 

@@ -48,7 +48,7 @@ export default function                                                 New() {
                                 <div className="col-xs-12 col-sm-6 col-md-3 Breaking_news_gap" key={index}>
                                     <div className="card">
                                         <div className="video text-center">
-                                            <Link className="hedding hovereffect text" to={`/cricket-news/${data.id}/${data.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                                            <Link className="hedding hovereffect text" to={`/cricket-breakingnews/${data.title.replace(/\s+/g, '-').toLowerCase()}/${data.id}`}>
                                                 <img className=" News_image" src={`https://grand11.in/g11/${data.image}`} alt="news_image" />
                                                 <div className='News_image_title'>
                                                     <h2 className="card-text content col_card_heading">{data.title.slice(0, 80)}</h2>

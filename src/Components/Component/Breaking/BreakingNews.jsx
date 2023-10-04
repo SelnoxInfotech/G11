@@ -7,7 +7,7 @@ function Breaking() {
     const [breakingnews, setbreakingnews] = useState([])
 
     useEffect(() => { 
-        axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
+        axios("https://www.g11fantasy.com/NewsSection/Get-TopNews/1", {
             method: 'GET',
               
         }).then(response => {
@@ -22,7 +22,7 @@ function Breaking() {
         
         dots: true,
         lazyLoad: true,
-        infinite: true,
+        infinite: false,
         speed: 80,
         slidesToShow: 4,
         slidesToScroll: 2,
