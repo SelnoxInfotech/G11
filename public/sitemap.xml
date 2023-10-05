@@ -46,57 +46,7 @@
   <priority>0.3</priority>
 </url>
 <url> 
-  <loc>https://g11prediction.com/cricket-news/:id/:name</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>
-</url>
-<url> 
-  <loc>https://g11prediction.com/latest-match/cricket-prediction/:id/:match</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>
-</url>
-<url> 
-  <loc>https://g11prediction.com/latest-match/cricket-prediction/:preview/:match/:Title/:id</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/latest-match/cricket-prediction/:id/:match/:Title/:preview</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/cricket-prediction/:id/:match</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/cricket-prediction/:id/:match/:Title/:preview</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/latest-match</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
   <loc>https://g11prediction.com/latest-match/cricket-prediction</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/cricket-breaking-news/:id/:Title</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/latest-video/:id/:Title</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/latest-video</loc>
   <changefreq>Hourly</changefreq>
   <priority>0.4</priority>  
 </url>
@@ -111,32 +61,12 @@
   <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com/ipl_2023/:Title/:id</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
   <loc>https://g11prediction.com/icc-cricket-world-cup-2023</loc>
   <changefreq>Hourly</changefreq>
   <priority>0.4</priority>  
 </url>
 <url> 
-  <loc>https://g11prediction.com/icc-cricket-world-cup-2023/:Title/:id</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/cricket-rules-and-regulation/:Title/:id</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
   <loc>https://g11prediction.com/cricket-players</loc>
-  <changefreq>Hourly</changefreq>
-  <priority>0.4</priority>  
-</url>
-<url> 
-  <loc>https://g11prediction.com/cricket-players/:Title/:id</loc>
   <changefreq>Hourly</changefreq>
   <priority>0.4</priority>  
 </url>
