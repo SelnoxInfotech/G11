@@ -15,6 +15,26 @@ function MatchPreview(props) {
   const [metaDiscription, SetmetaDiscription] = useState('')
   const { id, match, preview } = useParams();
   const _id = id
+  function modifystr(str) {
+    str = str.replace(/[^a-zA-Z0-9/ ]/g, "-");
+    str = str.trim().replaceAll(' ', "-");
+    let a = 0;
+    while (a < 1) {
+      if (str.includes("--")) {
+        str = str.replaceAll("--", "-")
+      } else if (str.includes("//")) {
+        str = str.replaceAll("//", "/")
+      } else if (str.includes("//")) {
+        str = str.replaceAll("-/", "/")
+      } else if (str.includes("//")) {
+        str = str.replaceAll("/-", "/")
+      } else {
+        a++
+      }
+    }
+
+    return str
+  }
   useEffect(() => {
     var url = "https://grand11.in/g11/api/page/match_details/" + _id
     var p = "https://grand11.in/g11/api/page/match_details/" + preview
@@ -60,7 +80,7 @@ function MatchPreview(props) {
 
         const input = containerData.querySelector("div >p").innerHTML;
         const f = containerData.querySelector("div >h3").innerHTML;
-        Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-').toLowerCase()}/${match}/${input.replace(/\s+/g, '-').slice(26).toLowerCase()}/${_id}`)
+        Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-').toLowerCase()}/${match}/${modifystr(input.replace(/\s+/g, '-').slice(26).toLowerCase())}/${_id}`)
 
         SetTitle(input.replace(/\s+/g, '-'))
       }).catch((error) => {

@@ -17,7 +17,7 @@ export default function Video() {
     const getApi = async () => {
       const response = await fetch("https://www.g11fantasy.com/NewsSection/Get-VideoNews/")
       const data = await response.json();
-      setVal(data.data.reverse())
+      setVal(data.data)
     }
     getApi()
 

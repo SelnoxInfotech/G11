@@ -16,14 +16,14 @@ export default function RelativeVideo() {
     const [setHandleAudio] = useState(false)
     const handleVideo = () => {
         setHandleAudio(true)
-    }
+    }   
     useEffect(() => {
 
         axios("https://www.g11fantasy.com/NewsSection/Get-VideoNews/", {
             method: 'GET',
         }).then(response => {
 
-            setVal(response.data.data.reverse())
+            setVal(response.data.data)
         })
     },[])
 

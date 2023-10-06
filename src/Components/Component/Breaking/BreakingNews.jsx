@@ -12,7 +12,7 @@ function Breaking() {
               
         }).then(response => {
             if (response.status === 200) {
-                setbreakingnews(response.data.reverse())
+                setbreakingnews(response.data)
               
             }
         })
