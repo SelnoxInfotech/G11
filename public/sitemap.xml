@@ -70,5 +70,26 @@
   <changefreq>Hourly</changefreq>
   <priority>0.4</priority>  
 </url>
+<url> 
+  <loc>https://g11prediction.com/sitemap/sitemapmatchpreview.xml</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/sitemap/sitemapteamguide.xml</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/sitemap/sitemapcheatsheet.xml</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
+</url>
+<url> 
+  <loc>https://g11prediction.com/sitemap/sitemapteam.xml</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
+</url>
+
 
 </urlset>
