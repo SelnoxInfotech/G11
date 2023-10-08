@@ -68,7 +68,7 @@ export default function UpdateMatch() {
                                 <div className="col-sm-4 bottom" key={index}>
 
                                     <div className="container-fluid updatematch ">
-                                        <Link to={location.pathname !== "/latest-match" ? `${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1).toLowerCase()}` : `cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1).toLowerCase()}    `} >
+                                        <Link to={location.pathname !== "/latest-match" ? `${data.id}/${data.title.replace(/\s+/g, '-').toLowerCase()}` : `cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1).toLowerCase()}    `} >
 
                                             <div className="row center grid_row">
                                                 <div className="col-12 center color">

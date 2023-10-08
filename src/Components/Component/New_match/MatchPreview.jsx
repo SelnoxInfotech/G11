@@ -124,7 +124,7 @@ function MatchPreview(props) {
 
           const input = containerData.querySelector("div >p").innerHTML;
           const f = containerData.querySelector("div >h3").innerHTML;
-          Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${input.replace(/\s+/g, '-').slice(26).toLowerCase()}/${preview}`)
+          Navigate(`/latest-match/cricket-prediction/${f.replace(/\s+/g, '-')}/${match}/${modifystr(input.replace(/\s+/g, '-').slice(26).toLowerCase())}/${preview}`)
           SetTitle(input.replace(/\s+/g, '-'))
         })
       })
@@ -133,7 +133,7 @@ function MatchPreview(props) {
   }, [_id])
 
   function TaBFunction(e) {
-    Navigate(`/latest-match/cricket-prediction/${e.target.innerText.replace(/\s+/g, '-').toLowerCase()}/${match}/${Title1.replace(/\s+/g, '-').slice(26).toLowerCase()}/${_id}`)
+    Navigate(`/latest-match/cricket-prediction/${e.target.innerText.replace(/\s+/g, '-').toLowerCase()}/${match}/${modifystr(Title1.replace(/\s+/g, '-').slice(26).toLowerCase())}/${_id}`)
   }
   return (
 

@@ -5,7 +5,7 @@ function Redirection(props) {
   const Navigate = useNavigate()
   const { Component } = props;
   React.useEffect(() => {
-    Navigate(`/latest-match/cricket-prediction/${Params.preview}/${Params.match}/${Params.Title}/${Params.id}`)
+    Navigate(`/latest-match/cricket-prediction/${Params.preview}/${Params.match}/${Params.Title.replace(/\s+/g, '-')}/${Params.id}`)
   }, [Component])
   return (
 
