@@ -20,10 +20,9 @@ export default function Footer_link() {
       </div>
       <div className='container link '>
         <ul className='policy_link  '>
-          <NavLink to="/terms-and-conditions"> <li className='term_privacy hovereffect'>Term of use</li></NavLink>
 
-          <NavLink to="/privacy-policy"><li className='term_privacy hovereffect '>  |&nbsp;Privacy Policy&nbsp; </li></NavLink>
-          <NavLink to="/Privacy-policy">  <li className='term_privacy hovereffect'>|&nbsp;Cookies Policy&nbsp;</li></NavLink>
+          <NavLink to="/privacy-policy"><li className='term_privacy hovereffect '> &nbsp;Privacy Policy&nbsp; </li></NavLink>
+          <NavLink to="/disclaimer">  <li className='term_privacy hovereffect'>|&nbsp;Disclaimer&nbsp;</li></NavLink>
           <NavLink to="/faq"><li className='term_privacy hovereffect'>|&nbsp;FAQ</li></NavLink>
         </ul>
       </div>

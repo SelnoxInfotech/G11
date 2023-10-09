@@ -27,7 +27,29 @@ export default function About() {
             <meta name="twitter:description" content={"About-Us- G11 best Fantasy Cricket Prediction Web and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps."} />
             </Helmet>
             <div className='Container'>
-       
+            <div className='row'>
+                    <div className='col-12 hedding center'>
+                        <h2> About us</h2>
+                    </div>
+
+                    <hr></hr>
+
+                </div >
+                <div className='container'>
+                    <div className='row '>
+                        <div className='col-12 textSize'>
+                            <p>Welcome to G11Prediction.com, your All-In-One destination for cricket predictions and analysis. We are very passionate about cricket, so we have started this website to share our analysis and predictions about cricket matches.</p>
+
+                            <p>Meet Our Co-Founder</p>
+                            <p>Sandeep Kourav - Founder and Entrepreneur</p>
+                            <p>Sandeep Kourav is the person behind G11Prediction.com. As a dedicated entrepreneur and co-founder of Selnox Infotech, he has experience and a deep passion for cricket on this platform. With a vision to give accurate and exciting cricket match predictions, Sandeep has curated a team of experts who share their analysis of the sport.
+
+                            </p>
+                            <p>Our Mission</p>
+                            <p>At G11Prediction.com, our mission is to give you an accurate cricket-watching experience by giving you insightful match predictions and analysis reports. We know the excitement that comes with each cricket game, and we are committed to giving you accurate predictions to keep you engaged throughout the match.</p>
+                        </div>
+                    </div>
+                </div>
                 <div className='row'>
                     <div className='col-12 hedding center'>
                         <h1> Welcome to G11 Fantasy Cricket Prediction Site ?</h1>

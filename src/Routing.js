@@ -34,6 +34,7 @@ import CricketRedriction from './RedirectionRoute/Cricketredirection';
 import VideoPageRedirect from "./RedirectionRoute/VideoPageRedirect"
 import Latest from "./RedirectionRoute/LatestMatch"
 import Ipl from './RedirectionRoute/Ipl';
+import Disclaimer from './Components/pages/Privacy_Policy/Disclaimer';
 export default function Routing() {
   return (
 
@@ -49,7 +50,7 @@ export default function Routing() {
           {/* News */}
           <Route path="/Cricket-news" element={ <Latest Component={News} ></Latest>} />
           <Route path="/cricket-news" element={<News />} />
-
+          <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/fAQ" element={<FAQ />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

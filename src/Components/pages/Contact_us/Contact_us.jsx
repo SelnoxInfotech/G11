@@ -7,31 +7,42 @@ export default function Contact_us() {
       <Helmet>
         <title>Contact Us | G11 Fantasy Cricket Prediction Today's Match |  </title>
         <link rel="canonical" href="https://g11prediction.com/contact-us" ></link>
-        <meta  name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match" />
+        <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match" />
         <meta name='description' content="Contact us, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 betting tips"></meta>
-              {/* Facebook tags */}
-              <meta property="og:type" content={"Cricket"} />
-            <meta property="og:title" content={"Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"} />
-            <meta property="og:description" content={"Contact us, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 betting tips"} />
-            { /* End Facebook tags */}
-            { /* Twitter tags */}
-            <meta name="twitter:creator" content={"Cricket"} />
-            <meta name="twitter:card" content={"Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"} />
-            <meta name="twitter:title" content={"Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"} />
-            <meta name="twitter:description" content={"Contact us, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 betting tips"} />
-      
-      
+        {/* Facebook tags */}
+        <meta property="og:type" content={"Cricket"} />
+        <meta property="og:title" content={"Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"} />
+        <meta property="og:description" content={"Contact us, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 betting tips"} />
+        { /* End Facebook tags */}
+        { /* Twitter tags */}
+        <meta name="twitter:creator" content={"Cricket"} />
+        <meta name="twitter:card" content={"Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"} />
+        <meta name="twitter:title" content={"Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"} />
+        <meta name="twitter:description" content={"Contact us, G11 Fantasy Cricket Prediction Today's Match. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps. Dream 11 betting tips"} />
+
+
       </Helmet>
       <div className='Container'>
         <div className='row'>
           <div className='col-12 hedding center'>
-          <h1>Contact Us</h1>
+            <h1>Contact Us</h1>
+          </div>
+          <hr></hr>
+          <div className='container'>
+            <div className='row '>
+              <div className='container'>
+                {/* <div className='row center'> */}
+                <div className='col-12 textSize '>
+                  <p>If you have any questions, concerns, or requests regarding anything throughout the website, please contact us at: </p>
+                </div>
+                {/* </div> */}
+              </div>
+            </div>
           </div>
 
-          <hr></hr>
           <div className='row'>
             <div className='col-12 hedding center'>
-            <h2>  Address</h2>
+              <h2>  Address</h2>
             </div>
 
             <hr></hr>
@@ -41,27 +52,29 @@ export default function Contact_us() {
               <div className='container'>
                 <div className='row center'>
                   <div className='col-12 textSize '>
-                    <p>Selnox infotech pvt ltd </p>  
-                    <p>shop no- 8   </p>
-                    <p>1st floor platinum plaza mata mandir road </p>
-                    <p> bhopal (m.p) - 462003</p>
+                    <p>Email Id:   <a href="mailto:g11hosting@gmail.com">g11hosting@gmail.com</a> </p>
+                    <p> <span>Contacts No:</span><span><a href='tel:+916262003399'>+916262003399</a></span></p>
+                    <p>or</p>
+                    <p>Visit: shop no 8,1st floor platinum plaza mata mandir road, bhopal (m.p)
+                      Bhopal, Madhya Pradesh, India, Madhya pradesh 462003
+                      India</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className='container'>
+          {/* <div className='container'>
             <div className='row '>
               <div className='col-12 textSize '>
-             <a href="mailto:info@grand11.in">   info@grand11.in</a>
+                <a href="mailto:g11hosting@gmail.com">g11hosting@gmail.com</a>
               </div>
             </div>
           </div>
           <div className='container'>
             <div className='row'>
               <div className='col-12 hedding center'>
-              <h2>Phone</h2>
+                <h2>Phone</h2>
               </div>
 
               <hr></hr>
@@ -74,7 +87,7 @@ export default function Contact_us() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>

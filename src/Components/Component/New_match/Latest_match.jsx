@@ -27,6 +27,29 @@ export default function UpdateMatch() {
     const handlelessImage = () => {
         setNext(next - imagePerRow);
     };
+    function modifystr(str) {
+        str = str.replace(/[^a-zA-Z0-9/ ]/g, "-");
+        str = str.trim().replaceAll(' ', "-");
+        let a = 0;
+        while (a < 1) {
+          if (str.includes("--")) {
+            str = str.replaceAll("--", "-")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("//", "/")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("-/", "/")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("/-", "/")
+          } else {
+            a++
+          }
+        }
+    
+        return str
+      }
+
+
+
     return (
 
 
@@ -68,7 +91,7 @@ export default function UpdateMatch() {
                                 <div className="col-sm-4 bottom" key={index}>
 
                                     <div className="container-fluid updatematch ">
-                                        <Link to={location.pathname !== "/latest-match" ? `${data.id}/${data.title.replace(/\s+/g, '-').toLowerCase()}` : `cricket-prediction/${data.id}/${data.title.replace(/\s+/g, '-').slice(0, -1).toLowerCase()}    `} >
+                                        <Link to={location.pathname !== "/latest-match" ? `${data.id}/${modifystr(data.title.toLowerCase())}` : `cricket-prediction/${data.id}/${modifystr(data.title.toLowerCase())}    `} >
 
                                             <div className="row center grid_row">
                                                 <div className="col-12 center color">
