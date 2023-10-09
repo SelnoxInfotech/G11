@@ -18,6 +18,28 @@ function Breaking() {
         })
     }, [])
 
+    function modifystr(str) {
+        str = str.replace(/[^a-zA-Z0-9/ ]/g, "-");
+        str = str.trim().replaceAll(' ', "-");
+        let a = 0;
+        while (a < 1) {
+          if (str.includes("--")) {
+            str = str.replaceAll("--", "-")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("//", "/")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("-/", "/")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("/-", "/")
+          } else {
+            a++
+          }
+        }
+    
+        return str
+      }
+
+
     var settings = {
         
         dots: true,
@@ -125,7 +147,7 @@ function Breaking() {
                                     </div >
                                     <div className="col-12 ">
 
-                                        <Link to={`/cricket-breakingnews/${data.id}/${data.Title?.replace(/\s+/g, '-').toLowerCase()}`}  className="hedding hovereffect text  "> 
+                                        <Link to={`/cricket-breakingnews/${data.id}/${modifystr(data.Title?.replace(/\s+/g, '-').toLowerCase())}`}  className="hedding hovereffect text  "> 
                                            <div className="col breacking_news_title">
                                            {data.Title.substr(0, 100)}
                                            </div>

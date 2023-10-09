@@ -111,7 +111,6 @@ async function generateSitemap() {
   
 
   axios.get(`https://www.g11fantasy.com/NewsSection/Get-News/1`).then((respones) => {
-    console.log(respones.data.map((data) => data.urlslug))
 
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -155,7 +154,7 @@ async function generateSitemap() {
 }
 
 
-cron.schedule("*/1 * * * * * ", function () {
+cron.schedule("*/1 * * * *  ", function () {
   if (run === 0) {
     generateSitemap();
     run = 1
