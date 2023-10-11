@@ -11,7 +11,7 @@ export default function BreakingNewsList({ h2, Api }) {
     const [next, setNext] = useState(imagePerRow);
     const [match_new, set_matche_new] = useState([]);
     function modifystr(str) {
-        str = str.replace(/[^a-zA-Z0-9/ ]/g, "-");
+        str = str?.replace(/[^a-zA-Z0-9/ ]/g, "-");
         str = str.trim().replaceAll(' ', "-");
         let a = 0;
         while (a < 1) {
@@ -33,19 +33,7 @@ export default function BreakingNewsList({ h2, Api }) {
 
 
     const [breakingnews, setbreakingnews] = useState([])
-    // useEffect(() => {
-    //     axios("https://www.g11fantasy.com/NewsSection/Get-News/", {
-    //         method: 'GET',
 
-    //     }).then(response => {
-    //         if (response.status === 200) {
-    //             setbreakingnews(response.data)
-
-
-    //         }
-    //     })
-
-    // }, [Api])
     useEffect(() => {
         axios("https://www.g11fantasy.com/NewsSection/Get-TopNews/1", {
             method: 'GET',
@@ -58,6 +46,7 @@ export default function BreakingNewsList({ h2, Api }) {
 
         }).then(response => {
             if (response.status === 200) {
+                console.log(response.data.map((data)=> data.urlslug))
                 setbreakingnews(response.data)
 
 
@@ -118,7 +107,7 @@ export default function BreakingNewsList({ h2, Api }) {
                                         <div className='col ShareOption'>
                                             <RWebShare
                                                 data={{
-                                                    url: `https://g11prediction.com/cricket-breakingnews/${breakingnews.id}/${modifystr(breakingnews?.urlslug?.toLowerCase())}`
+                                                    url: `https://g11prediction.com/cricket-breakingnews/${breakingnews.id}/${modifystr(breakingnews?.urlslug !== null ? breakingnews?.urlslug?.toLowerCase() : breakingnews?.Title)}`
                                                 }}
                                                 onClick={() => console.log("shared successfully!")}
                                             >
@@ -128,7 +117,7 @@ export default function BreakingNewsList({ h2, Api }) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/cricket-breakingnews/${breakingnews.id}/${modifystr(breakingnews?.urlslug.toLowerCase())}`}>
+                                        <Link className="hedding hovereffect text" to={`/cricket-breakingnews/${breakingnews.id}/${modifystr(breakingnews?.urlslug !== null ? breakingnews?.urlslug?.toLowerCase() : breakingnews?.Title)}`}>
                                             <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>

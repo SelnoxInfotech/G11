@@ -33,7 +33,7 @@ async function generateSitemap() {
     axios.get(`https://grand11.in/g11/all_matches_api.php`,).then((respones) => {
     // console.log(respones.data.reverse().slice(0,1))
     const  j = respones.data.reverse()
-    j?.slice(0,500).map((matchdata) => {
+    j?.slice(0,700).map((matchdata) => {
       console.log(matchdata)
 
         request(`https://grand11.in/g11/api/page/match_details/${matchdata.id}`, (error, daeta, html) => {
@@ -100,7 +100,7 @@ async function generateSitemap() {
             })
           } catch (error) {
             console.trace(error)
-            run = 0
+            // run = 0
           }
         });
 
@@ -110,27 +110,26 @@ async function generateSitemap() {
 
   
 
-  axios.get(`https://www.g11fantasy.com/NewsSection/Get-News/1`).then((respones) => {
+//   axios.get(`https://www.g11fantasy.com/NewsSection/Get-News/1`).then((respones) => {
 
-    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${respones.data.map((url) => `
-      <url>
-        <loc>https://g11prediction.com/cricket-breaking-news/${modifystr(url?.urlslug !== null ? url?.urlslug.toLowerCase() : "")}/${url.id}</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-      </url>
-    `).join('')}
-  </urlset>`;
+//     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+//   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+//     ${respones.data.map((url) => `
+//       <url>
+//         <loc>https://g11prediction.com/cricket-breaking-news/${modifystr(url?.urlslug !== null ? url?.urlslug.toLowerCase() : "")}/${url.id}</loc>
+//         <changefreq>daily</changefreq>
+//         <priority>0.7</priority>
+//       </url>
+//     `).join('')}
+//   </urlset>`;
   
-    console.log("breaking")
-      fs.writeFileSync('../public/sitemap/sitemapBreakingnews.xml', sitemapXml);
-      console.log("File written successfully");
-      run = 0
-  }).catch((error)=>{
- console.trace(error)
- run = 0
-  })
+//     console.log("breaking")
+//       fs.writeFileSync('../public/sitemap/sitemapBreakingnews.xml', sitemapXml);
+//       console.log("File written successfully");
+//       // run = 0
+//   }).catch((error)=>{
+//  console.trace(error)
+//   })
   
  
 
@@ -154,11 +153,11 @@ async function generateSitemap() {
 }
 
 
-cron.schedule("*/1 * * * *  ", function () {
-  if (run === 0) {
+// cron.schedule("*/1 * * * *  ", function () {
+  // if (run === 0) {
     generateSitemap();
-    run = 1
-    console.log("running a task every 1 seconds");
-  }
+    // run = 1
+    // console.log("running a task every 1 seconds");
+  // }
 
-});
+// });
