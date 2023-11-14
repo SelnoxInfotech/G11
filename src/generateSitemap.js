@@ -33,7 +33,7 @@ async function generateSitemap() {
     axios.get(`https://grand11.in/g11/all_matches_api.php`,).then((respones) => {
     // console.log(respones.data.reverse().slice(0,1))
     const  j = respones.data.reverse()
-    j?.slice(0,700).map((matchdata) => {
+    j?.slice(0,1000).map((matchdata) => {
       console.log(matchdata)
 
         request(`https://grand11.in/g11/api/page/match_details/${matchdata.id}`, (error, daeta, html) => {
@@ -133,20 +133,7 @@ async function generateSitemap() {
   
  
 
-  //  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-  // <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  //   ${respones.data.map((url) => `
-  //     <url>
-  //       <loc>https://www.weedx.io/products/${url.name.replace(/%20| /g, "-").toLowerCase()}/${url.id}</loc>
-  //       <changefreq>daily</changefreq>
-  //       <priority>0.7</priority>
-  //     </url>
-  //   `).join('')}
-  // </urlset>`;
 
-  // Write the sitemap XML to a file
-  // fs.writeFileSync('../public/sitemap/sitemapmatch.xml', sitemapXml);
-  // })
 
 
 
