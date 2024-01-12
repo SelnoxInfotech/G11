@@ -43,10 +43,10 @@ export default function IccWorld({ h2, Api }) {
     return (
         <div className='container-fluid center'>
             <Helmet>
-                <title>ICC Cricket World Cup 2024 | Latest News, Report, Prediction, Analysis |</title>
-                <link rel="canonical" href="https://g11prediction.com/icc-cricket-world-cup-2023" ></link>
-                <meta name="keywords" content="G11 Fantasy Cricket Prediction,ICC CRICKET WORLD CUP 2023,Dream11 prediction,ICC Cricket World Cup 2023 Prediction,Latest News,ICC CRICKET WORLD CUP Match,ICC Cricket World Cup 2023 schedule,ICC Cricket World Cup 2023 results,ICC Cricket World Cup 2023 fixtures,ICC Cricket World Cup 2023 videos" />
-                <meta name='description' content=" ICC Cricket World Cup 2023 Latest News, LIVE Updates, Match Prediction, Schedule, Venue Details, Points Table, Expert Analysis, & much more at G11 prediction."></meta>
+                <title>ICC Men's T20 World Cup 2024 Latest News, Predictions, Analysis l G11prediction</title>
+                <link rel="canonical" href="https://g11prediction.com/icc-cricket-world-cup-2024" ></link>
+                <meta name="keywords" content=" ICC T20 World Cup 2024,T20 schedule 2024, T20 teams 2024, T20 venues 2024, Dream11 prediction, T20 match prediction, T20 match analysis, T20 Latest News, T20 Live Updates, T20 Highlights," />
+                <meta name='description' content=" ICC Men's T20 World Cup 2024 Live Updates, Latest News, Match Predictions, ICC Men's T20 World Cup 2024 Match Schedule, Venue Details, Points Table, Match Analysis And Much More Only On G11prediction"></meta>
                                                 {/* Facebook tags */}
                                                 <meta property="og:type" content={"Cricket"} />
             <meta property="og:title" content={"ICC Cricket World Cup 2023 | Latest News, Report, Prediction, Analysis | "} />
@@ -64,7 +64,7 @@ export default function IccWorld({ h2, Api }) {
             <div className='row'>
                 <div className='col-12  breaking_news_hed mb-2 '>
                     {
-                        h2 ? <h2>icc cricket world cup 2023 </h2> : <h1>icc cricket world cup 2023 </h1>
+                        h2 ? <h2>icc cricket world cup 2024 </h2> : <h1>icc cricket world cup 2024 </h1>
 
                     }
                 </div>
