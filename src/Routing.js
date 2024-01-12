@@ -21,10 +21,14 @@ import Breaking from './Components/Component/Breaking/Breaking';
 import LatestvideoPlay from "./Components/pages/Video/Latest_videoPlay"
 import Video from './Components/pages/Video/Video';
 import IPlPriemier from "./Components/pages/IplPrimer/Ipl"
+import IPL2024 from "./Components/pages/IplPrimer/Ipl2024/Ipl2024"
 import SelcectIpl from "./Components/pages/IplPrimer/SelectIplNews"
+import SelcectIpl2024 from "./Components/pages/IplPrimer/Ipl2024/SelectIpl2024"
 import Redirection from "./RedirectionRoute/Redirection"
 import IccWorld from "../src/Components/pages/IccWorldCup/IccWorldCup"
+import IccWorld2024 from "../src/Components/pages/IccWorldCup/ICCworld2024/iccWorld2024"
 import SelectIccWorldCup from "../src/Components/pages/IccWorldCup/SelectIccWorldCup"
+import SelectIccWorldCup2024 from "../src/Components/pages/IccWorldCup/ICCworld2024/Selecticcworld"
 import RulsRegulation from "./Components/pages/Ruls&Regulation/RulsRegulation"
 import RulsRegulation1 from '../src/Components/pages/Ruls&Regulation/RulsRegulationsbyid';
 import Cricketplayers from "../src/Components/pages/Cricketplayers/Cricketplayers"
@@ -82,10 +86,14 @@ export default function Routing() {
           <Route path='/breakingnews' element={<BreakingNewsRediection Component={BreakingNewsList}></BreakingNewsRediection>} />
           <Route path='/breaking-news' element={<BreakingNewsList></BreakingNewsList>} />
           <Route path='/ipl_2023' element={ <Latest Component={IPlPriemier} ></Latest> } />
+          <Route path='/ipl_2024' element={ <Latest Component={IPL2024} ></Latest> } />
           <Route path='/Ipl_2023/:Title/:id' element={<Ipl Component={SelcectIpl}></Ipl>} />
           <Route path='/ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
+          <Route path='/ipl_2023/:Title/:id' element={<SelcectIpl2024></SelcectIpl2024>} />
           <Route path='/icc-cricket-world-cup-2023' element={<IccWorld></IccWorld>} />
+          <Route path='/icc-cricket-world-cup-2024' element={<IccWorld2024></IccWorld2024>} />
           <Route path='/icc-cricket-world-cup-2023/:Title/:id' element={<SelectIccWorldCup></SelectIccWorldCup>} />
+          <Route path='/icc-cricket-world-cup-2024/:Title/:id' element={<SelectIccWorldCup2024></SelectIccWorldCup2024>} />
           <Route path='/cricket-rules-and-regulation' element={<RulsRegulation></RulsRegulation>} />
           <Route path='/cricket-rules-and-regulation/:Title/:id' element={<RulsRegulation1></RulsRegulation1>} />
 
