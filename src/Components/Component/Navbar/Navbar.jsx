@@ -88,7 +88,7 @@ const hideDropdown = e => {
                     to="/breakingnews">Breaking News</NavLink>
                     <NavLink
                     onClick={toggleOffCanvas}
-                    to="/ipl_2024">IPL 2024</NavLink>
+                    to="/ipl-2024">IPL 2024</NavLink>
                   <NavLink Ipl_premier_league_2023
                     onClick={toggleOffCanvas}
                     to="/icc-cricket-world-cup-2024">ICC World Cup 2024</NavLink >

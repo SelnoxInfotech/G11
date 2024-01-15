@@ -31,7 +31,6 @@ async function generateSitemap() {
 
     return str
   }
-<<<<<<< HEAD
     axios.get(`https://grand11.in/g11/all_matches_api.php`,).then((respones) => {
     // console.log(respones.data.reverse().slice(0,1))
     const  j = respones.data.reverse()
@@ -108,8 +107,6 @@ async function generateSitemap() {
 
       })
     })
-=======
->>>>>>> 33bcfbd (vfgsd)
 
 
   let feed
@@ -278,15 +275,9 @@ async function generateSitemap() {
 
 
 
-<<<<<<< HEAD
 
 
 
-=======
-  // Write the sitemap XML to a file
-  // fs.writeFileSync('../public/sitemap/sitemapmatch.xml', sitemapXml);
-  // })
->>>>>>> 33bcfbd (vfgsd)
 }
 
 // cron.schedule("*/1 * * * *  ", function () {
