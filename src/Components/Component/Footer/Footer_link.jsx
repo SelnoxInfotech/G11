@@ -18,7 +18,7 @@ export default function Footer_link() {
         <a href='https://www.instagram.com/g11sport/'> <FontAwesomeIcon icon={faInstagram} size="2x" /></a>
         <a href='https://twitter.com/g11prediction'><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
         <a href='tel:+916262003399' className='calling'><span><IoMdCall></IoMdCall> </span> </a>
-        <a href='https://g11prediction.com/Rss.xml' className='calling'><span>   <FaRssSquare /></span> </a>
+        <a href='/rss-feed' className='calling'><span>   <FaRssSquare /></span> </a>
       </div>
       <div className='container link '>
         <ul className='policy_link  '>

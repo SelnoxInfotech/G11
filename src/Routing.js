@@ -39,6 +39,7 @@ import VideoPageRedirect from "./RedirectionRoute/VideoPageRedirect"
 import Latest from "./RedirectionRoute/LatestMatch"
 import Ipl from './RedirectionRoute/Ipl';
 import Disclaimer from './Components/pages/Privacy_Policy/Disclaimer';
+import Rss from './Components/pages/RSS/Rss';
 export default function Routing() {
   return (
 
@@ -100,6 +101,7 @@ export default function Routing() {
 
           <Route path='/cricket-players' element={<Cricketplayers></Cricketplayers>} />
           <Route path='/cricket-players/:Title/:id' element={<CricketplayersByid></CricketplayersByid>} />
+          <Route path='/rss-feed' element={<Rss></Rss>} />
           <Route path='*' element={<PageNotFound></PageNotFound>} />
         </Routes>
         <Footerlink></Footerlink>

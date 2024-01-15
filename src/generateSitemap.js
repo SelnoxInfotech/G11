@@ -259,3 +259,44 @@ generateSitemap();
 // }
 
 // });
+
+
+
+
+
+
+
+
+// let feed 
+// axios.get(`https://www.g11fantasy.com/NewsSection/Get-News/1`).then((respones) => {
+//   // console.log(respones)
+//    feed = new RSS({
+//     title: 'Cricket Breaking News ON TRENDING TOPICS',
+//     description: 'Cricket Breaking News ON TRENDING TOPICS',
+//     feed_url: 'https://g11prediction.com/sitemap/sitemapBreakingnewsrss-feed.xml/',
+//     site_url: 'https://g11prediction.com/',
+//     image_url: 'https://g11prediction.com/image/G11.png',
+//     // managingEditor: 'John Doe',
+//     // webMaster: 'Jane Doe',
+//     language: 'en',
+//     pubDate: new Date(),
+//     // ttl: 60,
+//   });
+//    respones.data.map((url) => {
+//       const l = dangerouslySetInnerHTML={__html: url.Description?.split('</p>')[0].replace(/(<([^>]+)>)/gi, "")}
+//       feed.item({
+//         title: url.Title,
+//         description: l['__html'],
+//         url: `https://g11prediction.com/cricket-breaking-news/${modifystr(url.urlslug?.replace(/\s+/g, '-').toLowerCase())}/${url.id}`,
+//         date: new Date(url.created),
+//       });
+
+//     }).join('')
+    
+//     const xml = feed.xml({ indent: true });
+//    fs.writeFileSync('./RSS/sitemapBreakingnewsrss-Feed.xml', xml, 'utf-8');
+//   console.log("File written successfully");
+//   run = 0
+// }).catch((error) => {
+//   console.trace(error)
+// })
