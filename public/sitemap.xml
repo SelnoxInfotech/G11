@@ -95,6 +95,10 @@
   <changefreq>Hourly</changefreq>
   <priority>0.4</priority>  
 </url>
-
+<url> 
+  <loc>https://g11prediction.com/Rss.xml</loc>
+  <changefreq>Hourly</changefreq>
+  <priority>0.4</priority>  
+</url
 
 </urlset>

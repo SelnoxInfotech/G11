@@ -89,7 +89,7 @@ export default function Routing() {
           <Route path='/ipl-2024' element={ <Latest Component={IPL2024} ></Latest> } />
           <Route path='/Ipl_2023/:Title/:id' element={<Ipl Component={SelcectIpl}></Ipl>} />
           <Route path='/ipl_2023/:Title/:id' element={<SelcectIpl></SelcectIpl>} />
-          <Route path='/ipl_2023/:Title/:id' element={<SelcectIpl2024></SelcectIpl2024>} />
+          <Route path='/ipl_2024/:Title/:id' element={<SelcectIpl2024></SelcectIpl2024>} />
           <Route path='/icc-cricket-world-cup-2023' element={<IccWorld></IccWorld>} />
           <Route path='/icc-cricket-world-cup-2024' element={<IccWorld2024></IccWorld2024>} />
           <Route path='/icc-cricket-world-cup-2023/:Title/:id' element={<SelectIccWorldCup></SelectIccWorldCup>} />
