@@ -10,27 +10,57 @@ async function generateSitemap() {
   let h = []
   let g = []
 
-  function modifystr(str) {
-    console.log(typeof str, " ffff")
-    str = str.replace(/[^a-zA-Z0-9/ ]/g, "-");
-    str = str.trim().replace(' ', "-");
-    let a = 0;
-    while (a < 1) {
-      if (str.includes("--")) {
-        str = str.replace("--", "-")
-      } else if (str.includes("//")) {
-        str = str.replace("//", "/")
-      } else if (str.includes("//")) {
-        str = str.replace("-/", "/")
-      } else if (str.includes("//")) {
-        str = str.replace("/-", "/")
-      } else {
-        a++
+  // function modifystr(str) {
+  //   console.log(typeof str, " ffff")
+  //   str = str.replaceAll(/[^a-zA-Z0-9/ ]/g, "-");
+  //   str = str.trim().replaceAll(' ', "-");
+  //   let a = 0;
+  //   while (a < 1) {
+  //     if (str.includes("--")) {
+  //       str = str.replaceAll("--", "-")
+  //     } else if (str.includes("//")) {
+  //       str = str.replaceAll("//", "/")
+  //     } else if (str.includes("//")) {
+  //       str = str.replaceAll("-/", "/")
+  //     } else if (str.includes("//")) {
+  //       str = str.replaceAll("/-", "/")
+  //     } else {
+  //       a++
+  //     }
+  //   }
+  //   console.log(typeof str, " ffff" , str)
+  //   return str
+  // }
+  function modifystr(inputString) {
+    // Use a regular expression to match all non-alphanumeric characters (excluding underscore)
+    if( typeof inputString === "string" )
+{    
+  const regex = /[^a-zA-Z0-9_]/g;
+  let a = 0;
+  let resultString = inputString.replace(regex, '-');
+  while (a < 1) {
+        if (resultString.includes("--")) {
+          resultString = resultString.replace("--", "-")
+        } else if (resultString.includes("//")) {
+          resultString = resultString.replace("//", "/")
+        } else if (resultString.includes("//")) {
+          resultString = resultString.replace("-/", "/")
+        } else if (resultString.includes("//")) {
+          resultString = resultString.replace("/-", "/")
+        } else {
+          a++
+        }
       }
-    }
+    // Replace all matches with an empty string
 
-    return str
+       console.log(resultString , inputString)
+       
+    return resultString;}
+    else {
+      return ''
+    }
   }
+
   // axios.get(`https://grand11.in/g11/all_matches_api.php`,).then((respones) => {
   //   // console.log(respones.data.reverse().slice(0,1))
   //   const j = respones.data.reverse()
@@ -135,6 +165,7 @@ async function generateSitemap() {
   }).catch((error) => {
     console.trace(error)
   })
+
   axios.get(`https://g11fantasy.com/NewsSection/FilterbySubCategory/7`).then((respones) => {
     console.log(respones)
     let feed1 = new RSS({
@@ -191,8 +222,6 @@ async function generateSitemap() {
     console.trace(error)
   })
 
-
-
   axios.get(`https://g11fantasy.com/NewsSection/FilterbySubCategory/8`).then((respones) => {
     let feed2 = new RSS({
       title: 'IPL 2024 - Latest News & Live Updates',
@@ -219,9 +248,7 @@ async function generateSitemap() {
   }).catch((error) => {
     console.trace(error)
   })
-  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
   axios.get(`https://g11fantasy.com/NewsSection/FilterbySubCategory/2`).then((respones) => {
     let feed3 = new RSS({
       title: 'IPL 2024 - Latest News & Live Updates',
