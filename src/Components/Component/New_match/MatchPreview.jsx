@@ -142,23 +142,24 @@ function MatchPreview(props) {
         <title>{`${preview?.replace('-', ' ')} | ${Title1?.replace(/\-+/g, ' ').slice(26)}`}| Cricket Prediction |  </title>
         <link rel="canonical" href="https://g11prediction.com/latest-match" ></link>
         <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match" />
+        {/* <metatext></meta> */}
         <meta name='description'
           content={
             preview === "match-preview" ? metaDiscription.slice(0, 160)
-              : preview === "team-guide" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}` + " "+"team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
-                : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}`+ " "+ "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
-                  : preview === "teams" && `${Title1?.replace(/\-+/g, ' ').slice(26)}` +  " "+"Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
+              : preview === "team-guide" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}` + " " + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
+                : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, ' ').slice(26)}` + " " + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
+                  : preview === "teams" && `${Title1?.replace(/\-+/g, ' ').slice(26)}` + " " + "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
 
           }
 
         ></meta>
-                {/* Facebook tags */}
-                <meta property="og:type" content={"website"} />
+        {/* Facebook tags */}
+        <meta property="og:type" content={"website"} />
         <meta property="og:title" content={`${preview} | ${Title1?.replace(/\-+/g, ' ').slice(26)}` + "| Cricket Prediction | "} />
         <meta property="og:description" content={
           preview === "match -preview" ? metaDiscription.slice(0, 160)
-            : preview === "team-guide" ? `${Title1?.replace(/\-+/g, ' ').slice(26) + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
-              : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, ' ').slice(26) + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
+            : preview === "team-guide" ? `${Title1?.replace(/\-+/g, ' ').slice(26) + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}`
+              : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, ' ').slice(26) + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}`
                 : preview === "teams" && `${Title1?.replace(/\-+/g, ' ').slice(26)}` + "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"
 
         } />
@@ -169,9 +170,9 @@ function MatchPreview(props) {
         <meta name="twitter:title" content={`${preview} | ${Title1?.replace(/\-+/g, ' ').slice(26)}` + "| Cricket Prediction | "} />
         <meta name="twitter:description" content={
           preview === "matchp-review" ? metaDiscription.slice(0, 160)
-            : preview === "team-guide" ? `${Title1?.replace(/\-+/g, '').slice(26)     + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
-              : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, '').slice(26) + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}` 
-                : preview === "teams" && `${Title1?.replace(/\+/g, '').slice(26)  + "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}`
+            : preview === "team-guide" ? `${Title1?.replace(/\-+/g, '').slice(26) + "team guide cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}`
+              : preview === "cheat-sheet" ? `${Title1?.replace(/\-+/g, '').slice(26) + "Cheet Sheet cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}`
+                : preview === "teams" && `${Title1?.replace(/\+/g, '').slice(26) + "Teams cricket prediction by G11 Fantasy Cricket Betting Prediction Site and Application"}`
 
         } />
 
