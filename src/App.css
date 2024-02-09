@@ -66,7 +66,7 @@
   border-radius: 20px;
   background-repeat: no-repeat;
 
-  background-image: url("/public/image/matchBackground.webp");
+  /* background-image: url("/public/image/matchBackground.webp");  */
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -76,12 +76,12 @@
   background-color: #c2121c;
 }
 
-.update_match {
-  margin-top: 10px;
-  position: relative;
-height: 320px;
-  color: white;
-}
+          .update_match {
+            margin-top: 10px;
+            position: relative;
+          height: 320px;
+            color: white;
+          }
 .breacking_news_title{
   text-align: center;
   height: 65px;
@@ -160,7 +160,7 @@ height: 320px;
 }
 
 .Banner_img {
-  background-image: url("/public/image/background.jpg");
+  /* background-image: url("/public/image/background.jpg"); */
   color: white;
   height: 469px;
   width: 100%;

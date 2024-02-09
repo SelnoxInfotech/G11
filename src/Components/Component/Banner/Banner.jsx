@@ -35,10 +35,10 @@ export default function Banner() {
                         match.map((match, index) => {
                             return (
                                 <div className='container banner_field hedd' key={index}>
-                                 
-                                        <div className='row '>
 
-                                            <Link to={`cricket-prediction/${match.id}/${match.title.replace(/\s+/g, '-')}`} >
+                                    <div className='row '>
+
+                                        <Link to={`cricket-prediction/${match.id}/${match.title.replace(/\s+/g, '-')}`} >
                                             <div className='col-sm center'>
                                                 <span style={{ color: "white" }}>{match.first_team}</span>
                                             </div>
@@ -48,9 +48,9 @@ export default function Banner() {
                                             <div className='col-sm center'>
                                                 <span style={{ color: "white" }}>{match.second_team}</span>
                                             </div>
-                                                </Link>
-                                        </div>
-                                    
+                                        </Link>
+                                    </div>
+
                                 </div>
                             )
                         })

@@ -1,7 +1,7 @@
 import React, {  useState } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from "axios";  
 
 export default function UpdateMatch() {
 
@@ -14,6 +14,7 @@ export default function UpdateMatch() {
         }).then(response => {
             if (response.status === 200) {
                 setnewmatch( response.data.reverse())
+                console.log(response.data.length , "DDDDDDd")
             }
         })
         // setnewmatch(data.matches)
@@ -81,14 +82,12 @@ export default function UpdateMatch() {
            
         ]
     };
+    
     return (
         <div className="container-fluid update_match " >
 
 
             <Slider {...settings} >
-
-
-
                 {
                     newMatch?.map((data, index) => {
                         return (

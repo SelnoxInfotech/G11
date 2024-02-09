@@ -30,7 +30,8 @@ function LatestNews() {
                 </div>
             </div>
             <div className="container-fluid Latest_news_back " >
-                {latestnews.map((data, index) => {
+                {
+                latestnews.map((data, index) => {
                     return (
                         <div className="container-fluid Latest_news_back" key={index}>
                             <Row >
@@ -65,7 +66,7 @@ function LatestNews() {
 
 
                 })
-                }
+                 }
             </div>
 
         </div >
