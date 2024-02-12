@@ -21,7 +21,7 @@ export default function Ipl({Api, h2 }) {
 
         }).then(response => {
             if (response.status === 200) {
-                SetIplData(response.data.data.reverse())
+                SetIplData(response.data.data)
 
 
                 window.scrollTo(0, 0);
