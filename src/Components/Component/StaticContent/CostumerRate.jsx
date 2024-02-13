@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
-import {  AiFillStar } from 'react-icons/ai'
+import { AiFillStar } from 'react-icons/ai'
 import { BsStarHalf } from 'react-icons/bs'
 export default function CostumerRate() {
     const settings = {
@@ -9,7 +9,7 @@ export default function CostumerRate() {
         slidesToScroll: 2,
         autoplay: false,
         speed: 500,
-        pauseOnHover:true,
+        pauseOnHover: true,
         responsive: [
             {
 
@@ -56,7 +56,7 @@ export default function CostumerRate() {
             }
         ]
     };
-    
+
     return (
         <div className='container-fluid rate_box '>
 
@@ -65,7 +65,7 @@ export default function CostumerRate() {
                     <div className='container-fluid  rate_container d-flex justify-content-center'>
                         <div className='row marg'>
                             <div className='col-12 d-flex justify-content-center '>
-                                <img className='rate_image ' src='image/blank.webp' alt="G11-Fantasy Cricket Prediction for Today's Match"/>
+                                <img className='rate_image ' src='image/blank.webp' alt="G11-Fantasy Cricket Prediction for Today's Match" />
                             </div>
                             <div className='col-12 d-flex justify-content-center'>
                                 <p>Maria Luisa</p>
@@ -119,7 +119,7 @@ export default function CostumerRate() {
                     <div className='container-fluid  rate_container d-flex justify-content-center'>
                         <div className='row marg'>
                             <div className='col-12 d-flex justify-content-center '>
-                                <img className='rate_image ' src='image/blank.webp' alt="G11-Fantasy Cricket Prediction for Today's Match"/>
+                                <img className='rate_image ' src='image/blank.webp' alt="G11-Fantasy Cricket Prediction for Today's Match" />
                             </div>
                             <div className='col-12 d-flex justify-content-center'>
                                 <p>Rishi Singh</p>

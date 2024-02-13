@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Company_expri_detail() {
-    window.scrollTo(0, 0);
     return (
         <div className='container-fluid ' style={{marginTop:"10px"}}>
              <div className='row company '>
