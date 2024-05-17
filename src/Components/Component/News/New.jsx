@@ -2,7 +2,7 @@ import { React, useContext, useState, useEffect } from 'react'
 import news from "../../context/NewsApi";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-export default function                                                 New() {
+export default function New() {
     const imagePerRow = 8
     const [match_new, set_matche_new] = useState([]);
     const [next, setNext] = useState(imagePerRow);
@@ -21,19 +21,19 @@ export default function                                                 New() {
         <section id="team" className="pb-5">
             <Helmet>
                 <title>Latest Cricket News | G11 Fantasy Cricket Prediction </title>
-                <link rel="canonical" href="https://g11prediction.com/news" ></link>
+                <link rel="canonical" href="https://grand11.in//news" ></link>
                 <meta name="keywords" content="Breaking News, Cricket news, G11 Fantasy Cricket Prediction, Dream11 prediction, Cricket News Today, Live Cricket News, Online Cricket News, Cricket News Today Match, world cup 2023 cricket news, " />
                 <meta name="description" key="description" content="Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"></meta>
-      {/* Facebook tags */}
-      <meta property="og:type" content={"Cricket"} />
-                            <meta property="og:title" content={'Latest Cricket News | G11 Fantasy Cricket Prediction'} />
-                            <meta property="og:description" content={"Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"} />
-                            { /* End Facebook tags */}
-                            { /* Twitter tags */}
-                            <meta name="twitter:creator" content={"Cricket"} />
-                            <meta name="twitter:card" content={'Latest Cricket News | G11 Fantasy Cricket Prediction'} />
-                            <meta name="twitter:title" content={'Latest Cricket News | G11 Fantasy Cricket Prediction'} />
-                            <meta name="twitter:description" content={"Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"} />
+                {/* Facebook tags */}
+                <meta property="og:type" content={"Cricket"} />
+                <meta property="og:title" content={'Latest Cricket News | G11 Fantasy Cricket Prediction'} />
+                <meta property="og:description" content={"Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"} />
+                { /* End Facebook tags */}
+                { /* Twitter tags */}
+                <meta name="twitter:creator" content={"Cricket"} />
+                <meta name="twitter:card" content={'Latest Cricket News | G11 Fantasy Cricket Prediction'} />
+                <meta name="twitter:title" content={'Latest Cricket News | G11 Fantasy Cricket Prediction'} />
+                <meta name="twitter:description" content={"Latest Cricket News on Trending topics. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips"} />
 
 
             </Helmet>
@@ -56,10 +56,10 @@ export default function                                                 New() {
                                             </Link>
 
                                             {/* <div className="col-12 ViewCount"> */}
-                                              
-                                                <div className="col-12 ViewCountDate">
-                                                    <span >{data.post_date}</span>
-                                                </div>
+
+                                            <div className="col-12 ViewCountDate">
+                                                <span >{data.post_date}</span>
+                                            </div>
                                             {/* </div> */}
                                         </div>
                                     </div>

@@ -47,7 +47,7 @@ export default function SelcectIpl(props) {
                     return (
                         <Helmet>
                             <title>{data.Meta_title}</title>
-                            <link rel="canonical" href="https://g11prediction.com/icc-cricket-world-cup-2024/:Title/:id" ></link>
+                            <link rel="canonical" href="https://grand11.in/icc-cricket-world-cup-2024/:Title/:id" ></link>
                             <meta name="keywords" content="G11 Fantasy Cricket Prediction,ICC CRICKET WORLD CUP 2023,Dream11 prediction,ICC Cricket World Cup 2023 Prediction,Latest News,ICC CRICKET WORLD CUP Match,ICC Cricket World Cup 2023 schedule,ICC Cricket World Cup 2023 results,ICC Cricket World Cup 2023 fixtures,ICC Cricket World Cup 2023 videos" />
                             <meta name='description' content={data.Meta_Description}></meta>
                                                              {/* Facebook tags */}

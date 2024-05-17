@@ -15,21 +15,21 @@ export default function BreakingNewsList({ h2, Api }) {
         str = str.trim().replaceAll(' ', "-");
         let a = 0;
         while (a < 1) {
-          if (str.includes("--")) {
-            str = str.replaceAll("--", "-")
-          } else if (str.includes("//")) {
-            str = str.replaceAll("//", "/")
-          } else if (str.includes("//")) {
-            str = str.replaceAll("-/", "/")
-          } else if (str.includes("//")) {
-            str = str.replaceAll("/-", "/")
-          } else {
-            a++
-          }
+            if (str.includes("--")) {
+                str = str.replaceAll("--", "-")
+            } else if (str.includes("//")) {
+                str = str.replaceAll("//", "/")
+            } else if (str.includes("//")) {
+                str = str.replaceAll("-/", "/")
+            } else if (str.includes("//")) {
+                str = str.replaceAll("/-", "/")
+            } else {
+                a++
+            }
         }
-    
+
         return str
-      }
+    }
 
 
     const [breakingnews, setbreakingnews] = useState([])
@@ -42,16 +42,15 @@ export default function BreakingNewsList({ h2, Api }) {
             if (response.status === 200) {
                 setbreakingnews(response.data)
                 axios("https://www.g11fantasy.com/NewsSection/Get-News/1", {
-            method: 'GET',
+                    method: 'GET',
 
-        }).then(response => {
-            if (response.status === 200) {
-                console.log(response.data.map((data)=> data.urlslug))
-                setbreakingnews(response.data)
+                }).then(response => {
+                    if (response.status === 200) {
+                        setbreakingnews(response.data)
 
 
-            }
-        })
+                    }
+                })
             }
         })
 
@@ -73,7 +72,7 @@ export default function BreakingNewsList({ h2, Api }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Breaking News |  G11 Fantasy Cricket Prediction |  </title>
-                <link rel="canonical" href="https://g11prediction.com/breakingnews" ></link>
+                <link rel="canonical" href="https://grand11.in/cricket-breaking-news/" ></link>
                 <meta name="keywords" content="Breaking News, Cricket news, G11 Fantasy Cricket Prediction, Dream11 prediction, Cricket News Today, Live Cricket News, Online Cricket News, Cricket News Today Match, world cup 2023 cricket news," />
                 <meta name="title" key="title" content="Breaking News |  G11 Fantasy Cricket Prediction |" />
                 <meta name='description' content="Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."></meta>
@@ -117,8 +116,8 @@ export default function BreakingNewsList({ h2, Api }) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/cricket-breakingnews/${breakingnews.id}/${modifystr(breakingnews?.urlslug !== null ? breakingnews?.urlslug?.toLowerCase() : breakingnews?.Title)}`}>
-                                            <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
+                                        <Link className="hedding hovereffect text" to={`/cricket-breaking-news/${modifystr(breakingnews?.urlslug !== null ? breakingnews?.urlslug?.toLowerCase() : breakingnews?.Title)}/${breakingnews.id}`}>
+                                            <img className=" News_image" src={`https://www.g11fantasy.com${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>

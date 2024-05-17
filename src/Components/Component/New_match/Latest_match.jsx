@@ -9,13 +9,23 @@ export default function UpdateMatch() {
     const [newMatch, setnewmatch] = useState([])
     const location = useLocation()
     React.useEffect(() => {
-        axios(" https://grand11.in/g11/all_matches_api.php", {
+        axios("https://www.g11fantasy.com/NewsSection/Get-Toph6tbl_matchApi/", {
             method: 'GET',
 
         }).then(response => {
             if (response.status === 200) {
-
-                setnewmatch(response.data.reverse())
+                setnewmatch(response?.data)
+                axios("https://www.g11fantasy.com/NewsSection/tbl_matchApi/", {
+                    method: 'GET',
+        
+                }).then(response => {
+                    if (response.status === 200) {
+                        setnewmatch(response?.data?.reverse())
+                    }
+        
+        
+                })
+                
             }
 
 
@@ -28,27 +38,26 @@ export default function UpdateMatch() {
         setNext(next - imagePerRow);
     };
     function modifystr(str) {
-        str = str.replace(/[^a-zA-Z0-9/ ]/g, "-");
+
+        str = str.replaceAll(/[^a-zA-Z0-9/ ]/g, "-");
         str = str.trim().replaceAll(' ', "-");
         let a = 0;
         while (a < 1) {
-          if (str.includes("--")) {
-            str = str.replaceAll("--", "-")
-          } else if (str.includes("//")) {
-            str = str.replaceAll("//", "/")
-          } else if (str.includes("//")) {
-            str = str.replaceAll("-/", "/")
-          } else if (str.includes("//")) {
-            str = str.replaceAll("/-", "/")
-          } else {
-            a++
-          }
+            if (str.includes("--")) {
+                str = str.replaceAll("--", "-")
+            } else if (str.includes("//")) {
+                str = str.replaceAll("//", "/")
+            } else if (str.includes("//")) {
+                str = str.replaceAll("-/", "/")
+            } else if (str.includes("//")) {
+                str = str.replaceAll("/-", "/")
+            } else {
+                a++
+            }
         }
-    
-        return str
-      }
 
-
+        return str.toLowerCase()
+    }
 
     return (
 
@@ -57,42 +66,46 @@ export default function UpdateMatch() {
             <Helmet>
 
 
-                <title>Today's Match | G11 | Fantasy Cricket Betting Prediction </title>
-                <link rel="canonical" href="https://g11prediction.com/latest-match/" ></link>
+                <title> G11 Dream11 Cricket Match Predictions for Today's Match </title>
+                <link rel="canonical" href="https://grand11.in/cricket-prediction/" ></link>
                 <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match" />
                 <meta name='description' content="Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"></meta>
-              {/* Facebook tags */}
-        <meta property="og:type" content={"website"} />
-        <meta property="og:title" content={"Today's Match | G11 | Fantasy Cricket Betting Prediction"} />
-        <meta property="og:description" content={
-         "Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"
+                {/* Facebook tags */}
+                <meta property="og:type" content={"website"} />
+                <meta property="og:title" content={"Today's Match | G11 | Fantasy Cricket Betting Prediction"} />
+                <meta property="og:description" content={
+                    "Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"
 
-        } />
-        { /* End Facebook tags */}
-        { /* Twitter tags */}
-        <meta name="twitter:creator" content={"Cricket"} />
-        <meta name="twitter:card" content={"Today's Match | G11 | Fantasy Cricket Betting Prediction"} />
-        <meta name="twitter:title" content={"Today's Match | G11 | Fantasy Cricket Betting Prediction"} />
-        <meta name="twitter:description" content={
-         "Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"
+                } />
+                { /* End Facebook tags */}
+                { /* Twitter tags */}
+                <meta name="twitter:creator" content={"Cricket"} />
+                <meta name="twitter:card" content={"Today's Match | G11 | Fantasy Cricket Betting Prediction"} />
+                <meta name="twitter:title" content={"Today's Match | G11 | Fantasy Cricket Betting Prediction"} />
+                <meta name="twitter:description" content={"Today's Match updates, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps"
 
-        } />
+                } />
 
 
-           
-           
+
+
             </Helmet>
             <div className="container">
                 <h1 className="section-title ">Today Match Predictions - Cricket Betting Tips from Experts (100% Free)</h1>
                 <div className="row" id="team_data" >
                     {
                         newMatch?.slice(0, next)?.map((data, index) => {
+                            console.log(data)
+                            const matchesObject = {};
+                            const l = data.match_discription?.split('</p>')[0].replace(/(<([^>]+)>)/gi, "");
+                            [l].forEach((match, index) => {
+                              matchesObject[`Match_${index + 1}`] = match.replace(/&ndash;/g, '-');
+                            });
                             return (
                                 <div className="col-sm-4 bottom" key={index}>
 
                                     <div className="container-fluid updatematch ">
-                                        <Link to={location.pathname !== "/latest-match" ? `${data.id}/${modifystr(data.title.toLowerCase())}` : `cricket-prediction/${data.id}/${modifystr(data.title.toLowerCase())}    `} >
-
+                                        <Link to={`/cricket-prediction/${modifystr(matchesObject?.Match_1?.split(/:|-/)[1]?.replace(/&nbsp;/g, ''))+"-dream11-prediction"}/${data.id}`} >
                                             <div className="row center grid_row">
                                                 <div className="col-12 center color">
                                                     {data.title}

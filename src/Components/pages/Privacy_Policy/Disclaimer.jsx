@@ -12,7 +12,7 @@ export default function Disclaimer() {
     <div className='container-fluid  center'>
       <Helmet>
         <title>Disclaimer | G11 Fantasy Cricket Prediction </title>
-        <link rel="canonical" href="https://g11prediction.com/disclaimer" ></link>
+        <link rel="canonical" href="https://grand11.in/disclaimer" ></link>
         <meta name='description' content="The disclaimer page provides crucial information about our website's policies. Make sure you are aware of our terms and conditions."></meta>
         {/* Facebook tags */}
         <meta property="og:type" content={"Cricket"} />

@@ -10,9 +10,9 @@ export default function Video() {
 
 
   const imagePerRow = 8
-  const [next, setNext] = useState(imagePerRow);
-  const [val, setVal] = useState([])
-  const [setHandleAudio] = useState(false)
+  const [next, setNext] = React.useState(imagePerRow);
+  const [val, setVal] = React.useState([])
+  const [setHandleAudio] = React.useState(false)
   useEffect(() => {
     const getApi = async () => {
       const response = await fetch("https://www.g11fantasy.com/NewsSection/Get-VideoNews/")
@@ -36,7 +36,7 @@ export default function Video() {
     <div className='container-fluid'>
       <Helmet>
         <title>Video News |  G11 Fantasy Cricket Prediction |</title>
-        <link rel="canonical" href="https://g11prediction.com/latest-video" ></link>
+        <link rel="canonical" href="https://grand11.in/latest-video" ></link>
         <meta name="keywords" content="Dream11 team prediction, My11Circle prediction, cricket betting tips, Dream 11 prediction, howzat today team prediction, Playerzpot prediction, prediction for today match, My11Circle cricket team prediction, Dream11 prediction today match, howzat team prediction today match, Playerzpot Fantasy Cricket prediction, Dream11 cricket team prediction, My11Circle prediction today match, Playerzpot Circle team prediction, howzat team prediction, Today Match Prediction, howzat prediction today's match"
         />
         <meta name='description' content="Video Breaking News on latest cricket updates. G11 Fantasy Cricket Prediction Website and Application for Today's match. # 1 Dream11 Fantasy Cricket Prediction tips."></meta>
@@ -57,7 +57,7 @@ export default function Video() {
       </Helmet>
       <div className="row">
         <div className='col-12 center mt-2 breaking_news_hed'>
-          <h1>Latest Video News </h1><h2 style={{fontSize:"23px"}}>- G11 Fantasy Cricket Prediction</h2>
+          <h1>Latest Video News </h1><h2 style={{ fontSize: "23px" }}>- G11 Fantasy Cricket Prediction</h2>
         </div>
         {val?.slice(0, next)?.map((ele) => {
           return (

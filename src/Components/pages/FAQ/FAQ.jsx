@@ -6,7 +6,7 @@ export default function FAQ() {
         <div className='container-fluid  center'>
             <Helmet>
                 <title>FAQs | G11 | Fantasy Cricket  Prediction Today's Match | </title>
-                <link rel="canonical" href="https://g11prediction.com/faq" ></link>
+                <link rel="canonical" href="https://grand11.in/faq" ></link>
                 <meta name='description' content='FAQs, G11 Fantasy Cricket Betting Prediction Site and Application. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and more. Dream11 Betting Tips. '></meta>
 
                 {/* Facebook tags */}
@@ -23,7 +23,7 @@ export default function FAQ() {
 
 
             </Helmet>
-            <div className='Container'>
+            <div className='container'>
                 <div className='row'>
                     <div className='col-12 hedding center'>
                         <h1>    What is G11 App?</h1>

@@ -20,7 +20,7 @@ export default function Players() {
         <Helmet>
           <title>Cricket Players Profile & Details | G11 Fantasy Cricket Prediction |</title>
           <meta  name="keywords" content="cricket betting tips" />
-          <link rel="canonical" href="https://g11prediction.com/players" ></link>
+          <link rel="canonical" href="https://grand11.in/players" ></link>
           <meta name='description' content='Cricket Players Profile & Details, Age, Hight and more, from G11 Fantasy Cricket Prediction App and site. Dream11 Cricket Betting Tips & Predictions '></meta>
         </Helmet>
         <div className="container">

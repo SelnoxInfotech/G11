@@ -511,7 +511,8 @@ slick-slide slick-active slick-current {
 }
 
 .footer_text {
-  font-size: x-large;
+  font-size: small;
+    right: -33px;
   left: 20px;
   text-align: center;
   font-weight: 600;

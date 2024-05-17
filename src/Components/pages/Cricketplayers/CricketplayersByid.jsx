@@ -47,7 +47,7 @@ export default function CricketplayersByid(props) {
                     return (
                         <Helmet>
                             <title>{data.Meta_title}</title>
-                            <link rel="canonical" href="https://g11prediction.com/cricket-players/:Title/:id" ></link>
+                            <link rel="canonical" href="https://grand11.in/cricket-players/:Title/:id" ></link>
                             <meta name="keywords" content="Cricketers, Cricket players, New t20 Rules,New ICC rules,India Cricket players, Player List, Test Cricket, Player Record, ODI Team, India cricketers, all cricket players profile, India cricketers profile, cricketers stats, Cricketers records, All cricket players, Cricket players details, " />
                             <meta name='description' content={data.Meta_Description}></meta>
                                  {/* Facebook tags */}

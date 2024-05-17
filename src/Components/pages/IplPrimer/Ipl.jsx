@@ -44,7 +44,7 @@ export default function Ipl({Api, h2 }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>IPL 2023-Latest News & Live Updates, Match Report & Analysis</title>
-                <link rel="canonical" href="https://g11prediction.com/ipl_2023" ></link>
+                <link rel="canonical" href="https://grand11.in/ipl_2023" ></link>
                 <meta name="keywords" content="Indian Premier League 2023 cricket score, IPL 2023 schedule, Indian Premier League 2023 results, IPL latest news 2023, Indian Premier League, ipl, iplt20, indian premier league, ipl cricket, ipl match, ipl live, ipl live scorecard, Ipl videos, Ipl news, Ipl Players, Ipl Auction, Ipl points Table, Ipl teams, Ipl highlights, Ipl Player Injury, Best T20 cricket League, T20 league,Tata ipl, ipl 2023, ipl Players squad, Csk, MI, SRH, DC, RR, GT, LSG, RCB, KKR, PBKS, IPL cricket live, Chennai Super Kings, Delhi Capitals, Gujarat Titans, Kolkata Knight Riders, Lucknow Super Giants, Mumbai Indians, Punjab Kings, Rajasthan Royals, Royal Challengers Bangalore, Sunrisers Hyderabad" />
                 <meta name='description' content="IPL 2023: Latest News, LIVE Updates, Schedule, Venue Details, Series, Player Stats, Points Table, Expert Analysis, Videos & much more at g11prediction.com"></meta>
                                                                      {/* Facebook tags */}
@@ -90,7 +90,7 @@ export default function Ipl({Api, h2 }) {
 
                                         </div>
                                         <Link className="hedding hovereffect text" to={`/cricket-breaking-news/${breakingnews?.urlslug?.replace(/\s+/g, '-').toLowerCase()}/${breakingnews.id} `}>
-                                            <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
+                                            <img className=" News_image" src={`https://www.g11fantasy.com${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>

@@ -82,10 +82,10 @@ const hideDropdown = e => {
                     className="NavLink" to="/">Home</Link>
                   <NavLink
                     onClick={toggleOffCanvas}
-                    to="/latest-match">Match</NavLink>
+                    to="/cricket-prediction">Match</NavLink>
                   <NavLink
                     onClick={toggleOffCanvas}
-                    to="/breakingnews">Breaking News</NavLink>
+                    to="/cricket-breaking-news/">Breaking News</NavLink>
                     <NavLink
                     onClick={toggleOffCanvas}
                     to="/ipl-2024">IPL 2024</NavLink>

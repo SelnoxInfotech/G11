@@ -44,19 +44,19 @@ export default function RulsRegulation({ h2, Api }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Cricket Rules And Regulations | Playing Conditions- G11 Prediction |</title>
-                <link rel="canonical" href="https://g11prediction.com/cricket-rules-and-regulation" ></link>
+                <link rel="canonical" href="https://grand11.in/cricket-rules-and-regulation" ></link>
                 <meta name="keywords" content="Cricket Playing Conditions, Cricket Rules and Regulations, Cricket Laws, Cricket Playing Rules, ODI laws, T20 rules, Cricket match playing rules, cricket penalty conditions," />
                 <meta name='description' content="Cricket Rules And Regulations, Playing Conditions by G11 Fantasy Cricket Prediction Website and Application for Today's Match. # 1 Fantasy Cricket Prediction tips."></meta>
-                   {/* Facebook tags */}
-        <meta property="og:type" content={"Cricket"} />
-        <meta property="og:title" content={"Cricket Rules And Regulations | Playing Conditions- G11 Prediction |"} />
-        <meta property="og:description" content={"Cricket Rules And Regulations, Playing Conditions by G11 Fantasy Cricket Prediction Website and Application for Today's Match. # 1 Fantasy Cricket Prediction tips."} />
-        { /* End Facebook tags */}
-        { /* Twitter tags */}
-        <meta name="twitter:creator" content={"Cricket"} />
-        <meta name="twitter:card" content={"Cricket Rules And Regulations | Playing Conditions- G11 Prediction |"} />
-        <meta name="twitter:title" content={"Cricket Rules And Regulations | Playing Conditions- G11 Prediction |"} />
-        <meta name="twitter:description" content={"Cricket Rules And Regulations, Playing Conditions by G11 Fantasy Cricket Prediction Website and Application for Today's Match. # 1 Fantasy Cricket Prediction tips."} />
+                {/* Facebook tags */}
+                <meta property="og:type" content={"Cricket"} />
+                <meta property="og:title" content={"Cricket Rules And Regulations | Playing Conditions- G11 Prediction |"} />
+                <meta property="og:description" content={"Cricket Rules And Regulations, Playing Conditions by G11 Fantasy Cricket Prediction Website and Application for Today's Match. # 1 Fantasy Cricket Prediction tips."} />
+                { /* End Facebook tags */}
+                { /* Twitter tags */}
+                <meta name="twitter:creator" content={"Cricket"} />
+                <meta name="twitter:card" content={"Cricket Rules And Regulations | Playing Conditions- G11 Prediction |"} />
+                <meta name="twitter:title" content={"Cricket Rules And Regulations | Playing Conditions- G11 Prediction |"} />
+                <meta name="twitter:description" content={"Cricket Rules And Regulations, Playing Conditions by G11 Fantasy Cricket Prediction Website and Application for Today's Match. # 1 Fantasy Cricket Prediction tips."} />
 
             </Helmet>
             <div className='row'>
@@ -89,7 +89,7 @@ export default function RulsRegulation({ h2, Api }) {
 
                                         </div>
                                         <Link className="hedding hovereffect text" to={`/cricket-rules-and-regulation/${breakingnews?.urlslug?.replace(/\s+/g, '-').replace(/\?/g, '').toLowerCase()}/${breakingnews.id} `}>
-                                            <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews?.Image}`} alt="news_image" />
+                                            <img className=" News_image" src={`https://www.g11fantasy.com${breakingnews?.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>

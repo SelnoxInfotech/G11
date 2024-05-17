@@ -92,7 +92,7 @@ function HighLight_News() {
                 <div className="row highlight-container">
                     <div className="col-md-12 View_All_link">
                     <h3>    <span className="hadd">Highlight </span></h3>
-                        <span className=" position-absolute end-0">  <Link to="/Cricket-news" className="view_all"> View All  </Link ></span>
+                        <span className=" position-absolute end-0">  <Link to="/c" className="view_all"> View All  </Link ></span>
                     </div>
                 </div>
                 <div className="Hight_light_set">
@@ -109,9 +109,9 @@ function HighLight_News() {
                                                 }} />
                                         </Col >
                                         <Col sm={6}  >
-                                            <div className="  hedding hovereffect "  >    <Link to={`/Cricket-News/${data.id}/${data.title.replace(/\s+/g, '-')}`}> <h2 >{data.title.substr(0,50)}</h2> </Link> </div>
+                                            <div className="  hedding hovereffect "  >    <Link to={`/cricket-news/${data.title.replace(/\s+/g, '-')}/${data.id}`}> <h2 >{data.title.substr(0,50)}</h2> </Link> </div>
                                             <div className="Hight_content"><span className="content text" value={data} >{parse(data.content.substr(0,500))}</span></div>
-                                            <Link to={`/cricket-news/${data.id}/${data.title.replace(/\s+/g, '-')}`}><div> <button className="btn mt-3 hovereffect text-break fw-lighter " >Read Full News</button></div></Link>
+                                            <Link to={`/cricket-news/${data.title.replace(/\s+/g, '-')}/${data.id}`}><div> <button className="btn mt-3 hovereffect text-break fw-lighter " >Read Full News</button></div></Link>
                                         </Col>
                                     </Row>
                                    

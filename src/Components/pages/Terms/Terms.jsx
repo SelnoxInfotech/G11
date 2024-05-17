@@ -12,7 +12,7 @@ export default function Terms() {
     <div className='container-fluid  center'>
       <Helmet>
         <title>Terms & Conditions | G11 Fantasy Cricket Prediction |</title>
-        <link rel="canonical" href="https://g11prediction.com/terms-and-conditions" ></link>
+        <link rel="canonical" href="https://grand11.in/terms-and-conditions" ></link>
         <meta name='description' content="'G11 Fantasy Cricket Prediction for Today's match.  Dream11 Tips Cricket Prediction. Dream11, My11Circle, Playerzpot, Howzat, Gamezy and Many More apps "></meta>
 
         {/* Facebook tags */}

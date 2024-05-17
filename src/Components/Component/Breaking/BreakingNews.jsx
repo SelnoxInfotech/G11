@@ -147,7 +147,7 @@ function Breaking() {
                                     </div >
                                     <div className="col-12 ">
 
-                                        <Link to={`/cricket-breakingnews/${data.id}/${modifystr(data.Title?.replace(/\s+/g, '-').toLowerCase())}`}  className="hedding hovereffect text  "> 
+                                        <Link to={`/cricket-breaking-news/${modifystr(data.Title?.replace(/\s+/g, '-').toLowerCase())}/${data.id}`}  className="hedding hovereffect text  "> 
                                            <div className="col breacking_news_title">
                                            {data.Title.substr(0, 100)}
                                            </div>

@@ -70,7 +70,7 @@ export default function IccWorld({ h2, Api }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>ICC Men's T20 World Cup 2024 Latest News, Predictions, Analysis l G11prediction</title>
-                <link rel="canonical" href="https://g11prediction.com/icc-cricket-world-cup-2024" ></link>
+                <link rel="canonical" href="https://grand11.in/icc-cricket-world-cup-2024" ></link>
                 <meta name="keywords" content=" ICC T20 World Cup 2024,T20 schedule 2024, T20 teams 2024, T20 venues 2024, Dream11 prediction, T20 match prediction, T20 match analysis, T20 Latest News, T20 Live Updates, T20 Highlights," />
                 <meta name='description' content=" ICC Men's T20 World Cup 2024 Live Updates, Latest News, Match Predictions, ICC Men's T20 World Cup 2024 Match Schedule, Venue Details, Points Table, Match Analysis And Much More Only On G11prediction"></meta>
                                                 {/* Facebook tags */}
@@ -115,8 +115,8 @@ export default function IccWorld({ h2, Api }) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/icc-cricket-world-cup-2024/${modifystr(breakingnews?.Title?.toLowerCase())}/${breakingnews.id} `}>
-                                            <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
+                                        <Link className="hedding hovereffect text" to={`/cricket-breaking-news/${modifystr(breakingnews?.Title?.toLowerCase())}/${breakingnews.id} `}>
+                                            <img className=" News_image" src={`https://www.g11fantasy.com${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>

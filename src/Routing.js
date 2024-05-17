@@ -65,18 +65,18 @@ export default function Routing() {
           <Route path='/cricket-news/:name/:id' element={<CricketRedriction Component={SelectNews}></CricketRedriction>} />
           <Route path='/cricket-news/:id/:name' element={<SelectNews></SelectNews>} />
           {/*  Match Priview Route */}
-          <Route path='/latest-match/cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
-          <Route path='/latest-match/cricket-prediction/:preview/:match/:Title/:id' element={<MatchPreview />} />
-          <Route path='/latest-match/cricket-prediction/:id/:match/:Title/:preview' element={<Redirection Component={MatchPreview} ></Redirection>} />
+          {/* <Route path='/latest-match/cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
+          <Route path='/latest-match/cricket-prediction/:preview/:  /:Title/:id' element={<MatchPreview />} />
+          <Route path='/latest-match/cricket-prediction/:id/:match/:Title/:preview' element={<Redirection Component={MatchPreview} ></Redirection>} /> */}
           {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title' element={<MatchPreview />} /> */}
           {/* <Route path='/Latest-match/Cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} /> */}
-          <Route path='/cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} />
-          <Route path='/cricket-prediction/:id/:match/:Title/:preview' element={<MatchPreview />} />
+          {/* <Route path='/cricket-prediction/:id/:match' element={<MatchPreview></MatchPreview>} /> */}
           {/* <Route path='/Cricket-prediction_match/:id/:match/:Title/:preview' element={<MatchPreview />} /> */}
           {/* End */}
-          <Route path="/Latest-Match" element={<Latest Component={Latestmatch} ></Latest>} />
-          <Route path="/latest-match" element={<Latestmatch></Latestmatch>} />
-          <Route path="/latest-match/cricket-prediction" element={<Latestmatch></Latestmatch>} />
+          <Route path='/cricket-prediction/:title?/:id' element={<MatchPreview />} />
+          {/* <Route path="/cricket-prediction" element={<Latest Component={Latestmatch} ></Latest>} /> */}
+          <Route path="/cricket-prediction" element={<Latestmatch></Latestmatch>} />
+          {/* <Route path="/cricket-prediction" element={<Latestmatch></Latestmatch>} /> */}
           <Route path='/Cricket-BreakingNews/:id/:Title' element={<BreakingNewsRediection Component={Breaking}></BreakingNewsRediection>} />
           <Route path='/cricket-breakingnews/:id/:Title' element={<BreakingNewsRediection Component={Breaking}></BreakingNewsRediection>} />
           <Route path='/cricket-breaking-news/:Title/:id' element={<Breaking></Breaking>} />
@@ -85,7 +85,7 @@ export default function Routing() {
           <Route path='/Latest-Video' element={<Latest Component={Video} ></Latest>} />
           <Route path='/latest-video' element={<Video></Video>} />
           <Route path='/breakingnews' element={<BreakingNewsRediection Component={BreakingNewsList}></BreakingNewsRediection>} />
-          <Route path='/breaking-news' element={<BreakingNewsList></BreakingNewsList>} />
+          <Route path='/cricket-breaking-news/' element={<BreakingNewsList></BreakingNewsList>} />
           <Route path='/ipl_2023' element={ <Latest Component={IPlPriemier} ></Latest> } />
           <Route path='/ipl-2024' element={ <Latest Component={IPL2024} ></Latest> } />
           <Route path='/Ipl_2023/:Title/:id' element={<Ipl Component={SelcectIpl}></Ipl>} />

@@ -56,7 +56,7 @@ export default function Ipl({ Api, h2 }) {
 
 
     const handleMoreImage = () => {
-        setNext(next + imagePerRow);
+        setNext(next + imagePerRow);    
     };
     const handlelessImage = () => {
         setNext(next - imagePerRow);
@@ -68,7 +68,7 @@ export default function Ipl({ Api, h2 }) {
         <div className='container-fluid center'>
             <Helmet>
                 <title>Get IPL 2024 Latest News, Predictions, Analysis  On G11predictions</title>
-                <link rel="canonical" href="https://g11prediction.com/ipl_2024" ></link>
+                <link rel="canonical" href="https://grand11.in/ipl_2024" ></link>
                 <meta name="keywords" content="IPL 2024,IPL schedule 2024, IPL teams 2024, IPL venues 2024, Dream11 prediction, IPL 2024 match prediction, IPL 2024" />
                 <meta name='description' content="PL 2024 Live Updates, Latest News, Match Predictions, IPL 2024 Match Schedule, Venue Details, Points Table, Match Analysis And Much More Only On G11prediction"></meta>
                 {/* Facebook tags */}
@@ -114,8 +114,8 @@ export default function Ipl({ Api, h2 }) {
                                             </RWebShare>
 
                                         </div>
-                                        <Link className="hedding hovereffect text" to={`/ipl-2024/${modifystr(breakingnews?.urlslug)}/${breakingnews.id} `}>
-                                            <img className=" News_image" src={`https://www.g11fantasy.com/${breakingnews.Image}`} alt="news_image" />
+                                        <Link className="hedding hovereffect text" to={`/cricket-breaking-news/${modifystr(breakingnews?.urlslug)}/${breakingnews.id} `}>
+                                            <img className=" News_image" src={`https://www.g11fantasy.com${breakingnews.Image}`} alt="news_image" />
                                             <div className='News_image_title'>
                                                 <h2 className="card-text content col_card_heading">{breakingnews.Title.slice(0, 80)}</h2>
                                             </div>

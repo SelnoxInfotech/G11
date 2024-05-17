@@ -48,15 +48,37 @@ export default function Breaking(props) {
         })
     }, [id])
 
+    function modifystr(str) {
+
+        str = str.replaceAll(/[^a-zA-Z0-9/ ]/g, "-");
+        str = str.trim().replaceAll(' ', "-");
+        let a = 0;
+        while (a < 1) {
+          if (str.includes("--")) {
+            str = str.replaceAll("--", "-")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("//", "/")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("-/", "/")
+          } else if (str.includes("//")) {
+            str = str.replaceAll("/-", "/")
+          } else {
+            a++
+          }
+        }
+    
+        return str.toLowerCase()
+      }
 
     return (
         <div>
             {
                 breakingnews?.map((data, index) => {
+                    // console.log(data)
                     return (
                         <Helmet key={index}>
                             <title>{data.Meta_title}</title>
-                            <link rel="canonical" href="https://g11prediction.com/cricket-breakingnews/:id/:Title" ></link>
+                            <link rel="canonical" href={`https://grand11.in/cricket-breaking-news/${modifystr(data.Title)}/${data.id}`} ></link>
                             <meta name="keywords" content="Cricket Betting Tips & Predictions" />
                             <meta name='description' content={data.Meta_Description}></meta>
                             {/* Facebook tags */}
@@ -80,8 +102,6 @@ export default function Breaking(props) {
             {
                 breakingnews?.map((data, index) => {
                     return (
-
-
                         <div className="container " key={index}>
                             <div className="row">
                                 <div className="col-12"> <h1 className="title_had">{parse(data.Title)}</h1></div>
@@ -107,7 +127,6 @@ export default function Breaking(props) {
                         </div>
                     )
                 })
-
             }
             <BreakingNewsList Api={Api} h2={true}></BreakingNewsList>
         </div>
